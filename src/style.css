@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+    --color-l-bg: #EFEFEF;
+    --color-d-bg: #141414;
+
+    --color-l-nav-bg: #E6E6E6;
+    --color-d-nav-bg: #212121;
+
+    --color-l-search-border: #919191;
+    --color-d-search-border: #828282;
+
+    --color-l-search-fill: #BFBFBF;
+    --color-d-search-fill: #444444;
+
+    --color-l-search-icon: #6F6F6F;
+    --color-d-search-icon: #989898;
+}

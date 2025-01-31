@@ -1,0 +1,49 @@
+---
+const { title } = Astro.props;
+---
+
+<script>
+	if (!document.cookie.includes("theme=")) {
+		document.cookie = "theme=auto; path=/; max-age=31536000; SameSite=Strict";
+	}
+
+	const auto =
+		window.matchMedia &&
+		window.matchMedia("(prefers-color-scheme: dark)").matches &&
+		document.cookie.includes("theme=auto");
+
+	const dark = document.cookie.includes("theme=dark");
+
+	if (dark || auto) {
+		document.body.classList.add("dark");
+	}
+</script>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="h-[100vh] bg-l-bg dark:bg-d-bg 
+				text-black dark:text-white 
+				fill-black dark:fill-white">
+		<slot />
+	</body>
+</html>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+			"Nimbus Sans", Arial, sans-serif;
+		font-size: 20px;
+	}
+</style>
