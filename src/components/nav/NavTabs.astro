@@ -16,7 +16,7 @@ interface TabData {
 const pages: TabData[] = [
     { name: "Docs", link: "./", color: "9C0505" },
     { name: "Tutorials", link: "./tutorials", color: "1B8C17" },
-    { name: "Developer Tools", link: "./tools", color: "0099B3" }
+    { name: "Tools", link: "./tools", color: "0099B3" }
 ];
 
 let active;
@@ -27,17 +27,17 @@ switch (type) {
     case PageType.TUTORIALS:
         active = pages[1];
         break;
-    case PageType.DEV_TOOLS:
+    case PageType.TOOLS:
         active = pages[2];
         break;
 }
 ---
 
-<div class="w-fit pt-1 m-auto flex flex-row gap-4 text-xl text-white">
+<div class="w-fit pt-1 m-auto flex flex-row gap-2 sm:gap-4 text-xl text-white">
     {pages.map(page => {
         if (active.name === page.name) {
             return <div class="flex flex-col gap-1">
-                <a href={page.link} class="outfit px-8 py-1 m-auto rounded-md font-bold shadow-lg"
+                <a href={page.link} class="outfit px-4 sm:px-8 py-1 m-auto rounded-md font-bold shadow-lg"
                     style={{ backgroundColor: `#${page.color}` }}>
                     {page.name}
                 </a>
@@ -45,7 +45,7 @@ switch (type) {
                     style={{ backgroundColor: `#${page.color}` }}></div>
             </div>
         } else {
-            return <a href={page.link} class="outfit mt-0 px-8 py-1 m-auto rounded-md hover:cursor-pointer"
+            return <a href={page.link} class="outfit mt-0 px-4 sm:px-8 py-1 m-auto rounded-md hover:cursor-pointer"
                 style={{ backgroundColor: `#${page.color}` }}>
                 {page.name}
             </a>
