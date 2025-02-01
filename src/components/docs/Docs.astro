@@ -1,17 +1,21 @@
 ---
 import Doc from './Doc.astro';
-import Filters from './Filters.astro';
+import DocsFilters from './DocsFilters.astro';
 import Syntax from './Syntax.astro';
 ---
 
-<div class="flex flex-row">
+<div class="flex flex-col-reverse md:flex-row overflow-y-scroll">
     <Syntax syntax={['On bed leave', 'Delete file']}/>
 
     <div class="p-6 flex-auto h-fit flex flex-col gap-2">
         <Doc/>
         <Doc/>
         <Doc/>
+        <Doc/>
+        <Doc/>
+        <Doc/>
+        <Doc/>
     </div>
 
-    <Filters/>
+    <DocsFilters/>
 </div>
