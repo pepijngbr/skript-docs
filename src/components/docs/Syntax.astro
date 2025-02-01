@@ -1,0 +1,17 @@
+---
+interface Props {
+    syntax: string[];
+}
+
+const { syntax }: Props = Astro.props;
+---
+
+<div class="w-64 h-full flex flex-col p-4 gap-2 border-r-2 border-l-border dark:border-d-border">
+    <h2>Syntax</h2>
+    
+    {syntax.map(x => 
+        <div class="p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary">
+            {x}
+        </div>
+    )}
+</div>

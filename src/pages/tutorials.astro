@@ -1,10 +1,10 @@
 ---
 import "../style.css";
-import Nav from "../components/nav/Nav.astro";
+import Nav, { PageType } from "../components/nav/Nav.astro";
 import Page from "../layouts/Page.astro";
 ---
 
 <Page title="Tutorials - Skript Docs">
-    <Nav />
+    <Nav type={PageType.TUTORIALS}/>
     <h1>Tutorials</h1>
 </Page>

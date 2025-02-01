@@ -1,0 +1,54 @@
+---
+const types = ["All", "New", "Events", "Conditions", "Sections", "Effects", "Types", "Structures", "Functions"]
+const versions = ["2.10.0", "2.9.0", "2.8.0", "2.7.0"]
+---
+
+<script>
+    let filter = "All"
+
+    function handleFilterClick(newFilter: string) {
+        filter = newFilter;
+        updateButtons();
+    }
+
+    function updateButtons() {
+        const buttons = document.querySelectorAll("#filters button");
+        buttons.forEach(button => {
+            if (button.textContent === filter) {
+                button.classList.add("bg-skript", "font-bold");
+                button.classList.remove("bg-l-bg-secondary", "dark:bg-d-bg-secondary");
+            } else {
+                button.classList.remove("bg-skript", "font-bold");
+                button.classList.add("bg-l-bg-secondary", "dark:bg-d-bg-secondary");
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll("#filters button");
+        buttons.forEach(button => {
+            button.addEventListener("click", () => handleFilterClick(button.textContent!!));
+        });
+        (buttons[0] as HTMLButtonElement).click();
+    });
+</script>
+
+<div id="filters" class="w-64 h-full flex flex-col p-4 gap-2 
+    border-l-2 border-l-border dark:border-d-border">
+    <h2>Filter by</h2>
+    <h3>Type</h3>
+    
+    {types.map(x => 
+        <button class="p-2 rounded-md text-center bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
+            {x}
+        </button>
+    )}
+
+
+    <h3>Version</h3>
+    {versions.map(x => 
+        <button class="p-2 rounded-md text-center bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
+            {x}
+        </button>
+    )}
+</div>

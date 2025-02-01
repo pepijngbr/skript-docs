@@ -1,9 +1,9 @@
 ---
 import "../style.css";
-import Nav from "../components/nav/Nav.astro";
+import Nav, { PageType } from "../components/nav/Nav.astro";
 import Page from "../layouts/Page.astro";
 ---
 
 <Page title="Tools - Skript Docs">
-    <Nav />
+    <Nav type={PageType.DEV_TOOLS}/>
 </Page>

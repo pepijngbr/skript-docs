@@ -3,9 +3,24 @@ import NavIcons from "./NavIcons.astro";
 import NavLogo from "./NavLogo.astro";
 import NavSearch from "./NavSearch.astro";
 import NavTabs from "./NavTabs.astro";
+
+/**
+ * The page that is currently active.
+ */
+export enum PageType {
+    DOCS,
+    TUTORIALS,
+    DEV_TOOLS
+}
+
+interface Props {
+    type: PageType;
+}
+
+const { type }: Props = Astro.props;
 ---
 
-<nav id="nav" class="fixed w-full h-fit flex flex-col bg-l-nav-bg dark:bg-d-nav-bg">
+<nav id="nav" class="w-full h-fit flex flex-col bg-l-nav-bg dark:bg-d-nav-bg">
 
     <!-- Top bar -->
     <div class="flex flex-row gap-10 p-2 m-auto">
@@ -15,6 +30,5 @@ import NavTabs from "./NavTabs.astro";
     </div>
 
     <!-- Page selector -->
-    <NavTabs/>
-
+    <NavTabs type={type}/>
 </nav>

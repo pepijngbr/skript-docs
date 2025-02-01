@@ -1,14 +1,27 @@
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const searchContainer = document.getElementById("search-container");
-        const searchInput = document.getElementById("search-input");
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "/" || (event.ctrlKey && event.key === "k")) {
+            const input = document.getElementById("search-input");
 
-        if (searchContainer == null || searchInput == null) {
+            if (input == null) {
+                return;
+            }
+
+            event.preventDefault();
+            input.focus();
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("search-container");
+        const input = document.getElementById("search-input");
+
+        if (container == null || input == null) {
             return;
         }
 
-        searchContainer.addEventListener("click", () => {
-            searchInput.focus();
+        container.addEventListener("click", () => {
+            input.focus();
         });
     });
 </script>
@@ -26,7 +39,7 @@
 
     <input
         id="search-input"
-        class="flex-auto text-l-search-icon dark:text-d-search-icon h-fit m-auto focus:outline-none"
+        class="flex-auto text-l-search-text dark:text-d-search-text h-fit m-auto focus:outline-none"
         placeholder="Search"
     />
 
