@@ -3,6 +3,7 @@ import Doc, { type DocType } from './Doc.astro';
 import DocsFilters from './DocsFilters.astro';
 import DocsSyntax from './DocsSyntax.astro';
 import docs from '../../assets/docs/docs.json';
+import { undefined } from 'astro:schema';
 
 const latest = docs.skriptVersion;
 const all = [...docs.classes, ...docs.conditions, ...docs.effects, 
@@ -19,7 +20,7 @@ const docTypes: DocType[] = all.map(doc => ({
     since: (doc.since as string),
     description: doc.description,
     examples: doc.examples!!,
-    patterns: doc.patterns!!,
+    patterns: (doc.patterns?.length === 1 && doc.patterns?.[0] === "") ? null : (doc.patterns || null),
     requirements: null,
     eventValues: null,
     returnType: null,

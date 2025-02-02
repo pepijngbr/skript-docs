@@ -14,7 +14,7 @@ export interface DocType {
     eventValues: string | null;
     returnType: string | null;
     events: string | null;
-    patterns: string[];
+    patterns: string[] | null;
     examples: string[];
 }
 
@@ -68,7 +68,9 @@ function color(): string {
         {docType.description.map((line: string) => <p><Fragment set:html={line}/></p>)}
     </div>
 
-    <Code class="p-4 rounded-md" code={`${docType.patterns?.join("\n")}`} lang="applescript"/>
+    {[docType.patterns]
+        .filter(x => x !== null)
+        .map(x => <Code class="p-4 rounded-md" code={`${x.join("\n")}`} lang="applescript"/>)}
 
     <div>
         <DocData text="Since" value={docType.since}/>

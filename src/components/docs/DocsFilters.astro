@@ -71,10 +71,15 @@ const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
 
     // Update position of filters to be below the nav bar,
     // since filters is sticky this cant be done directly
-    document.getElementById("filters")!!.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;
+    const filters = document.getElementById("filters")!!;
+    filters.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;
+    
+    window.addEventListener("DOMContentLoaded", () => {
+        filters.classList.remove("!fixed");
+    });
 </script>
 
-<div id="filters" class="sticky right-0 top-30
+<div id="filters" class="sticky !fixed right-0 top-30
     w-full md:w-64 h-fit md:h-[100vh] flex flex-col p-4 gap-2 
     border-b-2 md:border-b-0 md:border-l-2 border-l-border dark:border-d-border
     md:bg-l-bg dark:bg-d-bg
