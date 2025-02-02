@@ -51,6 +51,10 @@ h2 {
     font-weight: 700;
 }
 
+p a {
+    @apply underline text-blue-300;
+}
+
 .outfit {
     font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova","Nimbus Sans", Arial, sans-serif;
 }
