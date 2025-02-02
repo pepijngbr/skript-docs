@@ -1,17 +1,29 @@
 ---
-import "../style.css";
 import Nav, { PageType } from "../components/nav/Nav.astro";
 import Page from "../layouts/Page.astro";
 ---
 
 <Page title="Tools - Skript Docs">
     <Nav type={PageType.TOOLS}/>
-    <div class="p-4 my-auto flex flex-col gap-2">
-        <a href="/" class="outfit px-8 py-1 m-auto rounded-md bg-skript">
-            Javadocs
-        </a>
-        <a href="/" class="outfit px-8 py-1 m-auto rounded-md bg-skript">
-            Pattern Generator
-        </a>
+    <div class="p-4 m-auto flex flex-col gap-2 w-120">
+        <div class="flex flex-col gap-2 p-4 bg-l-bg-secondary dark:bg-d-bg-secondary rounded-md">
+            <div>
+                <h1>Javadocs</h1>
+                <p>View the Javadocs for the Skript API.</p>
+            </div>
+            <a href="tools/javadocs" class="outfit px-8 py-1 m-auto rounded-md bg-skript">
+                Open
+            </a>
+        </div>
+
+        <div class="flex flex-col gap-2 p-4 bg-l-bg-secondary dark:bg-d-bg-secondary rounded-md">
+            <div>
+                <h1>Pattern Creator</h1>
+                <p>Gets all possible patterns from the specified pattern.</p>
+            </div>
+            <a href="tools/patterns" class="outfit px-8 py-1 m-auto rounded-md bg-skript">
+                Open
+            </a>
+        </div>
     </div>
 </Page>
