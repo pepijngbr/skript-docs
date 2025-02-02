@@ -73,7 +73,7 @@ function type(doc: any): DocType {
 </script>
 
 <div class="flex flex-col-reverse md:flex-row">
-    <DocsSyntax syntax={names}/>
+    <DocsSyntax docTypes={docTypes}/>
 
     <div id="docs" class="p-6 flex-auto h-fit flex flex-col gap-4">
         {docTypes.map(x => <Doc docType={x}/>)}

@@ -1,9 +1,11 @@
 ---
+import type { Documentation } from './Doc.astro';
+
 interface Props {
-    syntax: string[];
+    docTypes: Documentation[];
 }
 
-const { syntax }: Props = Astro.props;
+const { docTypes }: Props = Astro.props;
 ---
 
 <script>
@@ -17,11 +19,9 @@ const { syntax }: Props = Astro.props;
             border-r-2 border-l-border dark:border-d-border">
     <h2>Syntax</h2>
     
-    {syntax.map(x => 
-        <section>
-            <button class="w-full text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
-                {x}
-            </button>
-        </section>
+    {docTypes.map(x => 
+        <a href={`#${x.id}`} class="w-full text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
+            {x.name}
+        </a>
     )}
 </div>

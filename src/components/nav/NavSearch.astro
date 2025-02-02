@@ -13,7 +13,7 @@
     });
 
     const container = document.getElementById("search-container")!!;
-    const input = document.getElementById("search-input")!!;
+    const input = document.getElementById("search-input")!! as HTMLInputElement;
 
     container.addEventListener("click", () => {
         input.focus();
@@ -22,7 +22,7 @@
     input.addEventListener("input", event => {
         const value = input.value.toLowerCase().trim();
 
-        const parents = [...document.querySelectorAll("section")!!];
+        const parents = [...document.getElementById("docs")?.children ?? []];
         parents.forEach(parent => {
             console.log(parent);
             
