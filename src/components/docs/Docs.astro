@@ -12,6 +12,7 @@ const all = [...docs.classes, ...docs.conditions, ...docs.effects,
 const names = all.map(x => x.name);
 
 const docTypes: DocType[] = all.map(doc => ({
+    id: doc.id,
     name: doc.name,
     new: doc.since?.includes(latest) || false,
     type: type(doc),
@@ -52,12 +53,20 @@ function type(doc: any): string {
 
     window.addEventListener("resize", update);
     window.addEventListener("DOMContentLoaded", update);
+
+    document.querySelectorAll(".examples").forEach((button) => {
+        button.addEventListener("click", () => {
+            const example = button.parentElement!!.querySelector(`.example`)!!;
+            button.getElementsByTagName("svg")[0].classList.toggle("-rotate-90");
+            example.classList.toggle("hidden");
+        });
+    });
 </script>
 
 <div class="flex flex-col-reverse md:flex-row">
     <DocsSyntax syntax={names}/>
 
-    <div id="docs" class="p-6 flex-auto h-fit flex flex-col gap-2">
+    <div id="docs" class="p-6 flex-auto h-fit flex flex-col gap-4">
         {docTypes.map(x => <Doc docType={x}/>)}
     </div>
 
