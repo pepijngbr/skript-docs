@@ -49,7 +49,7 @@ function color(): string {
 }
 ---
 
-<div data-new={docType.new} data-type={docType.type} data-since={docType.since}
+<section data-new={docType.new} data-type={docType.type} data-since={docType.since}
     class="p-6 flex flex-col gap-4 rounded-md
     bg-l-bg-secondary dark:bg-d-bg-secondary">
 
@@ -94,4 +94,4 @@ function color(): string {
     <div class="example hidden">
         <Code class="p-4 rounded-md" code={`${docType.examples?.join("\n")}`} lang="applescript"/>
     </div>
-</div>
+</section>

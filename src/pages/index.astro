@@ -21,33 +21,32 @@ import { Code } from "astro:components";
 			You will find all supported features of the plugin here, along with some useful examples. 
 		</p>
 
-		<Code class="p-4 rounded-md" code={`
-		command /sethome:
-			permission: skript.home # Permission required for this command
-			description: Set your home # Description of this command
-			executable by: players # Console won't be able to run this command
-			trigger: # The actual trigger/code that will run when someone do /sethome
-				# Set a unique variable to sender's location
-				set {home::%uuid of player%} to location of player
-				# Send a message to the sender
-				message "Set your home to <grey>%location of player%<reset>"
-		
-		command /home:
-			permission: skript.home
-			description: Teleport yourself to your home
-			trigger:
-				# Check if that variable we used in /sethome has been set (in other words, if player ever ran /sethome)
-				if {home::%uuid of player%} is not set:
-					message "You have not set your home yet!"
-					stop trigger # stop the code here, lines below won't run
-				# Teleport the player to their home
-				teleport player to {home::%uuid of player%}
-				send "&aYou have been teleported."`} lang="applescript"/>
+		<Code class="p-4 rounded-md" code={`command /sethome:
+	permission: skript.home # Permission required for this command
+	description: Set your home # Description of this command
+	executable by: players # Console won't be able to run this command
+	trigger: # The actual trigger/code that will run when someone do /sethome
+		# Set a unique variable to sender's location
+		set {home::%uuid of player%} to location of player
+		# Send a message to the sender
+		message "Set your home to <grey>%location of player%<reset>"
+
+command /home:
+	permission: skript.home
+	description: Teleport yourself to your home
+	trigger:
+		# Check if that variable we used in /sethome has been set (in other words, if player ever ran /sethome)
+		if {home::%uuid of player%} is not set:
+			message "You have not set your home yet!"
+			stop trigger # stop the code here, lines below won't run
+		# Teleport the player to their home
+		teleport player to {home::%uuid of player%}
+		send "&aYou have been teleported."`} lang="applescript"/>
 	</div>
 
 	<div class="mb-20 p-4 m-auto flex flex-row gap-4 w-fit">
 		<span>By <a class="underline font-bold text-blue-300" href="https://efnilite.dev">Efnilite</a></span>
 		&middot;
-		<span>Generated on {new Date().toLocaleDateString()}</span>
+		<span>Last updated at {new Date().toLocaleDateString()}</span>
 	</div>
 </Page>

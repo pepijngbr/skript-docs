@@ -12,16 +12,38 @@
         }
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const container = document.getElementById("search-container");
-        const input = document.getElementById("search-input");
+    const container = document.getElementById("search-container")!!;
+    const input = document.getElementById("search-input")!!;
 
-        if (container == null || input == null) {
-            return;
-        }
+    container.addEventListener("click", () => {
+        input.focus();
+    });
 
-        container.addEventListener("click", () => {
-            input.focus();
+    input.addEventListener("input", event => {
+        const value = input.value.toLowerCase().trim();
+
+        const parents = [...document.querySelectorAll("section")!!];
+        parents.forEach(parent => {
+            console.log(parent);
+            
+            const elements = [...parent.querySelectorAll("button, p, h1")!!];
+
+            let contains = false
+            elements.forEach(element => {
+                if (contains == true) {
+                    return;
+                }
+
+                const text = element.textContent?.toLowerCase() ?? "";
+
+                contains = contains || text.includes(value);
+            })
+
+            if (contains) {
+                parent.classList.remove("hidden");
+            } else {
+                parent.classList.add("hidden");
+            }
         });
     });
 </script>

@@ -18,8 +18,10 @@ const { syntax }: Props = Astro.props;
     <h2>Syntax</h2>
     
     {syntax.map(x => 
-        <button class="text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
-            {x}
-        </button>
+        <section>
+            <button class="w-full text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
+                {x}
+            </button>
+        </section>
     )}
 </div>
