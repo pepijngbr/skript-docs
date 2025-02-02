@@ -2,11 +2,12 @@
 import { Code } from "astro:components";
 import DocsFiche from "./DocsFiche.astro";
 import DocData from "./DocData.astro";
+import { DocType } from "./Docs.astro";
 
-export interface DocType {
+export interface Documentation {
     id: string,
     new: boolean;
-    type: string;
+    type: DocType;
     name: string;
     description: string[];
     since: string | null;
@@ -19,28 +20,28 @@ export interface DocType {
 }
 
 interface Props {
-    docType: DocType;
+    docType: Documentation;
 }
 
 const { docType }: Props = Astro.props;
 
 function color(): string {
     switch (docType.type) {
-        case "Event":
+        case DocType.EVENT:
             return "0099B3";
-        case "Condition":
+        case DocType.CONDITION:
             return "6f1896";
-        case "Effect":
+        case DocType.EFFECT:
             return "337A00";
-        case "Expression":
+        case DocType.EXPRESSION:
             return "006e43";
-        case "Function":
+        case DocType.FUNCTION:
             return "b25f0d";
-        case "Class":
+        case DocType.CLASS:
             return "0d41b2";
-        case "Section":
-            return "FFD700";
-        case "Structure":
+        case DocType.SECTION:
+            return "718400";
+        case DocType.STRUCTURE:
             return "7a0074";
         default:
             return "000000";
@@ -48,14 +49,15 @@ function color(): string {
 }
 ---
 
-<div data-new={docType.new} data-type={docType}
+<div data-new={docType.new} data-type={docType.type} data-since={docType.since}
     class="p-6 flex flex-col gap-4 rounded-md
     bg-l-bg-secondary dark:bg-d-bg-secondary">
 
     <div class="flex flex-col gap-2">
         <div class="flex flex-row gap-3">
             <h1>{docType.name}</h1>
-            <DocsFiche text="New" color="B10003"/>
+            {[docType.new].filter(x => x).map(x => <DocsFiche text="New" color="B10003"/>)}
+
             <DocsFiche text={docType.type} color={color()}/>
             <div class="flex-auto relative -top-37" id={docType.id}></div> <!-- Anchor all the way up or else its in the nav bar -->
             <div class="p-2 my-auto rounded-full hover:bg-l-icon-hover dark:hover:bg-d-icon-hover

@@ -1,9 +1,35 @@
 ---
-const types = ["All", "New", "Events", "Conditions", "Sections", "Effects", "Types", "Structures", "Functions"]
-const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
+const rtTypes = ["All", "New", "Classes", "Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures"]
+const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
 ---
 
 <script>
+    enum _DocType {
+        UNKNOWN = "All",
+        NEW = "New",
+        CLASS = "Class",
+        CONDITION = "Condition",
+        EFFECT = "Effect",
+        EVENT = "Event",
+        EXPRESSION = "Expression",
+        FUNCTION = "Function",
+        SECTION = "Section",
+        STRUCTURE = "Structure"
+    }
+
+    const types: any = {
+        "All": _DocType.UNKNOWN,
+        "New": _DocType.NEW,
+        "Classes": _DocType.CLASS,
+        "Conditions": _DocType.CONDITION,
+        "Effects": _DocType.EFFECT,
+        "Events": _DocType.EVENT,
+        "Expressions": _DocType.EXPRESSION,
+        "Functions": _DocType.FUNCTION,
+        "Sections": _DocType.SECTION,
+        "Structures": _DocType.STRUCTURE
+    }
+
     export interface Filter {
         type: string;
         version: string;
@@ -12,10 +38,11 @@ const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
     let filter: Filter = {type: "All", version: "All"}
 
     function handleClick(button: HTMLButtonElement) {
-        if (button.getAttribute("data-type") === "type") {
-            filter.type = button.textContent!!;
+        const isType = button.getAttribute("data-type") === "type";
+        if (isType) {
+            filter.type = button.textContent!!.trim();
         } else {
-            filter.version = button.textContent!!;
+            filter.version = button.textContent!!.trim();
         }
 
         // update rest of buttons
@@ -23,9 +50,9 @@ const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
         buttons.forEach(button => {
             let match = false;
             if (button.getAttribute("data-type") === "type") {
-                match = filter.type == button.textContent!!;
+                match = filter.type == button.textContent!!.trim();
             } else {
-                match = filter.version == button.textContent!!;
+                match = filter.version == button.textContent!!.trim();
             }
 
             if (match) {
@@ -37,8 +64,23 @@ const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
             }
         });
 
-        const event = new CustomEvent("updatefilters", { detail: filter });
-        window.dispatchEvent(event);
+        [...document.getElementById("docs")!!.children].forEach(element => {
+            if (isType) {
+                if (filter.type == "All") {
+                    element.classList.remove("hidden");
+                } else if (filter.type == "New") {
+                    element.classList.toggle("hidden", element.getAttribute("data-new") !== "true");
+                } else {      
+                    element.classList.toggle("hidden", element.getAttribute("data-type") !== types[filter.type].toString());
+                }
+            } else {
+                if (filter.version == "All") {
+                    element.classList.remove("hidden");
+                } else {
+                    element.classList.toggle("hidden", !element.getAttribute("data-since")?.includes(filter.version));
+                }
+            }
+        });
     }
 
     function resetButtons() {
@@ -102,7 +144,7 @@ const versions = ["All", "2.10.0", "2.9.0", "2.8.0", "2.7.0"]
         <h3>Type</h3>
         
         <div class="w-fit flex flex-row flex-wrap gap-2">
-            {types.map(x => 
+            {rtTypes.map(x => 
                 <button data-type="type" class="filter-button p-2 rounded-md 
                     bg-l-bg-secondary dark:bg-d-bg-secondary 
                     hover:cursor-pointer hover:opacity-80 transition">

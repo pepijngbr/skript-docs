@@ -29,7 +29,7 @@ interface Props {
 const { selected }: Props = Astro.props;
 ---
 
-<div class="flex flex-row mb-20">
+<div class="flex flex-col lg:flex-row mb-20">
     <TutorialsOverview selected={selected} tutorials={tutorials}/>
     <div class="flex flex-col gap-4">
         <div class="m-4 px-4 md:pl-24 md:pr-64 py-4 rounded-md flex-auto h-fit flex flex-col gap-2">

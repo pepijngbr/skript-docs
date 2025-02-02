@@ -2,11 +2,11 @@
 import docs from "../../assets/docs/docs.json";
 ---
 
-<div class="flex flex-row gap-6 font-bold">
+<div class="w-fit sm:w-24 md:w-48 flex flex-row-reverse gap-6 font-bold">
+    <a href={`https://github.com/SkriptLang/Skript/releases/tag/${docs.skriptVersion}`} 
+        class="hidden lg:block my-auto hover:underline">{docs.skriptVersion}</a>
     <a href="/" class="-m-2 p-2 flex flex-row text-5xl">
         <span>sk</span>
         <span class="m-0 text-skript">.</span>
     </a>
-    <a href={`https://github.com/SkriptLang/Skript/releases/tag/${docs.skriptVersion}`} 
-        class="hidden lg:block m-auto hover:underline">{docs.skriptVersion}</a>
 </div>

@@ -1,9 +1,8 @@
 ---
-import Doc, { type DocType } from './Doc.astro';
+import Doc, { type Documentation } from './Doc.astro';
 import DocsFilters from './DocsFilters.astro';
 import DocsSyntax from './DocsSyntax.astro';
 import docs from '../../assets/docs/docs.json';
-import { undefined } from 'astro:schema';
 
 const latest = docs.skriptVersion;
 const all = [...docs.classes, ...docs.conditions, ...docs.effects, 
@@ -12,10 +11,10 @@ const all = [...docs.classes, ...docs.conditions, ...docs.effects,
 
 const names = all.map(x => x.name);
 
-const docTypes: DocType[] = all.map(doc => ({
+const docTypes: Documentation[] = all.map(doc => ({
     id: doc.id,
     name: doc.name,
-    new: doc.since?.includes(latest) || false,
+    new: doc.since?.includes(latest.split(".").slice(0, 2).join(".")) || false,
     type: type(doc),
     since: (doc.since as string),
     description: doc.description,
@@ -27,23 +26,32 @@ const docTypes: DocType[] = all.map(doc => ({
     events: null
 }));
 
-function type(doc: any): string {
-    return docs.classes.includes(doc) ? "Class" :
-    docs.conditions.includes(doc) ? "Condition" :
-    docs.effects.includes(doc) ? "Effect" :
-    docs.events.includes(doc) ? "Event" :
-    docs.expressions.includes(doc) ? "Expression" :
-    docs.functions.includes(doc) ? "Function" :
-    docs.sections.includes(doc) ? "Section" :
-    docs.structures.includes(doc) ? "Structure" : "Unknown";
+export enum DocType {
+    UNKNOWN = "All",
+    NEW = "New",
+    CLASS = "Class",
+    CONDITION = "Condition",
+    EFFECT = "Effect",
+    EVENT = "Event",
+    EXPRESSION = "Expression",
+    FUNCTION = "Function",
+    SECTION = "Section",
+    STRUCTURE = "Structure"
+}
+
+function type(doc: any): DocType {
+    return docs.classes.includes(doc) ? DocType.CLASS :
+    docs.conditions.includes(doc) ? DocType.CONDITION :
+    docs.effects.includes(doc) ? DocType.EFFECT :
+    docs.events.includes(doc) ? DocType.EVENT :
+    docs.expressions.includes(doc) ? DocType.EXPRESSION :
+    docs.functions.includes(doc) ? DocType.FUNCTION :
+    docs.sections.includes(doc) ? DocType.SECTION :
+    docs.structures.includes(doc) ? DocType.STRUCTURE : DocType.UNKNOWN;
 }
 ---
 
 <script>
-    window.addEventListener("updatefilters", e => {
-        console.log((e as CustomEvent).detail);
-    });
-
     function update() {
         let diff = 0;
         if (screen.width > 768) {
