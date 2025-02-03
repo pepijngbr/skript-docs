@@ -1,7 +1,7 @@
 ---
 import Doc, { type Documentation } from './Doc.astro';
 import DocsFilters from './DocsFilters.astro';
-import DocsSyntax from './DocsSyntax.astro';
+import DocsSyntaxes from './DocsSyntaxes.astro';
 import docs from '../../assets/docs/docs.json';
 
 const latest = docs.skriptVersion;
@@ -73,7 +73,7 @@ function type(doc: any): DocType {
 </script>
 
 <div class="flex flex-col-reverse md:flex-row">
-    <DocsSyntax docTypes={docTypes}/>
+    <DocsSyntaxes docTypes={docTypes}/>
 
     <div id="docs" class="p-6 flex-auto h-fit flex flex-col gap-4">
         {docTypes.map(x => <Doc docType={x}/>)}

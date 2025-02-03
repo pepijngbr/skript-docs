@@ -64,7 +64,13 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
             }
         });
 
-        [...document.getElementById("docs")!!.children].forEach(element => {
+        [...document.getElementById("docs")!!.children,
+        ...document.getElementById("syntax")!!.children
+        ].forEach(element => {
+            if (element instanceof HTMLHeadingElement) {
+                return;
+            }
+
             if (isType) {
                 if (filter.type == "All") {
                     element.classList.remove("hidden-by-type");

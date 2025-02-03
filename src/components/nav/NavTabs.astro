@@ -19,7 +19,7 @@ const pages: TabData[] = [
     { name: "Tools", link: "../tools", color: "0099B3" }
 ];
 
-let active;
+let active: TabData | null = null;
 switch (type) {
     case PageType.DOCS:
         active = pages[0];
@@ -35,7 +35,7 @@ switch (type) {
 
 <div class="w-fit pt-1 m-auto flex flex-row gap-2 sm:gap-4 text-xl text-white">
     {pages.map(page => {
-        if (active.name === page.name) {
+        if (active?.name === page.name) {
             return <div class="flex flex-col gap-1">
                 <a href={page.link} class="outfit px-4 sm:px-8 py-1 m-auto rounded-md font-bold shadow-lg"
                     style={{ backgroundColor: `#${page.color}` }}>
