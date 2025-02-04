@@ -5,7 +5,7 @@ import { Code } from "astro:components";
 ---
 
 <Page title="Skript Docs">
-	<Nav type={PageType.DOCS}/>
+	<Nav type={PageType.OTHER}/>
 	<div class="p-4 m-auto flex flex-col gap-4 lg:w-200">
 		<h1>Skript</h1>
 		<p>
@@ -21,7 +21,7 @@ import { Code } from "astro:components";
 			You will find all supported features of the plugin here, along with some useful examples. 
 		</p>
 
-		<Code class="p-4 rounded-md" code={`command /sethome:
+		<Code code={`command /sethome:
 	permission: skript.home # Permission required for this command
 	description: Set your home # Description of this command
 	executable by: players # Console won't be able to run this command

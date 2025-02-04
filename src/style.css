@@ -58,3 +58,7 @@ p a {
 .outfit {
     font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova","Nimbus Sans", Arial, sans-serif;
 }
+
+pre {
+    @apply p-4 rounded-md;
+}
