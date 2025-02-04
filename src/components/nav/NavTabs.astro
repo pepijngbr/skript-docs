@@ -41,14 +41,16 @@ switch (type) {
                     style={{ backgroundColor: `#${page.color}` }}>
                     {page.name}
                 </a>
-                <div class="w-full h-1" 
-                    style={{ backgroundColor: `#${page.color}` }}></div>
+                <div class="w-full h-1" style={{ backgroundColor: `#${page.color}` }}></div>
             </div>
         } else {
-            return <a href={page.link} class="outfit mt-0 px-4 sm:px-8 py-1 m-auto rounded-md hover:cursor-pointer"
-                style={{ backgroundColor: `#${page.color}` }}>
-                {page.name}
-            </a>
+            return <div class="flex flex-col gap-1">
+                <a href={page.link} class="outfit mt-0 px-4 sm:px-8 py-1 m-auto rounded-md hover:cursor-pointer"
+                    style={{ backgroundColor: `#${page.color}` }}>
+                    {page.name}
+                </a>
+                <div class="w-full h-1"></div>
+            </div>
         }
     })}
 </div>
