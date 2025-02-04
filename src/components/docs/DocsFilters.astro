@@ -103,14 +103,21 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
         resetButtons();
     });
 
-    document.getElementById("filter-clear")!!.addEventListener("click", resetButtons);
+    const expand = document.getElementById("filter-expand-button")!!;
+    const expandIcon = document.getElementById("filter-expand-icon")!!;
+    const filterElements = document.getElementById("filter-expand-area")!!;
+    document.getElementById("filter-clear")!!.addEventListener("click", () => {
+        // double fire eventts to avoid clear button opening the filter menu
+        filterElements.classList.toggle("hidden");
+        filterElements.classList.toggle("flex");
+        expandIcon.querySelector("svg")!!.classList.toggle("rotate-90");
+        resetButtons();
+    });
 
-    const expand = document.getElementById("filter-expand")!! as HTMLButtonElement;
     expand.addEventListener("click", () => {
-        const filters = document.getElementById("filter-expand-area")!!;
-        filters.classList.toggle("hidden");
-        filters.classList.toggle("flex");
-        expand.querySelector("svg")!!.classList.toggle("rotate-90");
+        filterElements.classList.toggle("hidden");
+        filterElements.classList.toggle("flex");
+        expandIcon.querySelector("svg")!!.classList.toggle("rotate-90");
     });
 
     if (screen.width > 768) {
@@ -123,7 +130,7 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
     filters.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;
     
     window.addEventListener("DOMContentLoaded", () => {
-        filters.classList.remove("!fixed");
+        filters.classList.remove("!fixed"); // fix layout shift on
     });
 </script>
 
@@ -132,14 +139,15 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
     border-b-2 md:border-b-0 md:border-l-2 border-l-border dark:border-d-border
     md:bg-l-bg dark:bg-d-bg
     overflow-y-hidden">
-    <div class="flex flex-row gap-2">
+
+    <div id="filter-expand-button" class="p-4 -m-4 flex flex-row gap-2 hover:cursor-pointer">
         <h2>Filter by</h2>
         <div class="flex-auto"></div>
         <button id="filter-clear" class="px-2 w-fit rounded-sm 
             hover:cursor-pointer hover:opacity-80 transition">
             Clear
         </button>
-        <button id="filter-expand" class="block md:hidden px-2 w-fit rounded-sm 
+        <button id="filter-expand-icon" class="block md:hidden px-2 w-fit rounded-sm 
             hover:cursor-pointer hover:opacity-80 transition">
             <svg class="transition rotate-90" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.60627 10.8563L5.88752 8.1375C5.85002 8.1 5.82202 8.0595 5.80352 8.016C5.78502 7.9725 5.77552 7.9255 5.77502 7.875C5.77502 7.775 5.80952 7.6875 5.87852 7.6125C5.94752 7.5375 6.03802 7.5 6.15002 7.5H11.85C11.9625 7.5 12.0533 7.5375 12.1223 7.6125C12.1913 7.6875 12.2255 7.775 12.225 7.875C12.225 7.9 12.1875 7.9875 12.1125 8.1375L9.39377 10.8563C9.33127 10.9188 9.26877 10.9625 9.20627 10.9875C9.14377 11.0125 9.07502 11.025 9.00002 11.025C8.92502 11.025 8.85627 11.0125 8.79377 10.9875C8.73127 10.9625 8.66877 10.9188 8.60627 10.8563Z"/>
