@@ -70,6 +70,18 @@ function type(doc: any): DocType {
             example.classList.toggle("hidden");
         });
     });
+
+    document.querySelectorAll(".share").forEach((button) => {
+        button.addEventListener("click", () => {
+            const id = button.parentElement!!.querySelector(`.id`)!!.id;
+            const url = `${window.location.origin}${window.location.pathname}#${id}`;
+            navigator.clipboard.writeText(url);
+
+            const p = button.getElementsByTagName("p")[0];
+            p.classList.remove("hidden");
+            setTimeout(() => p.classList.add("hidden"), 2000);
+        });
+    });
 </script>
 
 <div class="flex flex-col-reverse md:flex-row">

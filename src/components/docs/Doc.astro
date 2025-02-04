@@ -54,25 +54,29 @@ function color(): string {
     bg-l-bg-secondary dark:bg-d-bg-secondary">
 
     <div class="flex flex-col gap-2">
-        <div class="flex flex-row gap-3">
+        <div class="flex flex-row gap-3 flex-wrap">
             <h1>{docType.name}</h1>
             {[docType.new].filter(x => x).map(x => <DocsFiche text="New" color="B10003"/>)}
 
             <DocsFiche text={docType.type} color={color()}/>
-            <div class="flex-auto relative -top-37" id={docType.id}></div> <!-- Anchor all the way up or else its in the nav bar -->
-            <div class="p-2 my-auto rounded-full hover:bg-l-icon-hover dark:hover:bg-d-icon-hover
+            <div class="id flex-auto relative -top-37" id={docType.id}></div> <!-- Anchor all the way up or else its in the nav bar -->
+            <button class="share flex flex-row-reverse gap-2 
+                        p-2 my-auto rounded-full 
+                        hover:bg-l-icon-hover dark:hover:bg-d-icon-hover
                         hover:cursor-pointer">
-                <svg width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
+                <p class="p-2 hidden absolute w-64 my-auto shadow-lg 
+                    rounded-full bg-l-icon-hover dark:bg-d-icon-hover">Copied to clipboard</p>
+                <svg class="my-auto" width="18" height="19" viewBox="0 0 18 19" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.75 17C12.125 17 11.5938 16.7812 11.1562 16.3438C10.7188 15.9062 10.5 15.375 10.5 14.75C10.5 14.675 10.5188 14.5 10.5562 14.225L5.2875 11.15C5.0875 11.3375 4.85625 11.4845 4.59375 11.591C4.33125 11.6975 4.05 11.7505 3.75 11.75C3.125 11.75 2.59375 11.5312 2.15625 11.0938C1.71875 10.6562 1.5 10.125 1.5 9.5C1.5 8.875 1.71875 8.34375 2.15625 7.90625C2.59375 7.46875 3.125 7.25 3.75 7.25C4.05 7.25 4.33125 7.30325 4.59375 7.40975C4.85625 7.51625 5.0875 7.663 5.2875 7.85L10.5562 4.775C10.5312 4.6875 10.5157 4.60325 10.5097 4.52225C10.5037 4.44125 10.5005 4.3505 10.5 4.25C10.5 3.625 10.7188 3.09375 11.1562 2.65625C11.5938 2.21875 12.125 2 12.75 2C13.375 2 13.9062 2.21875 14.3438 2.65625C14.7812 3.09375 15 3.625 15 4.25C15 4.875 14.7812 5.40625 14.3438 5.84375C13.9062 6.28125 13.375 6.5 12.75 6.5C12.45 6.5 12.1687 6.44675 11.9062 6.34025C11.6438 6.23375 11.4125 6.087 11.2125 5.9L5.94375 8.975C5.96875 9.0625 5.9845 9.147 5.991 9.2285C5.9975 9.31 6.0005 9.4005 6 9.5C5.9995 9.5995 5.9965 9.69025 5.991 9.77225C5.9855 9.85425 5.96975 9.9385 5.94375 10.025L11.2125 13.1C11.4125 12.9125 11.6438 12.7657 11.9062 12.6597C12.1687 12.5537 12.45 12.5005 12.75 12.5C13.375 12.5 13.9062 12.7188 14.3438 13.1562C14.7812 13.5938 15 14.125 15 14.75C15 15.375 14.7812 15.9062 14.3438 16.3438C13.9062 16.7812 13.375 17 12.75 17Z"/>
                     </svg>
-            </div>
+            </button>
         </div>
         {docType.description.map((line: string) => <p><Fragment set:html={line}/></p>)}
     </div>
 
     {[docType.patterns]
         .filter(x => x !== null)
-        .map(x => <Code class="p-4 rounded-md" code={`${x.join("\n")}`} lang="applescript"/>)}
+        .map(x => <Code class="textp-4 rounded-md" code={`${x.join("\n")}`} lang="applescript"/>)}
 
     <div>
         <DocData text="Since" value={docType.since}/>
