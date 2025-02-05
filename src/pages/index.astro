@@ -10,7 +10,7 @@ import { Code } from "astro:components";
 		<h1>Skript</h1>
 		<p>
 			... is a scripting plugin for the Bukkit platform. 
-			It is easy to use for simple tasks, but you can also create really complex things with it. 
+			It is easy to use for simple tasks, and you can also create really complex things with it. 
 			The syntax of Skript is close to English, but it is still not magic. 
 			While you might succeed with experimentation for simple tasks, 
 			for anything more complex you will need some guidance.
@@ -47,6 +47,7 @@ command /home:
 	<div class="mb-20 p-4 m-auto flex flex-row gap-4 w-fit">
 		<span>By <a class="underline font-bold text-blue-300" href="https://efnilite.dev">Efnilite</a></span>
 		&middot;
-		<span>Last updated at {new Date().toLocaleDateString()}</span>
+		<span>Last updated at {new Date().toLocaleDateString("nls")}</span> 
+		<!-- DD/MM/YYYY (the correct format) -->
 	</div>
 </Page>

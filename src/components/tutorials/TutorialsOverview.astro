@@ -20,13 +20,13 @@ const { selected, tutorials }: Props = Astro.props;
             border-b-2 md:border-b-0 md:border-r-2 border-l-border dark:border-d-border">
     {tutorials.map(x => {
         if (x.title === selected) {
-            return <a href={`../tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
+            return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
                 bg-skript hover:cursor-pointer
                 font-bold text-white">
                 {x.title}
             </a>
         } else {
-            return <a href={`../tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
+            return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
                 bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer
                 font-bold">
                 {x.title}

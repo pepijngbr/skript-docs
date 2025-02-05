@@ -18,7 +18,7 @@ const docTypes: Documentation[] = all.map(doc => ({
     type: type(doc),
     since: (doc.since as string),
     description: doc.description,
-    examples: doc.examples!!,
+    examples: doc.examples || null,
     patterns: (doc.patterns?.length === 1 && doc.patterns?.[0] === "") ? null : (doc.patterns || null),
     requirements: null,
     eventValues: null,
