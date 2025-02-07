@@ -9,8 +9,6 @@ const all = [...docs.classes, ...docs.conditions, ...docs.effects,
             ...docs.events, ...docs.expressions, ...docs.functions,
             ...docs.sections, ...docs.structures].toSorted((x, y) => x.name.localeCompare(y.name));
 
-const names = all.map(x => x.name);
-
 const docTypes: Documentation[] = all.map(doc => ({
     id: doc.id,
     name: doc.name,
@@ -40,14 +38,7 @@ export enum DocType {
 }
 
 function type(doc: any): DocType {
-    return docs.classes.includes(doc) ? DocType.CLASS :
-    docs.conditions.includes(doc) ? DocType.CONDITION :
-    docs.effects.includes(doc) ? DocType.EFFECT :
-    docs.events.includes(doc) ? DocType.EVENT :
-    docs.expressions.includes(doc) ? DocType.EXPRESSION :
-    docs.functions.includes(doc) ? DocType.FUNCTION :
-    docs.sections.includes(doc) ? DocType.SECTION :
-    docs.structures.includes(doc) ? DocType.STRUCTURE : DocType.UNKNOWN;
+    return DocType.CLASS;
 }
 ---
 
@@ -85,9 +76,17 @@ function type(doc: any): DocType {
 </script>
 
 <div class="flex flex-col-reverse md:flex-row">
-    <DocsSyntaxes docTypes={docTypes}/>
+    <DocsSyntaxes syntaxes={docTypes.map(syntax => {
+        return {
+            id: syntax.id,
+            isNew: syntax.new,
+            type: syntax.type,
+            since: syntax.since!!,
+            name: syntax.name
+        }
+    })}/>
 
-    <div id="docs" class="p-6 flex-auto h-fit flex flex-col gap-4">
+    <div id="docs" class="p-2 md:p-6 flex-auto h-fit flex flex-col gap-2 md:gap-4">
         {docTypes.map(x => <Doc docType={x}/>)}
     </div>
 

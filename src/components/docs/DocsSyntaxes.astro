@@ -1,12 +1,11 @@
 ---
-import type { Documentation } from './Doc.astro';
-import DocsSyntax from './DocsSyntax.astro';
+import DocsSyntax, { type Syntax } from './DocsSyntax.astro';
 
 interface Props {
-    docTypes: Documentation[];
+    syntaxes: Syntax[];
 }
 
-const { docTypes }: Props = Astro.props;
+const { syntaxes }: Props = Astro.props;
 ---
 
 <script>
@@ -20,5 +19,5 @@ const { docTypes }: Props = Astro.props;
             border-r-2 border-l-border dark:border-d-border overflow-y-auto">
     <h2>Syntax</h2>
     
-    {docTypes.map(docType => <DocsSyntax docType={docType}/>)}
+    {syntaxes.map(syntax => <DocsSyntax syntax={syntax}/>)}
 </div>

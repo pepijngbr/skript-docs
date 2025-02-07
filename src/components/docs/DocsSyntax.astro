@@ -1,17 +1,25 @@
 ---
-import type { Documentation } from './Doc.astro';
+import type { DocType } from './Docs.astro';
 
-interface Props {
-    docType: Documentation;
+export interface Syntax {
+    id: string;
+    isNew: boolean;
+    type: DocType;
+    since: string;
+    name: string;
 }
 
-const { docType }: Props = Astro.props;
+interface Props {
+    syntax: Syntax;
+}
+
+const { syntax }: Props = Astro.props;
 ---
 
-<a href={`#${docType.id}`}
-    data-new={docType.new} data-type={docType.type} data-since={docType.since} 
+<a href={`#${syntax.id}`}
+    data-new={syntax.isNew} data-type={syntax.type} data-since={syntax.since} 
     class="w-full text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
-    {docType.name}
+    {syntax.name}
 </a>
 
 <style>

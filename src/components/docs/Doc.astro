@@ -50,7 +50,7 @@ function color(): string {
 ---
 
 <section data-new={docType.new} data-type={docType.type} data-since={docType.since}
-    class="p-6 flex flex-col gap-4 rounded-md
+    class="p-4 md:p-6 flex flex-col gap-4 rounded-md
     bg-l-bg-secondary dark:bg-d-bg-secondary">
 
     <div class="flex flex-col gap-2">
@@ -76,7 +76,7 @@ function color(): string {
 
     {[docType.patterns]
         .filter(x => x !== null)
-        .map(x => <Code class="textp-4 rounded-md" code={`${x.join("\n")}`} lang="applescript"/>)}
+        .map(x => <Code code={`${x.join("\n")}`} lang="applescript"/>)}
 
     <div>
         <DocData text="Since" value={docType.since}/>
