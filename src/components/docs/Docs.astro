@@ -38,7 +38,14 @@ export enum DocType {
 }
 
 function type(doc: any): DocType {
-    return DocType.CLASS;
+    return docs.classes.includes(doc) ? DocType.CLASS :
+    docs.conditions.includes(doc) ? DocType.CONDITION :
+    docs.effects.includes(doc) ? DocType.EFFECT :
+    docs.events.includes(doc) ? DocType.EVENT :
+    docs.expressions.includes(doc) ? DocType.EXPRESSION :
+    docs.functions.includes(doc) ? DocType.FUNCTION :
+    docs.sections.includes(doc) ? DocType.SECTION :
+    docs.structures.includes(doc) ? DocType.STRUCTURE : DocType.UNKNOWN;
 }
 ---
 
@@ -68,9 +75,11 @@ function type(doc: any): DocType {
             const url = `${window.location.origin}${window.location.pathname}#${id}`;
             navigator.clipboard.writeText(url);
 
-            const p = button.getElementsByTagName("p")[0];
-            p.classList.remove("hidden");
-            setTimeout(() => p.classList.add("hidden"), 2000);
+            if (screen.width > 768) {
+                const p = button.getElementsByTagName("p")[0];
+                p.classList.remove("hidden");
+                setTimeout(() => p.classList.add("hidden"), 2000);
+            }
         });
     });
 </script>

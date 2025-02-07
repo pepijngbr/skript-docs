@@ -18,16 +18,6 @@ const { syntax }: Props = Astro.props;
 
 <a href={`#${syntax.id}`}
     data-new={syntax.isNew} data-type={syntax.type} data-since={syntax.since} 
-    class="w-full text-left p-2 rounded-md bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer">
+    class="syntax">
     {syntax.name}
 </a>
-
-<style>
-    .hidden-by-type {
-        display: none;
-    }
-
-    .hidden-by-version {
-        display: none;
-    }
-</style>

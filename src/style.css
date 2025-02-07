@@ -32,9 +32,17 @@
     --color-d-border: #3A3A3A;
 }
 
-html, body {
+* {
+    /* scrollbar-width: thin;
+    scrollbar-color: var(--color-l-search-fill) var(--color-l-bg); */
+
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
+}
+
+body, .dark {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-d-search-fill) var(--color-d-bg);
 }
 
 h1 {
@@ -56,9 +64,40 @@ p a {
 }
 
 .outfit {
-    font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova","Nimbus Sans", Arial, sans-serif;
+    font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
 }
 
 pre {
     @apply p-4 rounded-md;
+}
+
+.hidden-by-type {
+    display: none;
+}
+
+.hidden-by-version {
+    display: none;
+}
+
+.syntax {
+    @apply w-full text-left p-2 rounded-md 
+        bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer
+        break-words;
+}
+
+.doc-container {
+    @apply p-4 md:p-6 flex flex-col gap-4 rounded-md
+      bg-l-bg-secondary dark:bg-d-bg-secondary;
+}
+
+.share {
+    @apply flex flex-row-reverse gap-2 
+        p-2 my-auto rounded-full 
+        hover:bg-l-icon-hover dark:hover:bg-d-icon-hover
+        hover:cursor-pointer;
+}
+
+.examples {
+    @apply pl-2 pr-4 py-1 w-fit rounded-md hover:cursor-pointer font-bold
+        flex flex-row gap-2 text-white;
 }
