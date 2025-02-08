@@ -37,7 +37,7 @@ function color(): string {
             return "006e43";
         case DocType.FUNCTION:
             return "b25f0d";
-        case DocType.CLASS:
+        case DocType.TYPE:
             return "0d41b2";
         case DocType.SECTION:
             return "718400";
@@ -83,7 +83,7 @@ function color(): string {
     </div>
 
     {[docType.examples]
-        .filter(x => x !== null && x !== undefined)
+        .filter(x => x !== null)
         .map(_ => 
         <button class="examples"
             style={{ backgroundColor: `#${color()}` }}>
@@ -96,7 +96,7 @@ function color(): string {
 
     <div class="example hidden">
         {[docType.examples]
-            .filter(x => x !== null && x !== undefined && x.length > 0)
+            .filter(x => x !== null)
             .map(x => <Code code={`${x?.join("\n")}`} lang="applescript"/>)}
     </div>
 </section>

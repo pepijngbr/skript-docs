@@ -16,7 +16,7 @@ const docTypes: Documentation[] = all.map(doc => ({
     type: type(doc),
     since: (doc.since as string),
     description: doc.description,
-    examples: doc.examples || null,
+    examples: (doc.examples?.length === 1 && doc.examples?.[0] === "") ? null : (doc.examples || null),
     patterns: (doc.patterns?.length === 1 && doc.patterns?.[0] === "") ? null : (doc.patterns || null),
     requirements: null,
     eventValues: null,
@@ -27,7 +27,7 @@ const docTypes: Documentation[] = all.map(doc => ({
 export enum DocType {
     UNKNOWN = "All",
     NEW = "New",
-    CLASS = "Class",
+    TYPE = "Type",
     CONDITION = "Condition",
     EFFECT = "Effect",
     EVENT = "Event",
@@ -38,7 +38,7 @@ export enum DocType {
 }
 
 function type(doc: any): DocType {
-    return docs.classes.includes(doc) ? DocType.CLASS :
+    return docs.classes.includes(doc) ? DocType.TYPE :
     docs.conditions.includes(doc) ? DocType.CONDITION :
     docs.effects.includes(doc) ? DocType.EFFECT :
     docs.events.includes(doc) ? DocType.EVENT :

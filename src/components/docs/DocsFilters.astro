@@ -1,5 +1,5 @@
 ---
-const rtTypes = ["All", "New", "Classes", "Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures"]
+const rtTypes = ["All", "New", "Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures", "Types"]
 const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
 ---
 
@@ -7,7 +7,7 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
     enum _DocType {
         UNKNOWN = "All",
         NEW = "New",
-        CLASS = "Class",
+        TYPE = "Type",
         CONDITION = "Condition",
         EFFECT = "Effect",
         EVENT = "Event",
@@ -20,7 +20,7 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
     const types: any = {
         "All": _DocType.UNKNOWN,
         "New": _DocType.NEW,
-        "Classes": _DocType.CLASS,
+        "Types": _DocType.TYPE,
         "Conditions": _DocType.CONDITION,
         "Effects": _DocType.EFFECT,
         "Events": _DocType.EVENT,

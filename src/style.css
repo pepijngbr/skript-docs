@@ -72,11 +72,11 @@ pre {
 }
 
 .hidden-by-type {
-    display: none;
+    display: none !important;
 }
 
 .hidden-by-version {
-    display: none;
+    display: none !important;
 }
 
 .syntax {
