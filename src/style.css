@@ -32,7 +32,7 @@
     --color-d-border: #3A3A3A;
 }
 
-* {
+body, p, div, table {
     /* scrollbar-width: thin;
     scrollbar-color: var(--color-l-search-fill) var(--color-l-bg); */
 
