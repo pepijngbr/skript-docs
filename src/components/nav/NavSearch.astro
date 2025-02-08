@@ -23,7 +23,7 @@
     input.addEventListener("input", event => {
         const value = input.value.toLowerCase().trim();
 
-        [...document.getElementById("docs")!!.children].forEach(parent => {
+        [...document.getElementById("docs")?.children ?? []].forEach(parent => {
             const elements = [...parent.querySelectorAll("a, p, h1")!!];
 
             let contains = false

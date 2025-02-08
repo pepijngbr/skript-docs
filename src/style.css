@@ -48,14 +48,21 @@ body, .dark {
 h1 {
     font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
 }
 
 h2 {
     font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova",
+        "Nimbus Sans", Arial, sans-serif;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -108,4 +115,13 @@ pre {
 
 td, th {
     @apply p-1;
+}
+
+th, tr:nth-child(even) {
+    @apply 
+        bg-l-bg-secondary dark:bg-d-bg-secondary;
+}
+
+ul {
+    @apply list-disc list-inside;
 }

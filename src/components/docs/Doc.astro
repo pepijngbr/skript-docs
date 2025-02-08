@@ -52,9 +52,9 @@ function color(): string {
 <section data-new={docType.new} data-type={docType.type} data-since={docType.since}
     class="doc-container">
 
-    <div class="flex-col gap-2">
+    <div class="flex flex-col gap-1">
         <div class="flex flex-row gap-3 flex-wrap">
-            <h1>{docType.name}</h1>
+            <h2>{docType.name}</h2>
             {[docType.new].filter(x => x).map(x => <DocsFiche text="New" color="B10003"/>)}
 
             <DocsFiche text={docType.type} color={color()}/>
