@@ -86,6 +86,10 @@ pre {
     display: none !important;
 }
 
+.hidden-by-search {
+    display: none !important;
+}
+
 .syntax {
     @apply w-full text-left p-2 rounded-md 
         bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer
