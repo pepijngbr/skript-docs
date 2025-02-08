@@ -126,6 +126,6 @@ ul {
     @apply list-disc list-inside;
 }
 
-.-rotate-90 {
-    @apply -rotate-90;
+.-r-90 {
+    @apply transform -rotate-90;
 }

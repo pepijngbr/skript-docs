@@ -64,7 +64,7 @@ function type(doc: any): DocType {
     document.querySelectorAll("button.examples").forEach((button) => {
         button.addEventListener("click", () => {
             const example = button.parentElement!!.querySelector(`.example`)!!;
-            button.querySelector("svg")?.classList.toggle("-rotate-90");
+            button.querySelector("svg")?.classList.toggle("-r-90");
             example.classList.toggle("hidden");
         });
     });
