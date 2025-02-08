@@ -61,10 +61,10 @@ function type(doc: any): DocType {
     window.addEventListener("resize", update);
     window.addEventListener("DOMContentLoaded", update);
 
-    document.querySelectorAll(".examples").forEach((button) => {
+    document.querySelectorAll("button.examples").forEach((button) => {
         button.addEventListener("click", () => {
             const example = button.parentElement!!.querySelector(`.example`)!!;
-            button.getElementsByTagName("svg")[0].classList.toggle("-rotate-90");
+            button.querySelector("svg")?.classList.toggle("-rotate-90");
             example.classList.toggle("hidden");
         });
     });
