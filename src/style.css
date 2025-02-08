@@ -125,3 +125,7 @@ th, tr:nth-child(even) {
 ul {
     @apply list-disc list-inside;
 }
+
+.-rotate-90 {
+    @apply -rotate-90;
+}
