@@ -85,6 +85,10 @@ pre {
         break-words;
 }
 
+.syntax-active {
+    @apply bg-skript;
+}
+
 .doc-container {
     @apply p-4 md:p-6 flex flex-col gap-4 rounded-md
       bg-l-bg-secondary dark:bg-d-bg-secondary;
@@ -100,4 +104,8 @@ pre {
 .examples {
     @apply pl-2 pr-4 py-1 w-fit rounded-md hover:cursor-pointer font-bold
         flex flex-row gap-2 text-white;
+}
+
+td, th {
+    @apply p-1;
 }

@@ -27,15 +27,17 @@
             const elements = [...parent.querySelectorAll("a, p, h1")!!];
 
             let contains = false
-            elements.forEach(element => {
-                if (contains == true) {
-                    return;
+            for (let i = 0; i < elements.length; i++) {
+                if (contains) {
+                    break;
                 }
 
-                const text = element.textContent?.toLowerCase() ?? "";
+                const text = elements[i].textContent?.toLowerCase() ?? "";
 
-                contains = contains || text.includes(value);
-            })
+                if (text.includes(value)) {
+                    contains = true;
+                }
+            }
 
             if (contains) {
                 parent.classList.remove("!hidden");
