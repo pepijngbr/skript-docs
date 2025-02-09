@@ -24,8 +24,8 @@ const docTypes: Documentation[] = all.map(doc => ({
     patterns: (doc.patterns?.length === 1 && doc.patterns?.[0] === "") ? null : (doc.patterns || null),
     requirements: null,
     eventValues: null,
-    returnType: null,
-    events: null
+    returnType: (doc as any)["return-type"] || null,
+    events: doc.events?.length === 0 ? null : (doc.events || null),
 }));
 
 export enum DocType {

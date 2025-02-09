@@ -1,5 +1,5 @@
 {
-  "skriptVersion": "2.10.0",
+  "skriptVersion": "2.10.1-nightly-90822ec89",
   "conditions": [
     {
       "id": "CondAlphanumeric",
@@ -17,7 +17,8 @@
       "patterns": [
         "%strings% (is|are) alphanumeric",
         "%strings% (isn't|is not|aren't|are not) alphanumeric"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondAnchorWorks",
@@ -33,7 +34,8 @@
       ],
       "patterns": [
         "respawn anchors [do[1:(n't| not)]] work in %worlds%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCancelled",
@@ -52,7 +54,8 @@
       "patterns": [
         "[the] event is cancel[l]ed",
         "[the] event (is not|isn't) cancel[l]ed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCanHold",
@@ -70,7 +73,8 @@
       "patterns": [
         "%inventories% (can hold|ha(s|ve) [enough] space (for|to hold)) %itemtypes%",
         "%inventories% (can(no|')t hold|(ha(s|ve) not|ha(s|ve)n't|do[es]n't have) [enough] space (for|to hold)) %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCanSee",
@@ -93,7 +97,8 @@
         "%players% can see %entities%",
         "%entities% (is|are)(n't| not) [visible|:invisible] for %players%",
         "%players% can('t| not) see %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondChance",
@@ -113,7 +118,8 @@
       ],
       "patterns": [
         "chance of %number%(1¦\\%|)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondChatVisibility",
@@ -138,7 +144,8 @@
         "%player% can('t|[ ]not) see any (command[s]|message[s]) [in chat]",
         "%player% can('t|[ ]not) see all messages [in chat]",
         "%player% can('t|[ ]not) only see (commands|system messages) [in chat]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondContains",
@@ -159,7 +166,8 @@
         "%inventories% (doesn't|does not|do not|don't) have %itemtypes% [in [(the[ir]|his|her|its)] inventory]",
         "%inventories/strings/objects% contain[(1¦s)] %itemtypes/strings/objects%",
         "%inventories/strings/objects% (doesn't|does not|do not|don't) contain %itemtypes/strings/objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondDamageCause",
@@ -187,7 +195,8 @@
       ],
       "patterns": [
         "[the] damage (was|is|has)(0¦|1¦n('|o)t) [been] (caused|done|made) by %damagecause%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondDate",
@@ -210,7 +219,8 @@
       "patterns": [
         "%date% (was|were)( more|(n't| not) less) than %timespan% [ago]",
         "%date% (was|were)((n't| not) more| less) than %timespan% [ago]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondElytraBoostConsume",
@@ -229,7 +239,8 @@
       "patterns": [
         "[the] (boosting|used) firework will be consumed",
         "[the] (boosting|used) firework (will not|won't) be consumed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondFromMobSpawner",
@@ -248,7 +259,8 @@
         "%entities% (isn't|aren't|is not|are not) from a [mob] spawner",
         "%entities% (was|were) spawned (from|by) a [mob] spawner",
         "%entities% (wasn't|weren't|was not|were not) spawned (from|by) a [mob] spawner"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasItemCooldown",
@@ -268,7 +280,8 @@
         "%players% (has|have) %itemtypes% on [(item|a)] cooldown",
         "%players% (doesn't|does not|do not|don't) have [([an] item|a)] cooldown (on|for) %itemtypes%",
         "%players% (doesn't|does not|do not|don't) have %itemtypes% on [(item|a)] cooldown"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasLineOfSight",
@@ -288,7 +301,8 @@
         "%livingentities% (has|have) [a] [direct] line of sight to %entities/locations%",
         "%livingentities% does(n't| not) have [a] [direct] line of sight to %entities/locations%",
         "%livingentities% (has|have) no [direct] line of sight to %entities/locations%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasMetadata",
@@ -305,7 +319,8 @@
       "patterns": [
         "%metadataholders% (has|have) metadata [(value|tag)[s]] %strings%",
         "%metadataholders% (doesn't|does not|do not|don't) have metadata [(value|tag)[s]] %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasPotion",
@@ -326,7 +341,8 @@
       "patterns": [
         "%livingentities% (has|have) potion[s] [effect[s]] %potioneffecttypes%",
         "%livingentities% (doesn't|does not|do not|don't) have potion[s] [effect[s]] %potioneffecttypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIgnitionProcess",
@@ -346,7 +362,8 @@
         "[creeper[s]] %livingentities% ((is|are)|1¦(isn't|is not|aren't|are not)) going to explode",
         "[creeper[s]] %livingentities% ((is|are)|1¦(isn't|is not|aren't|are not)) in the (ignition|explosion) process",
         "creeper[s] %livingentities% ((is|are)|1¦(isn't|is not|aren't|are not)) ignited"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIncendiary",
@@ -366,7 +383,8 @@
         "%entities% ((is|are) incendiary|cause[s] a[n] (incendiary|fiery) explosion)",
         "%entities% ((is not|are not|isn't|aren't) incendiary|(does not|do not|doesn't|don't) cause[s] a[n] (incendiary|fiery) explosion)",
         "the [event(-| )]explosion (is|1¦(is not|isn't)) (incendiary|fiery)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBanned",
@@ -387,7 +405,8 @@
         "%players/strings% (is|are) IP(-| |)banned",
         "%offlineplayers/strings% (isn't|is not|aren't|are not) banned",
         "%players/strings% (isn't|is not|aren't|are not) IP(-| |)banned"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBlockRedstonePowered",
@@ -409,7 +428,8 @@
         "%blocks% (is|are) indirectly redstone powered",
         "%blocks% (is|are)(n't| not) redstone powered",
         "%blocks% (is|are)(n't| not) indirectly redstone powered"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsCustomNameVisible",
@@ -428,7 +448,8 @@
         "%entities%'[s] custom name[s] (isn't|is not|are not|aren't) visible",
         "custom name of %entities% (is|are) visible",
         "custom name of %entities% (isn't|is not|are not|aren't) visible"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsDivisibleBy",
@@ -448,7 +469,8 @@
         "%numbers% (isn't|is not|aren't|are not) evenly divisible by %number%",
         "%numbers% can be evenly divided by %number%",
         "%numbers% (can't|can[ ]not) be evenly divided by %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsHandRaised",
@@ -475,7 +497,8 @@
         "%livingentities%'[s] off[ |-]hand[s] (isn't|is not|aren't|are not) raised",
         "off[ |-]hand[s] of %livingentities% (is|are) raised",
         "off[ |-]hand[s] of %livingentities% (isn't|is not|aren't|are not) raised"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsLoaded",
@@ -499,7 +522,8 @@
         "%scripts/worlds% (is|are)[1:(n't| not)] loaded",
         "script[s] %scripts% (is|are)[1:(n't| not)] loaded",
         "world[s] %worlds% (is|are)[1:(n't| not)] loaded"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPluginEnabled",
@@ -523,7 +547,8 @@
         "plugin[s] %strings% (is|are) enabled",
         "plugin[s] %strings% (is|are)(n't| not) enabled",
         "plugin[s] %strings% (is|are) disabled"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPreferredTool",
@@ -547,7 +572,8 @@
         "%itemtypes% (is|are) [the|a] preferred tool[s] (for|of) %blocks/blockdatas%",
         "%itemtypes% (is|are)(n't| not) %blocks/blockdatas%'s preferred tool[s]",
         "%itemtypes% (is|are)(n't| not) [the|a] preferred tool[s] (for|of) %blocks/blockdatas%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSet",
@@ -567,7 +593,8 @@
       "patterns": [
         "%~objects% (exist[s]|(is|are) set)",
         "%~objects% (do[es](n't| not) exist|(is|are)(n't| not) set)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsUsingFeature",
@@ -589,7 +616,8 @@
         "%scripts% are using %strings%",
         "%script% is(n't| not) using %strings%",
         "%scripts% are(n't| not) using %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsWhitelisted",
@@ -609,7 +637,8 @@
         "[the] server (is|not:(isn't|is not)) (in white[ ]list mode|white[ ]listed)",
         "%offlineplayers% (is|are|not:(isn't|is not|aren't|are not)) white[ ]listed",
         "[the] server white[ ]list (is|not:(isn't|is not)) enforced"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsWithin",
@@ -637,7 +666,8 @@
         "%locations% (isn't|is not|aren't|are not) within %location% and %location%",
         "%locations% (is|are) (within|in[side [of]]) %entity/chunk/world/block%",
         "%locations% (isn't|is not|aren't|are not) (within|in[side [of]]) %entity/chunk/world/block%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondItemInHand",
@@ -661,7 +691,8 @@
         "[%livingentities%] (is not|isn't) holding %itemtypes% [in main hand]",
         "[%livingentities%] (ha(s|ve) not|do[es]n't have) %itemtypes% in off[(-| )]hand",
         "[%livingentities%] (is not|isn't) holding %itemtypes% in off[(-| )]hand"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondLeashWillDrop",
@@ -681,6 +712,9 @@
       ],
       "patterns": [
         "[the] (lead|leash) [item] (will|not:(won't|will not)) (drop|be dropped)"
+      ],
+      "events": [
+        "Unleash"
       ]
     },
     {
@@ -702,7 +736,8 @@
       "patterns": [
         "%strings% (1¦match[es]|2¦do[es](n't| not) match) %strings%",
         "%strings% (1¦partially match[es]|2¦do[es](n't| not) partially match) %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondMinecraftVersion",
@@ -718,7 +753,8 @@
       ],
       "patterns": [
         "running [(1¦below)] minecraft %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondPastFuture",
@@ -748,7 +784,8 @@
       "patterns": [
         "%dates% (is|are)[negated:(n't| not)] in the (past|:future)",
         "%dates% ha(s|ve)[negated:(n't| not)] passed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondPermission",
@@ -767,7 +804,8 @@
       "patterns": [
         "%commandsenders% (has|have) [the] permission[s] %strings%",
         "%commandsenders% (doesn't|does not|do not|don't) have [the] permission[s] %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondPlayedBefore",
@@ -785,7 +823,8 @@
       "patterns": [
         "%offlineplayers% [(has|have|did)] [already] play[ed] [on (this|the) server] (before|already)",
         "%offlineplayers% (has not|hasn't|have not|haven't|did not|didn't) [(already|yet)] play[ed] [on (this|the) server] (before|already|yet)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondPvP",
@@ -803,7 +842,8 @@
       "patterns": [
         "(is PvP|PvP is) enabled [in %worlds%]",
         "(is PvP|PvP is) disabled [in %worlds%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondResourcePack",
@@ -822,6 +862,9 @@
       "patterns": [
         "[the] resource pack (was|is|has) [been] %resourcepackstate%",
         "[the] resource pack (was|is|has)(n't| not) [been] %resourcepackstate%"
+      ],
+      "events": [
+        "resource pack request response"
       ]
     },
     {
@@ -840,6 +883,9 @@
       ],
       "patterns": [
         "[the] respawn location (was|is)[1:(n'| no)t] [a] (:bed|respawn anchor)"
+      ],
+      "events": [
+        "respawn"
       ]
     },
     {
@@ -858,7 +904,8 @@
       "patterns": [
         "script[s] [%-strings%] (is|are) loaded",
         "script[s] [%-strings%] (isn't|is not|aren't|are not) loaded"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondStartsEndsWith",
@@ -876,7 +923,8 @@
       "patterns": [
         "%strings% (start|1¦end)[s] with %strings%",
         "%strings% (doesn't|does not|do not|don't) (start|1¦end) with %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondTooltip",
@@ -898,7 +946,8 @@
         "[the] [entire|:additional] tool[ ]tip[s] of %itemtypes% (isn't|is not|aren't|are not) (:shown|hidden)",
         "%itemtypes%'[s] [entire|:additional] tool[ ]tip[s] (is|are) (:shown|hidden)",
         "%itemtypes%'[s] [entire|:additional] tool[ ]tip[s] (isn't|is not|aren't|are not) (:shown|hidden)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondWillHatch",
@@ -916,6 +965,9 @@
       ],
       "patterns": [
         "[the] egg (:will|will not|won't) hatch"
+      ],
+      "events": [
+        "Egg Throw"
       ]
     },
     {
@@ -929,12 +981,15 @@
       ],
       "examples": [
         "on fishing line cast:",
-        "\tif lure enchantment is applied:",
+        "\tif lure enchantment bonus is applied:",
         "\t\tcancel event"
       ],
       "patterns": [
         "lure enchantment bonus is (applied|active)",
         "lure enchantment bonus is(n't| not) (applied|active)"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -955,7 +1010,8 @@
         "%displays%'[s] text (has|have) [a] (drop|text) shadow",
         "[[the] text of] %displays% (doesn't|does not|do not|don't) have [a] (drop|text) shadow",
         "%displays%'[s] text (doesn't|does not|do not|don't) have [a] (drop|text) shadow"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPressingKey",
@@ -976,7 +1032,8 @@
         "%players% (isn't|is not|aren't|are not) pressing %inputkeys%",
         "%players% (was|were) pressing %inputkeys%",
         "%players% (wasn't|was not|weren't|were not) pressing %inputkeys%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondAI",
@@ -993,7 +1050,8 @@
       "patterns": [
         "%livingentities% (has|have) (ai|artificial intelligence)",
         "%livingentities% (doesn't|does not|do not|don't) have (ai|artificial intelligence)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCanFly",
@@ -1010,7 +1068,8 @@
       "patterns": [
         "%players% can fly",
         "%players% (can't|cannot|can not) fly"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCanPickUpItems",
@@ -1032,7 +1091,8 @@
       "patterns": [
         "%livingentities% can pick([ ]up items| items up)",
         "%livingentities% (can't|cannot|can not) pick([ ]up items| items up)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondChatColors",
@@ -1052,7 +1112,8 @@
       "patterns": [
         "%players% can see chat colo[u]r[s|ing]",
         "%players% (can't|cannot|can not) see chat colo[u]r[s|ing]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondChatFiltering",
@@ -1070,7 +1131,8 @@
       "patterns": [
         "%players% (has|have) (chat|text) filtering (on|enabled)",
         "%players% (doesn't|does not|do not|don't) have (chat|text) filtering (on|enabled)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondEntityIsInLiquid",
@@ -1090,7 +1152,8 @@
       "patterns": [
         "%entities% (is|are) in (1¦water|2¦lava|3¦[a] bubble[ ]column|4¦rain)",
         "%entities% (isn't|is not|aren't|are not) in (1¦water|2¦lava|3¦[a] bubble[ ]column|4¦rain)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondEntityIsWet",
@@ -1107,7 +1170,8 @@
       "patterns": [
         "%entities% (is|are) wet",
         "%entities% (isn't|is not|aren't|are not) wet"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondGlowingText",
@@ -1124,7 +1188,8 @@
       "patterns": [
         "%blocks/itemtypes% (has|have) glowing text",
         "%blocks/itemtypes% (doesn't|does not|do not|don't) have glowing text"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasClientWeather",
@@ -1142,7 +1207,8 @@
       "patterns": [
         "%players% (has|have) [a] (client|custom) weather [set]",
         "%players% (doesn't|does not|do not|don't) have [a] (client|custom) weather [set]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasCustomModelData",
@@ -1159,7 +1225,8 @@
       "patterns": [
         "%itemtypes% (has|have) [custom] model data",
         "%itemtypes% (doesn't|does not|do not|don't) have [custom] model data"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasResourcePack",
@@ -1176,7 +1243,8 @@
       "patterns": [
         "%players% (has|have) [a] resource pack [(loaded|installed)]",
         "%players% (doesn't|does not|do not|don't) have [a] resource pack [(loaded|installed)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasScoreboardTag",
@@ -1193,7 +1261,8 @@
       "patterns": [
         "%entities% (has|have) [the] score[ ]board tag[s] %strings%",
         "%entities% (doesn't|does not|do not|don't) have [the] score[ ]board tag[s] %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsAlive",
@@ -1213,7 +1282,8 @@
       "patterns": [
         "%entities% (is|are) (alive|1¦dead)",
         "%entities% (isn't|is not|aren't|are not) (alive|1¦dead)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBlock",
@@ -1231,7 +1301,8 @@
       "patterns": [
         "%itemtypes% (is|are) ([a] block|blocks)",
         "%itemtypes% (isn't|is not|aren't|are not) ([a] block|blocks)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBlocking",
@@ -1250,7 +1321,8 @@
       "patterns": [
         "%players% (is|are) (blocking|defending) [with [a] shield]",
         "%players% (isn't|is not|aren't|are not) (blocking|defending) [with [a] shield]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBurning",
@@ -1269,7 +1341,8 @@
       "patterns": [
         "%entities% (is|are) (burning|ignited|on fire)",
         "%entities% (isn't|is not|aren't|are not) (burning|ignited|on fire)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsCharged",
@@ -1287,7 +1360,8 @@
       "patterns": [
         "%entities% (is|are) (charged|powered)",
         "%entities% (isn't|is not|aren't|are not) (charged|powered)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsClimbing",
@@ -1307,7 +1381,8 @@
       "patterns": [
         "%livingentities% (is|are) climbing",
         "%livingentities% (isn't|is not|aren't|are not) climbing"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsCommandBlockConditional",
@@ -1325,7 +1400,8 @@
       "patterns": [
         "%blocks% (is|are) [:un]conditional",
         "%blocks% (isn't|is not|aren't|are not) [:un]conditional"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsEdible",
@@ -1343,7 +1419,8 @@
       "patterns": [
         "%itemtypes% (is|are) edible",
         "%itemtypes% (isn't|is not|aren't|are not) edible"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsEmpty",
@@ -1360,7 +1437,8 @@
       "patterns": [
         "%inventories/slots/strings/numbered% (is|are) empty",
         "%inventories/slots/strings/numbered% (isn't|is not|aren't|are not) empty"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsEnchanted",
@@ -1378,7 +1456,8 @@
       "patterns": [
         "%itemtypes% (is|are) enchanted [with %-enchantmenttype%]",
         "%itemtypes% (isn't|is not|aren't|are not) enchanted [with %-enchantmenttype%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsFireResistant",
@@ -1396,7 +1475,8 @@
       "patterns": [
         "%itemtypes% (is|are) (fire resistant|resistant to fire)",
         "%itemtypes% (isn't|is not|aren't|are not) (fire resistant|resistant to fire)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsFlammable",
@@ -1414,7 +1494,8 @@
       "patterns": [
         "%itemtypes% (is|are) flammable",
         "%itemtypes% (isn't|is not|aren't|are not) flammable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsFlying",
@@ -1431,7 +1512,8 @@
       "patterns": [
         "%players% (is|are) flying",
         "%players% (isn't|is not|aren't|are not) flying"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsFrozen",
@@ -1449,7 +1531,8 @@
       "patterns": [
         "%entities% (is|are) frozen",
         "%entities% (isn't|is not|aren't|are not) frozen"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsFuel",
@@ -1469,7 +1552,8 @@
       "patterns": [
         "%itemtypes% (is|are) [furnace] fuel",
         "%itemtypes% (isn't|is not|aren't|are not) [furnace] fuel"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsGliding",
@@ -1486,7 +1570,8 @@
       "patterns": [
         "%livingentities% (is|are) gliding",
         "%livingentities% (isn't|is not|aren't|are not) gliding"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInfinite",
@@ -1503,7 +1588,8 @@
       "patterns": [
         "%potioneffects% (is|are) infinite",
         "%potioneffects% (isn't|is not|aren't|are not) infinite"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInteractable",
@@ -1523,7 +1609,8 @@
       "patterns": [
         "%itemtypes% (is|are) interactable",
         "%itemtypes% (isn't|is not|aren't|are not) interactable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInvisible",
@@ -1540,7 +1627,8 @@
       "patterns": [
         "%livingentities% (is|are) (invisible|:visible)",
         "%livingentities% (isn't|is not|aren't|are not) (invisible|:visible)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInvulnerable",
@@ -1561,7 +1649,8 @@
       "patterns": [
         "%entities/gamemodes% (is|are) (invulnerable|invincible)",
         "%entities/gamemodes% (isn't|is not|aren't|are not) (invulnerable|invincible)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsJumping",
@@ -1581,7 +1670,8 @@
       "patterns": [
         "%livingentities% (is|are) jumping",
         "%livingentities% (isn't|is not|aren't|are not) jumping"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsLeftHanded",
@@ -1601,7 +1691,8 @@
       "patterns": [
         "%livingentities% (is|are) (:left|right)( |-)handed",
         "%livingentities% (isn't|is not|aren't|are not) (:left|right)( |-)handed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsOccluding",
@@ -1618,7 +1709,8 @@
       "patterns": [
         "%itemtypes% (is|are) occluding",
         "%itemtypes% (isn't|is not|aren't|are not) occluding"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsOfType",
@@ -1636,7 +1728,8 @@
       "patterns": [
         "%itemstacks/entities% (is|are) of type[s] %itemtypes/entitydatas%",
         "%itemstacks/entities% (isn't|is not|aren't|are not) of type[s] %itemtypes/entitydatas%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsOnGround",
@@ -1653,7 +1746,8 @@
       "patterns": [
         "%entities% (is|are) on [the] ground",
         "%entities% (isn't|is not|aren't|are not) on [the] ground"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsOnline",
@@ -1680,7 +1774,8 @@
       "patterns": [
         "%offlineplayers% (is|are) (online|:offline|:connected)",
         "%offlineplayers% (isn't|is not|aren't|are not) (online|:offline|:connected)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsOp",
@@ -1697,7 +1792,8 @@
       "patterns": [
         "%offlineplayers% (is|are) [[a] server|an] op[erator][s]",
         "%offlineplayers% (isn't|is not|aren't|are not) [[a] server|an] op[erator][s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPassable",
@@ -1716,7 +1812,8 @@
       "patterns": [
         "%blocks% (is|are) passable",
         "%blocks% (isn't|is not|aren't|are not) passable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPathfinding",
@@ -1739,7 +1836,8 @@
       "patterns": [
         "%livingentities% (is|are) pathfinding [to[wards] %-livingentity/location%]",
         "%livingentities% (isn't|is not|aren't|are not) pathfinding [to[wards] %-livingentity/location%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsPoisoned",
@@ -1758,7 +1856,8 @@
       "patterns": [
         "%livingentities% (is|are) poisoned",
         "%livingentities% (isn't|is not|aren't|are not) poisoned"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsResonating",
@@ -1776,7 +1875,8 @@
       "patterns": [
         "%blocks% (is|are) resonating",
         "%blocks% (isn't|is not|aren't|are not) resonating"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsRiding",
@@ -1793,7 +1893,8 @@
       "patterns": [
         "%entities% (is|are) riding [%entitydatas%]",
         "%entities% (isn't|is not|aren't|are not) riding [%entitydatas%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsRinging",
@@ -1810,7 +1911,8 @@
       "patterns": [
         "%blocks% (is|are) ringing",
         "%blocks% (isn't|is not|aren't|are not) ringing"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsRiptiding",
@@ -1827,7 +1929,8 @@
       "patterns": [
         "%livingentities% (is|are) riptiding",
         "%livingentities% (isn't|is not|aren't|are not) riptiding"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSaddled",
@@ -1845,7 +1948,8 @@
       "patterns": [
         "%livingentities% (is|are) [:properly] saddled",
         "%livingentities% (isn't|is not|aren't|are not) [:properly] saddled"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSheared",
@@ -1863,7 +1967,8 @@
       "patterns": [
         "%livingentities% (is|are) (sheared|shorn)",
         "%livingentities% (isn't|is not|aren't|are not) (sheared|shorn)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSilent",
@@ -1880,7 +1985,8 @@
       "patterns": [
         "%entities% (is|are) silent",
         "%entities% (isn't|is not|aren't|are not) silent"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSkriptCommand",
@@ -1902,7 +2008,8 @@
       "patterns": [
         "%string% (is|are) [a] s(k|c)ript (command|cmd)",
         "%string% (isn't|is not|aren't|are not) [a] s(k|c)ript (command|cmd)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSleeping",
@@ -1923,7 +2030,8 @@
       "patterns": [
         "%players% (is|are) sleeping",
         "%players% (isn't|is not|aren't|are not) sleeping"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSlimeChunk",
@@ -1947,7 +2055,8 @@
       "patterns": [
         "%chunk% (is|are) ([a] slime chunk|slime chunks|slimey)",
         "%chunk% (isn't|is not|aren't|are not) ([a] slime chunk|slime chunks|slimey)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSneaking",
@@ -1968,7 +2077,8 @@
       "patterns": [
         "%players% (is|are) sneaking",
         "%players% (isn't|is not|aren't|are not) sneaking"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSolid",
@@ -1986,7 +2096,8 @@
       "patterns": [
         "%itemtypes% (is|are) solid",
         "%itemtypes% (isn't|is not|aren't|are not) solid"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSprinting",
@@ -2003,7 +2114,8 @@
       "patterns": [
         "%players% (is|are) sprinting",
         "%players% (isn't|is not|aren't|are not) sprinting"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsStackable",
@@ -2022,7 +2134,8 @@
       "patterns": [
         "%itemstacks% (is|are) stackable",
         "%itemstacks% (isn't|is not|aren't|are not) stackable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsSwimming",
@@ -2039,7 +2152,8 @@
       "patterns": [
         "%livingentities% (is|are) swimming",
         "%livingentities% (isn't|is not|aren't|are not) swimming"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsTameable",
@@ -2058,7 +2172,8 @@
       "patterns": [
         "%livingentities% (is|are) tameable",
         "%livingentities% (isn't|is not|aren't|are not) tameable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsTamed",
@@ -2076,7 +2191,8 @@
       "patterns": [
         "%entities% (is|are) (tamed|domesticated)",
         "%entities% (isn't|is not|aren't|are not) (tamed|domesticated)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsTicking",
@@ -2093,7 +2209,8 @@
       "patterns": [
         "%entities% (is|are) ticking",
         "%entities% (isn't|is not|aren't|are not) ticking"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsTransparent",
@@ -2110,7 +2227,8 @@
       "patterns": [
         "%itemtypes% (is|are) transparent",
         "%itemtypes% (isn't|is not|aren't|are not) transparent"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsUnbreakable",
@@ -2130,7 +2248,8 @@
       "patterns": [
         "%itemtypes% (is|are) [:un]breakable",
         "%itemtypes% (isn't|is not|aren't|are not) [:un]breakable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsValid",
@@ -2149,7 +2268,8 @@
       "patterns": [
         "%entities/scripts% (is|are) valid",
         "%entities/scripts% (isn't|is not|aren't|are not) valid"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsVectorNormalized",
@@ -2166,7 +2286,8 @@
       "patterns": [
         "%vectors% (is|are) normalized",
         "%vectors% (isn't|is not|aren't|are not) normalized"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsWearing",
@@ -2185,7 +2306,8 @@
       "patterns": [
         "%livingentities% (is|are) wearing %itemtypes%",
         "%livingentities% (isn't|is not|aren't|are not) wearing %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondItemEnchantmentGlint",
@@ -2210,7 +2332,8 @@
       "patterns": [
         "%itemtypes% (has|have) enchantment glint overrid(den|e)",
         "%itemtypes% (doesn't|does not|do not|don't) have enchantment glint overrid(den|e)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondItemEnchantmentGlint-2",
@@ -2235,7 +2358,8 @@
       "patterns": [
         "%itemtypes% (is|are) forced to [:not] glint",
         "%itemtypes% (isn't|is not|aren't|are not) forced to [:not] glint"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondLeashed",
@@ -2252,7 +2376,8 @@
       "patterns": [
         "%livingentities% (is|are) leashed",
         "%livingentities% (isn't|is not|aren't|are not) leashed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondLidState",
@@ -2272,7 +2397,8 @@
         "[the] lid[s] of %blocks% (isn't|is not|aren't|are not) (open[ed]|:close[d])",
         "%blocks%'[s] lid[s] (is|are) (open[ed]|:close[d])",
         "%blocks%'[s] lid[s] (isn't|is not|aren't|are not) (open[ed]|:close[d])"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondWithinRadius",
@@ -2292,7 +2418,8 @@
       "patterns": [
         "%locations% (is|are) within %number% (block|metre|meter)[s] (around|of) %locations%",
         "%locations% (isn't|is not|aren't|are not) within %number% (block|metre|meter)[s] (around|of) %locations%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInOpenWater",
@@ -2312,6 +2439,9 @@
       "patterns": [
         "%entities% (is|are) in open water[s]",
         "%entities% (isn't|is not|aren't|are not) in open water[s]"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -2331,7 +2461,8 @@
       "patterns": [
         "%livingentities% can (age|grow (up|old[er]))",
         "%livingentities% (can't|cannot|can not) (age|grow (up|old[er]))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCanBreed",
@@ -2350,7 +2481,8 @@
       "patterns": [
         "%livingentities% can (breed|be bred)",
         "%livingentities% (can't|cannot|can not) (breed|be bred)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsAdult",
@@ -2369,7 +2501,8 @@
       "patterns": [
         "%livingentities% (is|are) [an] adult",
         "%livingentities% (isn't|is not|aren't|are not) [an] adult"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsBaby",
@@ -2388,7 +2521,8 @@
       "patterns": [
         "%livingentities% (is|are) a (child|baby)",
         "%livingentities% (isn't|is not|aren't|are not) a (child|baby)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsInLove",
@@ -2407,7 +2541,8 @@
       "patterns": [
         "%livingentities% (is|are) in lov(e|ing) [state|mode]",
         "%livingentities% (isn't|is not|aren't|are not) in lov(e|ing) [state|mode]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondTextDisplaySeeThroughBlocks",
@@ -2425,7 +2560,8 @@
       "patterns": [
         "%displays% (is|are) visible through (blocks|walls)",
         "%displays% (isn't|is not|aren't|are not) visible through (blocks|walls)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsTagged",
@@ -2445,7 +2581,8 @@
       "patterns": [
         "%itemtypes/entities/entitydatas% (is|are) tagged (as|with) %minecrafttags%",
         "%itemtypes/entities/entitydatas% (isn't|is not|aren't|are not) tagged (as|with) %minecrafttags%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondHasLootTable",
@@ -2469,7 +2606,8 @@
       "patterns": [
         "%blocks/entities% (has|have) [a] loot[ ]table",
         "%blocks/entities% (doesn't|does not|do not|don't) have [a] loot[ ]table"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondIsLootable",
@@ -2497,7 +2635,8 @@
       "patterns": [
         "%blocks/entities% (is|are) lootable",
         "%blocks/entities% (isn't|is not|aren't|are not) lootable"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "CondCompare",
@@ -2539,7 +2678,8 @@
         "(1¦neither|) %objects@1% (will be [(equal to|the same as)]|(is|are) (turning|changing) [in]to) %objects%",
         "(1¦neither|) %objects@1% will be between %objects% and %objects%",
         "(1¦neither|) %objects@1% (2¦)(will not be|won't be) between %objects% and %objects%"
-      ]
+      ],
+      "events": []
     }
   ],
   "effects": [
@@ -2559,7 +2699,8 @@
       ],
       "patterns": [
         "(wait|halt) [for] %timespan%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffActionBar",
@@ -2575,7 +2716,8 @@
       ],
       "patterns": [
         "send [the] action[ ]bar [with text] %string% [to %players%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffApplyBoneMeal",
@@ -2591,7 +2733,8 @@
       ],
       "patterns": [
         "apply [%-number%] bone[ ]meal[s] [to %blocks%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffBan",
@@ -2622,7 +2765,8 @@
         "unban %players% by IP",
         "IP(-| )ban [kick:and kick] %players% [(by reason of|because [of]|on account of|due to) %-string%] [for %-timespan%]",
         "(IP(-| )unban|un[-]IP[-]ban) %players%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffBlockUpdate",
@@ -2642,7 +2786,8 @@
       ],
       "patterns": [
         "update %blocks% (as|to be) %blockdata% [physics:without [neighbo[u]r[ing]|adjacent] [physic[s]] update[s]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffBreakNaturally",
@@ -2665,7 +2810,8 @@
       ],
       "patterns": [
         "break %blocks% [naturally] [using %-itemtype%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffBroadcast",
@@ -2682,7 +2828,8 @@
       ],
       "patterns": [
         "broadcast %objects% [(to|in) %-worlds%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCancelCooldown",
@@ -2708,7 +2855,8 @@
       "patterns": [
         "(cancel|ignore) [the] [current] [command] cooldown",
         "un(cancel|ignore) [the] [current] [command] cooldown"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCancelDrops",
@@ -2730,6 +2878,10 @@
       "patterns": [
         "(cancel|clear|delete) [the] drops [of (1¦items|2¦[e]xp[erience][s])]",
         "(cancel|clear|delete) [the] (1¦item|2¦[e]xp[erience]) drops"
+      ],
+      "events": [
+        "death",
+        "break / mine"
       ]
     },
     {
@@ -2750,7 +2902,8 @@
       "patterns": [
         "cancel [the] event",
         "uncancel [the] event"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCancelItemUse",
@@ -2769,7 +2922,8 @@
       ],
       "patterns": [
         "(cancel|interrupt) [the] us[ag]e of %livingentities%'[s] [active|current] item"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffChange",
@@ -2813,7 +2967,8 @@
         "(reduce|decrease) %~objects% by %objects%",
         "(delete|clear) %~objects%",
         "reset %~objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCharge",
@@ -2831,7 +2986,8 @@
       "patterns": [
         "make %entities% [un:(un|not |non[-| ])](charged|powered)",
         "[:un](charge|power) %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffColorItems",
@@ -2849,7 +3005,8 @@
       "patterns": [
         "(dye|colo[u]r|paint) %itemtypes% %color%",
         "(dye|colo[u]r|paint) %itemtypes% \\(%number%, %number%, %number%\\)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCommand",
@@ -2870,7 +3027,8 @@
         "[execute] [the] [bungee:bungee[cord]] command[s] %strings% [by %-commandsenders%]",
         "[execute] [the] %commandsenders% [bungee:bungee[cord]] command[s] %strings%",
         "(let|make) %commandsenders% execute [[the] [bungee:bungee[cord]] command[s]] %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCommandBlockConditional",
@@ -2887,7 +3045,8 @@
       ],
       "patterns": [
         "make command block[s] %blocks% [not:(un|not )]conditional"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffConnect",
@@ -2910,7 +3069,8 @@
         "connect %players% to [proxy|bungeecord] [server] %string%",
         "send %players% to [proxy|bungeecord] server %string%",
         "transfer %players% to server %string% [on port %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffContinue",
@@ -2940,7 +3100,8 @@
       "patterns": [
         "continue [this loop|[the] [current] loop]",
         "continue [the] <-?\\d+(_\\d+)*>(st|nd|rd|th) loop"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCopy",
@@ -2962,7 +3123,8 @@
       ],
       "patterns": [
         "copy %~objects% [in]to %~objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffCustomName",
@@ -2980,7 +3142,8 @@
       "patterns": [
         "(:show|hide) [the] (custom|display)[ ]name of %entities%",
         "(:show|hide) %entities%'[s] (custom|display)[ ]name"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffDetonate",
@@ -2996,7 +3159,8 @@
       ],
       "patterns": [
         "detonate %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffDoIf",
@@ -3013,7 +3177,8 @@
       ],
       "patterns": [
         "<.+> if <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffDrop",
@@ -3030,7 +3195,8 @@
       ],
       "patterns": [
         "drop %itemtypes/experiences% [%directions% %locations%] [(1¦without velocity)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffDropLeash",
@@ -3051,6 +3217,9 @@
       "patterns": [
         "(force|allow) [the] (lead|leash) [item] to drop",
         "(block|disallow|prevent) [the] (lead|leash) [item] from dropping"
+      ],
+      "events": [
+        "Unleash"
       ]
     },
     {
@@ -3070,7 +3239,8 @@
       "patterns": [
         "(prevent|disallow) [the] (boosting|used) firework from being consumed",
         "allow [the] (boosting|used) firework to be consumed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffEnchant",
@@ -3088,7 +3258,8 @@
       "patterns": [
         "enchant %~itemtypes% with %enchantmenttypes%",
         "disenchant %~itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffEnforceWhitelist",
@@ -3106,7 +3277,8 @@
       ],
       "patterns": [
         "[:un]enforce [the] [server] white[ ]list"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffEntityVisibility",
@@ -3132,7 +3304,8 @@
       "patterns": [
         "hide %entities% [(from|for) %-players%]",
         "reveal %entities% [(to|for|from) %-players%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffEquip",
@@ -3156,7 +3329,8 @@
         "make %livingentities% wear %itemtypes%",
         "unequip %itemtypes% [from %livingentities%]",
         "unequip %livingentities%'[s] (armo[u]r|equipment)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffExit",
@@ -3181,7 +3355,8 @@
         "(exit|stop) [1|a|the|this] (section|1:loop|2:conditional)",
         "(exit|stop) <-?\\d+(_\\d+)*> (section|1:loop|2:conditional)s",
         "(exit|stop) all (section|1:loop|2:conditional)s"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffExplodeCreeper",
@@ -3202,7 +3377,8 @@
         "ignite creeper[s] %livingentities%",
         "start (ignition|explosion) [process] of [creeper[s]] %livingentities%",
         "stop (ignition|explosion) [process] of [creeper[s]] %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffExplosion",
@@ -3224,7 +3400,8 @@
         "[(create|make)] [a] safe explosion (of|with) (force|strength|power) %number% [%directions% %locations%]",
         "[(create|make)] [a] fake explosion [%directions% %locations%]",
         "[(create|make)] [an] explosion[ ]effect [%directions% %locations%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffFeed",
@@ -3241,7 +3418,8 @@
       ],
       "patterns": [
         "feed [the] %players% [by %-number% [beef[s]]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffFireResistant",
@@ -3258,7 +3436,8 @@
       ],
       "patterns": [
         "make %itemtypes% [:not] (fire resistant|resistant to fire)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffFireworkLaunch",
@@ -3274,7 +3453,8 @@
       ],
       "patterns": [
         "(launch|deploy) [[a] firework [with effect[s]]] %fireworkeffects% at %locations% [([with] (duration|power)|timed) %number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffForceAttack",
@@ -3292,7 +3472,8 @@
       "patterns": [
         "make %livingentities% attack %entity%",
         "force %livingentities% to attack %entity%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffForceEnchantmentGlint",
@@ -3312,7 +3493,8 @@
         "(force|make) %itemtypes% [to] (not|stop) glint[ing]",
         "(clear|delete|reset) [the] enchantment glint override of %itemtypes%",
         "(clear|delete|reset) %itemtypes%'s enchantment glint override"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffGlowingText",
@@ -3329,7 +3511,8 @@
       "patterns": [
         "make %blocks/itemtypes% have glowing text",
         "make %blocks/itemtypes% have (normal|non[-| ]glowing) text"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffHandedness",
@@ -3348,7 +3531,8 @@
       ],
       "patterns": [
         "make %livingentities% (:left|right)( |-)handed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffHealth",
@@ -3370,7 +3554,8 @@
         "damage %livingentities/itemtypes/slots% by %number% [heart[s]] [with [fake] [damage] cause %-damagecause%]",
         "heal %livingentities% [by %-number% [heart[s]]]",
         "repair %itemtypes/slots% [by %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffHidePlayerFromServerList",
@@ -3388,7 +3573,8 @@
       "patterns": [
         "hide %players% (in|on|from) [the] server list",
         "hide %players%'[s] info[rmation] (in|on|from) [the] server list"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffIgnite",
@@ -3407,7 +3593,8 @@
         "(ignite|set fire to) %entities% [for %-timespan%]",
         "(set|light) %entities% on fire [for %-timespan%]",
         "extinguish %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffIncendiary",
@@ -3426,7 +3613,8 @@
         "make %entities% [(1¦not)] incendiary",
         "make %entities%'[s] explosion [(1¦not)] (incendiary|fiery)",
         "make [the] [event(-| )]explosion [(1¦not)] (incendiary|fiery)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffInvisible",
@@ -3444,7 +3632,8 @@
       "patterns": [
         "make %livingentities% (invisible|not visible)",
         "make %livingentities% (visible|not invisible)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffInvulnerability",
@@ -3461,7 +3650,8 @@
       "patterns": [
         "make %entities% (invulnerable|invincible)",
         "make %entities% (not (invulnerable|invincible)|vulnerable|vincible)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffKeepInventory",
@@ -3480,6 +3670,9 @@
       "patterns": [
         "keep [the] (inventory|items) [(1:and [e]xp[erience][s] [point[s]])]",
         "keep [the] [e]xp[erience][s] [point[s]] [(1:and (inventory|items))]"
+      ],
+      "events": [
+        "death"
       ]
     },
     {
@@ -3498,7 +3691,8 @@
       ],
       "patterns": [
         "kick %players% [(by reason of|because [of]|on account of|due to) %-string%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffKill",
@@ -3516,7 +3710,8 @@
       ],
       "patterns": [
         "kill %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffKnockback",
@@ -3533,7 +3728,8 @@
       ],
       "patterns": [
         "(apply knockback to|knock[back]) %livingentities% [%direction%] [with (strength|force) %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLeash",
@@ -3554,7 +3750,8 @@
         "(leash|lead) %livingentities% to %entity%",
         "make %entity% (leash|lead) %livingentities%",
         "un(leash|lead) [holder of] %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLidState",
@@ -3572,7 +3769,8 @@
       "patterns": [
         "(open|:close) [the] lid[s] (of|for) %blocks%",
         "(open|:close) %blocks%'[s] lid[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLightning",
@@ -3589,7 +3787,8 @@
       ],
       "patterns": [
         "(create|strike) lightning(1¦[ ]effect|) %directions% %locations%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLoadServerIcon",
@@ -3614,7 +3813,8 @@
       ],
       "patterns": [
         "load [the] server icon (from|of) [the] [image] [file] %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLog",
@@ -3636,7 +3836,8 @@
       ],
       "patterns": [
         "log %strings% [(to|in) [file[s]] %-strings%] [with [the|a] severity [of] (1:warning|2:severe)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffLook",
@@ -3661,7 +3862,8 @@
       "patterns": [
         "(force|make) %livingentities% [to] (face [towards]|look [(at|towards)]) (%entity%['s (feet:feet|eyes)]|of:(feet:feet|eyes) of %entity%) [at [head] [rotation] speed %-number%] [[and] max[imum] [head] pitch %-number%]",
         "(force|make) %livingentities% [to] (face [towards]|look [(at|towards)]) %vector/location% [at [head] [rotation] speed %-number%] [[and] max[imum] [head] pitch %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffMakeEggHatch",
@@ -3679,6 +3881,9 @@
       ],
       "patterns": [
         "make [the] egg [:not] hatch"
+      ],
+      "events": [
+        "Egg Throw"
       ]
     },
     {
@@ -3698,7 +3903,8 @@
         "force %players% to [(start|1¦stop)] fly[ing]",
         "make %players% (start|1¦stop) flying",
         "make %players% fly"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffMakeSay",
@@ -3716,7 +3922,8 @@
       "patterns": [
         "make %players% (say|send [the] message[s]) %strings%",
         "force %players% to (say|send [the] message[s]) %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffMessage",
@@ -3743,7 +3950,8 @@
       ],
       "patterns": [
         "(message|send [message[s]]) %objects% [to %commandsenders%] [from %-player%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffOp",
@@ -3760,7 +3968,8 @@
       ],
       "patterns": [
         "[de[-]]op %offlineplayers%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffOpenBook",
@@ -3776,7 +3985,8 @@
       ],
       "patterns": [
         "(open|show) book %itemtype% (to|for) %players%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffOpenInventory",
@@ -3796,7 +4006,8 @@
         "(open|show) ((0¦(crafting [table]|workbench)|1¦chest|2¦anvil|3¦hopper|4¦dropper|5¦dispenser) (view|window|inventory|)|%-inventory/inventorytype%) (to|for) %players%",
         "close [the] inventory [view] (to|of|for) %players%",
         "close %players%'[s] inventory [view]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPathfind",
@@ -3815,7 +4026,8 @@
       "patterns": [
         "make %livingentities% (pathfind|move) to[wards] %livingentity/location% [at speed %-number%]",
         "make %livingentities% stop (pathfinding|moving)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPlayerInfoVisibility",
@@ -3839,6 +4051,9 @@
       "patterns": [
         "hide [all] player [related] info[rmation] [(in|on|from) [the] server list]",
         "(show|reveal) [all] player [related] info[rmation] [(in|to|on|from) [the] server list]"
+      ],
+      "events": [
+        "server list ping"
       ]
     },
     {
@@ -3868,7 +4083,8 @@
       "patterns": [
         "play sound[s] %strings% [[with] seed %-number%] [(in|from) %-soundcategory%] [(at|with) volume %-number%] [(and|at|with) pitch %-number%] (at|on|from) %locations/entities% [(to|for) %-players%]",
         "play sound[s] %strings% [[with] seed %-number%] [(in|from) %-soundcategory%] [(at|with) volume %-number%] [(and|at|with) pitch %-number%] [(to|for) %players%] [(at|on|from) %-locations/entities%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPoison",
@@ -3887,7 +4103,8 @@
       "patterns": [
         "poison %livingentities% [for %-timespan%]",
         "(cure|unpoison) %livingentities% [(from|of) poison]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPotion",
@@ -3913,7 +4130,8 @@
         "apply %potioneffects% to %livingentities%",
         "apply infinite [:ambient] [potion of] %potioneffecttypes% [potion] [[[of] tier] %-number%] [noparticles:without [any] particles] [icon:(whilst hiding [the]|without (the|a)) [potion] icon] to %livingentities% [replacing:replacing [the] existing effect]",
         "apply [:ambient] [potion of] %potioneffecttypes% [potion] [[[of] tier] %-number%] [noparticles:without [any] particles] [icon:(whilst hiding [the]|without (the|a)) [potion] icon] to %livingentities% [for %-timespan%] [replacing:replacing [the] existing effect]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPush",
@@ -3930,7 +4148,8 @@
       ],
       "patterns": [
         "(push|thrust) %entities% %direction% [(at|with) (speed|velocity|force) %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffPvP",
@@ -3948,7 +4167,8 @@
       "patterns": [
         "enable PvP [in %worlds%]",
         "disable PVP [in %worlds%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffReplace",
@@ -3977,7 +4197,8 @@
         "(replace [with|using] regex|regex replace) %strings% with %string% in %strings%",
         "replace [all|every] %itemtypes% in %inventories% with %itemtype%",
         "replace [all|every] %itemtypes% with %itemtype% in %inventories%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffResetTitle",
@@ -3995,7 +4216,8 @@
       "patterns": [
         "reset [the] title[s] [of %players%]",
         "reset [the] %players%'[s] title[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffRespawn",
@@ -4012,7 +4234,8 @@
       ],
       "patterns": [
         "force %players% to respawn"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffReturn",
@@ -4032,7 +4255,8 @@
       ],
       "patterns": [
         "return %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffRing",
@@ -4052,7 +4276,8 @@
       "patterns": [
         "ring %blocks% [from [the]] [%-direction%]",
         "(make|let) %entity% ring %blocks% [from [the]] [%-direction%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffRun",
@@ -4071,7 +4296,8 @@
       "patterns": [
         "run %executable% [arguments:with arg[ument]s %-objects%]",
         "execute %executable% [arguments:with arg[ument]s %-objects%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffScriptFile",
@@ -4093,7 +4319,8 @@
         "(1:(enable|load)|2:reload|3:disable|4:unload) script [file|named] %string%",
         "(1:(enable|load)|2:reload|3:disable|4:unload) skript file %string%",
         "(1:(enable|load)|2:reload|3:disable|4:unload) %scripts%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSendBlockChange",
@@ -4110,7 +4337,8 @@
       ],
       "patterns": [
         "make %players% see %blocks% as %itemtype/blockdata%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSendResourcePack",
@@ -4137,7 +4365,8 @@
       "patterns": [
         "send [the] resource pack [from [[the] URL]] %string% to %players%",
         "send [the] resource pack [from [[the] URL]] %string% with hash %string% to %players%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSendTitle",
@@ -4162,7 +4391,8 @@
       "patterns": [
         "send title %string% [with subtitle %-string%] [to %players%] [for %-timespan%] [with fade[(-| )]in %-timespan%] [[and] [with] fade[(-| )]out %-timespan%]",
         "send subtitle %string% [to %players%] [for %-timespan%] [with fade[(-| )]in %-timespan%] [[and] [with] fade[(-| )]out %-timespan%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffShear",
@@ -4185,7 +4415,8 @@
       "patterns": [
         "[:force] shear %livingentities%",
         "un[-]shear %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSilence",
@@ -4204,7 +4435,8 @@
         "unsilence %entities%",
         "make %entities% silent",
         "make %entities% not silent"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSort",
@@ -4224,7 +4456,8 @@
       ],
       "patterns": [
         "sort %~objects% [in (:descending|ascending) order] [(by|based on) <.+>]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffStopServer",
@@ -4242,7 +4475,8 @@
       "patterns": [
         "(stop|shut[ ]down) [the] server",
         "restart [the] server"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffStopSound",
@@ -4264,7 +4498,8 @@
       "patterns": [
         "stop (all:all sound[s]|sound[s] %-strings%) [(in [the]|from) %-soundcategory%] [(from playing to|for) %players%]",
         "stop playing sound[s] %strings% [(in [the]|from) %-soundcategory%] [(to|for) %players%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSuppressWarnings",
@@ -4281,7 +4516,8 @@
       ],
       "patterns": [
         "[local[ly]] suppress [the] (0:conflict|1:variable save|2:[missing] conjunction|3:starting [with] expression[s]|4:deprecated syntax|5:unreachable code) warning[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSwingHand",
@@ -4298,7 +4534,8 @@
       "patterns": [
         "make %livingentities% swing [their] [main] hand",
         "make %livingentities% swing [their] off[ ]hand"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTame",
@@ -4315,7 +4552,8 @@
       ],
       "patterns": [
         "[:un](tame|domesticate) %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTeleport",
@@ -4340,7 +4578,8 @@
       ],
       "patterns": [
         "[:force] teleport %entities% (to|%direction%) %location% [[while] retaining %-teleportflags%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffToggle",
@@ -4361,7 +4600,8 @@
         "(close|turn off|de[-]activate) %blocks%",
         "(toggle|switch) [[the] state of] %blocks%",
         "(open|turn on|activate) %blocks%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffToggleCanPickUpItems",
@@ -4383,7 +4623,8 @@
       "patterns": [
         "allow %livingentities% to pick([ ]up items| items up)",
         "(forbid|disallow) %livingentities% (from|to) pick([ing | ]up items|[ing] items up)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffToggleFlight",
@@ -4400,7 +4641,8 @@
       "patterns": [
         "(allow|enable) (fly|flight) (for|to) %players%",
         "(disallow|disable) (fly|flight) (for|to) %players%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTooltip",
@@ -4420,7 +4662,8 @@
       "patterns": [
         "(show|reveal|:hide) %itemtypes%'[s] [entire|:additional] tool[ ]tip",
         "(show|reveal|:hide) [the] [entire|:additional] tool[ ]tip of %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTransform",
@@ -4448,7 +4691,8 @@
       ],
       "patterns": [
         "(transform|map) %~objects% (using|with) <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTree",
@@ -4466,7 +4710,8 @@
       "patterns": [
         "(grow|create|generate) tree [of type %structuretype%] %directions% %locations%",
         "(grow|create|generate) %structuretype% %directions% %locations%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffVehicle",
@@ -4485,7 +4730,8 @@
         "(make|let|force) %entities% [to] (ride|mount) [(in|on)] %entities/entitydatas%",
         "(make|let|force) %entities% [to] (dismount|(dismount|leave) (from|of|) (any|the[ir]|his|her|) vehicle[s])",
         "(eject|dismount) (any|the|) passenger[s] (of|from) %entities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffVisualEffect",
@@ -4504,7 +4750,8 @@
       "patterns": [
         "(play|show) %visualeffects% (on|%directions%) %entities/locations% [(to %-players%|in (radius|range) of %-number%)]",
         "(play|show) %number% %visualeffects% (on|%directions%) %locations% [(to %-players%|in (radius|range) of %-number%)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffWorldLoad",
@@ -4527,7 +4774,8 @@
       "patterns": [
         "load [[the] world[s]] %strings% [with environment %-environment%]",
         "unload [[the] world[s]] %worlds% [:without saving]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffWorldSave",
@@ -4545,7 +4793,8 @@
       ],
       "patterns": [
         "save [[the] world[s]] %worlds%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffRotate",
@@ -4575,7 +4824,8 @@
         "rotate %quaternions/displays% around [the|its|their] local (:x|:y|:z)(-| )ax(i|e)s by %number%",
         "rotate %vectors/quaternions/displays% around [the] %vector% by %number%",
         "rotate %quaternions/displays% by x %number%, y %number%(, [and]| and) z %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffFishingLure",
@@ -4593,6 +4843,9 @@
       "patterns": [
         "apply [the] lure enchantment bonus",
         "remove [the] lure enchantment bonus"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -4610,6 +4863,9 @@
       ],
       "patterns": [
         "(reel|pull) in hook[ed] entity"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -4632,7 +4888,8 @@
         "unlock age of %livingentities%",
         "allow aging of %livingentities%",
         "allow %livingentities% to age"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffBreedable",
@@ -4652,7 +4909,8 @@
         "unsterilize %livingentities%",
         "make %livingentities% (not |non(-| )|un)breedable",
         "sterilize %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffMakeAdultOrBaby",
@@ -4671,7 +4929,8 @@
       "patterns": [
         "make %livingentities% [a[n]] (adult|:baby)",
         "force %livingentities% to be[come] a[n] (adult|:baby)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTextDisplayDropShadow",
@@ -4692,7 +4951,8 @@
         "(apply|add) (drop|text) shadow to %displays%'[s] text",
         "(remove|clear) (drop|text) shadow from [[the] text of] %displays%",
         "(remove|clear) (drop|text) shadow from %displays%'[s] text"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffTextDisplaySeeThroughBlocks",
@@ -4711,7 +4971,8 @@
         "make %displays% visible through (blocks|walls)",
         "force %displays% to be visible through (blocks|walls)",
         "(prevent|block) %displays% from being (visible|seen) through (blocks|walls)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffRegisterTag",
@@ -4737,7 +4998,8 @@
       ],
       "patterns": [
         "register [a[n]] [custom] (1:item|2:block|3:entity [type]) tag named %string% (containing|using) %entitydatas/itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffGenerateLoot",
@@ -4755,7 +5017,8 @@
       ],
       "patterns": [
         "generate [the] loot (of|using) %loottable% [(with|using) %-lootcontext%] in %inventories%"
-      ]
+      ],
+      "events": []
     }
   ],
   "expressions": [
@@ -4773,6 +5036,9 @@
       ],
       "patterns": [
         "[the] absorbed blocks"
+      ],
+      "events": [
+        "sponge absorb"
       ]
     },
     {
@@ -4792,7 +5058,8 @@
       ],
       "patterns": [
         "[the] affected entities"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAllBannedEntries",
@@ -4810,7 +5077,8 @@
       ],
       "patterns": [
         "[all [[of] the]|the] banned (players|ips:(ips|ip addresses))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAllCommands",
@@ -4827,7 +5095,8 @@
       ],
       "patterns": [
         "[(all|the|all [of] the)] [registered] [(1¦script)] commands"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAngle",
@@ -4850,7 +5119,8 @@
         "%number% [in] rad[ian][s]",
         "%numbers% in deg[ree][s]",
         "%numbers% in rad[ian][s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAppliedEffect",
@@ -4870,6 +5140,9 @@
       ],
       "patterns": [
         "[the] applied [beacon] effect"
+      ],
+      "events": [
+        "Beacon Effect"
       ]
     },
     {
@@ -4888,6 +5161,9 @@
       ],
       "patterns": [
         "[the] applied enchant[ment]s"
+      ],
+      "events": [
+        "enchant"
       ]
     },
     {
@@ -4915,7 +5191,8 @@
         "[(all [[of] the]|the)] arg[ument][(1:s)]",
         "[the] %*classinfo%( |-)arg[ument][( |-)<\\d+>]",
         "[the] arg[ument]( |-)%*classinfo%[( |-)<\\d+>]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAttacked",
@@ -4933,6 +5210,11 @@
       ],
       "patterns": [
         "[the] (attacked|damaged|victim) [<(.+)>]"
+      ],
+      "events": [
+        "damage",
+        "death",
+        "projectile hit"
       ]
     },
     {
@@ -4953,6 +5235,11 @@
       ],
       "patterns": [
         "[the] (attacker|damager)"
+      ],
+      "events": [
+        "damage",
+        "death",
+        "destroy"
       ]
     },
     {
@@ -4972,7 +5259,8 @@
       ],
       "patterns": [
         "[the] [piglin] barter[ing] drops"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBarterInput",
@@ -4990,7 +5278,8 @@
       ],
       "patterns": [
         "[the] [piglin] barter[ing] input"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlock",
@@ -5014,7 +5303,8 @@
       ],
       "patterns": [
         "[the] [event-]block"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprChatFormat",
@@ -5030,7 +5320,8 @@
       ],
       "patterns": [
         "[the] (message|chat) format[ting]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprChatRecipients",
@@ -5046,7 +5337,8 @@
       ],
       "patterns": [
         "[chat][( |-)]recipients"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprClicked",
@@ -5064,6 +5356,10 @@
       ],
       "patterns": [
         "[the] (1¦clicked [enchant[ment]] (button|option)|2¦clicked (block|%-*itemtype/entitydata%)|3¦clicked slot|4¦clicked inventory|5¦click (type|action)|6¦inventory action)"
+      ],
+      "events": [
+        "click",
+        "inventory click"
       ]
     },
     {
@@ -5089,7 +5385,8 @@
         "[the] ((cooldown|wait) time|[wait] time of [the] (cooldown|wait) [(of|for) [the] [current] command])",
         "[the] last usage [date] [of [the] (cooldown|wait) [(of|for) [the] [current] command]]",
         "[the] [cooldown] bypass perm[ission] [of [the] (cooldown|wait) [(of|for) [the] [current] command]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCommand",
@@ -5111,6 +5408,9 @@
       "patterns": [
         "[the] (full|complete|whole) command",
         "[the] command [(label|alias)]"
+      ],
+      "events": [
+        "command"
       ]
     },
     {
@@ -5128,7 +5428,8 @@
       ],
       "patterns": [
         "[the] [skript] config"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDamage",
@@ -5150,6 +5451,11 @@
       ],
       "patterns": [
         "[the] damage"
+      ],
+      "events": [
+        "Damage",
+        "Vehicle Damage",
+        "Item Damage"
       ]
     },
     {
@@ -5167,6 +5473,9 @@
       ],
       "patterns": [
         "[the] drops"
+      ],
+      "events": [
+        "death"
       ]
     },
     {
@@ -5185,6 +5494,9 @@
       ],
       "patterns": [
         "[the] [displayed] ([e]xp[erience]|enchanting) cost"
+      ],
+      "events": [
+        "enchant"
       ]
     },
     {
@@ -5205,6 +5517,10 @@
       ],
       "patterns": [
         "[the] enchant[ed] item"
+      ],
+      "events": [
+        "enchant prepare",
+        "enchant"
       ]
     },
     {
@@ -5222,6 +5538,9 @@
       ],
       "patterns": [
         "[the] enchantment bonus"
+      ],
+      "events": [
+        "enchant prepare"
       ]
     },
     {
@@ -5241,6 +5560,9 @@
         "[all [of]] [the] enchant[ment] offers",
         "enchant[ment] offer[s] %numbers%",
         "[the] %number%(st|nd|rd|th) enchant[ment] offer"
+      ],
+      "events": [
+        "enchant prepare"
       ]
     },
     {
@@ -5259,6 +5581,9 @@
       ],
       "patterns": [
         "[the] [event-]initiator[( |-)inventory]"
+      ],
+      "events": [
+        "Inventory Item Move"
       ]
     },
     {
@@ -5290,6 +5615,12 @@
       ],
       "patterns": [
         "[the] (spawned|dropped|) [e]xp[erience] [orb[s]]"
+      ],
+      "events": [
+        "experience spawn",
+        "break / mine",
+        "experience change",
+        "entity breeding"
       ]
     },
     {
@@ -5310,6 +5641,9 @@
       "patterns": [
         "[the] explosion (yield|radius|size)",
         "[the] (yield|radius|size) of [the] explosion"
+      ],
+      "events": [
+        "explosion prime"
       ]
     },
     {
@@ -5326,6 +5660,9 @@
       ],
       "patterns": [
         "[all] [the] fertilized blocks"
+      ],
+      "events": [
+        "block fertilize"
       ]
     },
     {
@@ -5342,6 +5679,9 @@
       ],
       "patterns": [
         "[the] final damage"
+      ],
+      "events": [
+        "damage"
       ]
     },
     {
@@ -5362,7 +5702,8 @@
       ],
       "patterns": [
         "[the] hanging (entity|:remover)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHash",
@@ -5391,7 +5732,8 @@
       ],
       "patterns": [
         "%strings% hash[ed] with (0¦MD5|1¦SHA-256)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHatchingNumber",
@@ -5409,6 +5751,9 @@
       ],
       "patterns": [
         "[the] hatching number"
+      ],
+      "events": [
+        "Egg Throw"
       ]
     },
     {
@@ -5426,6 +5771,9 @@
       ],
       "patterns": [
         "[the] hatching entity [type]"
+      ],
+      "events": [
+        "Egg Throw"
       ]
     },
     {
@@ -5444,6 +5792,9 @@
       ],
       "patterns": [
         "[the] heal[ing] amount"
+      ],
+      "events": [
+        "heal"
       ]
     },
     {
@@ -5462,7 +5813,8 @@
       ],
       "patterns": [
         "[the] (host|domain)[ ][name]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHotbarButton",
@@ -5479,7 +5831,8 @@
       ],
       "patterns": [
         "[the] hotbar button"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHoverList",
@@ -5502,6 +5855,9 @@
       "patterns": [
         "[the] [custom] [player|server] (hover|sample) ([message] list|message)",
         "[the] [custom] player [hover|sample] list"
+      ],
+      "events": [
+        "server list ping"
       ]
     },
     {
@@ -5520,6 +5876,9 @@
       ],
       "patterns": [
         "[the] inventory clos(e|ing) (reason|cause)"
+      ],
+      "events": [
+        "Inventory Close"
       ]
     },
     {
@@ -5536,7 +5895,8 @@
       ],
       "patterns": [
         "[the] [last[ly]] loaded server icon"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastSpawnedEntity",
@@ -5562,7 +5922,8 @@
         "[the] [last[ly]] dropped (2:item)",
         "[the] [last[ly]] (created|struck) (3:lightning)",
         "[the] [last[ly]] (launched|deployed) (4:firework)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocation",
@@ -5579,7 +5940,8 @@
       ],
       "patterns": [
         "[the] [event-](location|position)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLoopIteration",
@@ -5603,7 +5965,8 @@
       ],
       "patterns": [
         "[the] loop(-| )(counter|iteration)[-%-*number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLoopValue",
@@ -5641,7 +6004,8 @@
         "[the] [current] loop-<.+>",
         "[the] next loop-<.+>",
         "[the] previous loop-<.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMe",
@@ -5660,7 +6024,8 @@
       "patterns": [
         "me",
         "my[self]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMemory",
@@ -5678,7 +6043,8 @@
       ],
       "patterns": [
         "[the] [server] (:free|max:max[imum]|total) (memory|ram)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMendingRepairAmount",
@@ -5696,7 +6062,8 @@
       ],
       "patterns": [
         "[the] [mending] repair amount"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMessage",
@@ -5737,6 +6104,13 @@
         "[the] (quit|leave|log[ ]out|kick)( |-)message",
         "[the] death( |-)message",
         "[the] broadcast(-|[ed] )message"
+      ],
+      "events": [
+        "chat",
+        "join",
+        "quit",
+        "death",
+        "broadcast"
       ]
     },
     {
@@ -5755,7 +6129,8 @@
       ],
       "patterns": [
         "[the] [(1¦default)|(2¦shown|displayed)] (MOTD|message of [the] day)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNow",
@@ -5771,7 +6146,8 @@
       ],
       "patterns": [
         "now"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNumberOfCharacters",
@@ -5793,7 +6169,8 @@
         "number of upper[ ]case char(acters|s) in %string%",
         "number of lower[ ]case char(acters|s) in %string%",
         "number of digit char(acters|s) in %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprOfflinePlayers",
@@ -5809,7 +6186,8 @@
       ],
       "patterns": [
         "[(all [[of] the]|the)] offline[ ]players"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprOps",
@@ -5825,7 +6203,8 @@
       ],
       "patterns": [
         "[all [[of] the]|the] [server] [:non(-| )]op[erator]s"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprParseError",
@@ -5846,7 +6225,8 @@
       ],
       "patterns": [
         "[the] [last] [parse] error"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlugins",
@@ -5865,7 +6245,8 @@
       ],
       "patterns": [
         "[(all [[of] the]|the)] [loaded] plugins"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPortal",
@@ -5884,6 +6265,9 @@
       "patterns": [
         "[the] portal['s] blocks",
         "[the] blocks of [the] portal"
+      ],
+      "events": [
+        "portal_create"
       ]
     },
     {
@@ -5911,6 +6295,9 @@
       ],
       "patterns": [
         "[the] [server] [(sent|required|fake)] protocol version [number]"
+      ],
+      "events": [
+        "server list ping"
       ]
     },
     {
@@ -5927,7 +6314,8 @@
       ],
       "patterns": [
         "[the] moved blocks"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRandomUUID",
@@ -5943,7 +6331,8 @@
       ],
       "patterns": [
         "[a] random uuid"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRawName",
@@ -5959,7 +6348,8 @@
       ],
       "patterns": [
         "(raw|minecraft|vanilla) name[s] of %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprReadiedArrow",
@@ -5978,6 +6368,9 @@
       ],
       "patterns": [
         "[the] (readied|selected|drawn) (:arrow|bow)"
+      ],
+      "events": [
+        "ready arrow"
       ]
     },
     {
@@ -5995,7 +6388,8 @@
       ],
       "patterns": [
         "[the] respawn location"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprScript",
@@ -6023,7 +6417,8 @@
         "[the] [current] script",
         "[the] script[s] [named] %strings%",
         "[the] scripts in [directory|folder] %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprScripts",
@@ -6045,7 +6440,8 @@
         "[all [[of] the]|the] scripts",
         "[all [[of] the]|the] (enabled|loaded) scripts",
         "[all [[of] the]|the] (disabled|unloaded) scripts"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprScriptsOld",
@@ -6067,7 +6463,8 @@
         "[all [of the]|the] scripts [1:without ([subdirectory] paths|parents)]",
         "[all [of the]|the] (enabled|loaded) scripts [1:without ([subdirectory] paths|parents)]",
         "[all [of the]|the] (disabled|unloaded) scripts [1:without ([subdirectory] paths|parents)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSentCommands",
@@ -6087,6 +6484,9 @@
       ],
       "patterns": [
         "[the] [sent] [server] command[s] list"
+      ],
+      "events": [
+        "send command list"
       ]
     },
     {
@@ -6103,7 +6503,8 @@
       ],
       "patterns": [
         "[the] shooter [of %projectile%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSourceBlock",
@@ -6121,6 +6522,9 @@
       ],
       "patterns": [
         "[the] source block"
+      ],
+      "events": [
+        "Spread"
       ]
     },
     {
@@ -6138,7 +6542,8 @@
       "patterns": [
         "(0¦NaN|1¦[(2¦-|2¦minus)](infinity|∞)) value",
         "value of (0¦NaN|1¦[(2¦-|2¦minus)](infinity|∞))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprStringCase",
@@ -6179,7 +6584,8 @@
         "[(1¦lower|2¦upper|3¦capital|4¦screaming)[ ]]snake[ ]case %strings%",
         "%strings% in [(1¦lower|2¦upper|3¦capital)[ ]]kebab[ ]case",
         "[(1¦lower|2¦upper|3¦capital)[ ]]kebab[ ]case %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTamer",
@@ -6197,7 +6603,8 @@
       ],
       "patterns": [
         "[the] tamer"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTimes",
@@ -6218,7 +6625,8 @@
         "once",
         "twice",
         "thrice"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTPS",
@@ -6237,7 +6645,8 @@
         "tps from [the] last 5[ ]m[inutes]",
         "tps from [the] last 15[ ]m[inutes]",
         "[the] tps"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTransformReason",
@@ -6254,7 +6663,8 @@
       ],
       "patterns": [
         "[the] transform[ing] (cause|reason|type)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprUnleashReason",
@@ -6271,6 +6681,9 @@
       ],
       "patterns": [
         "[the] unleash[ing] reason"
+      ],
+      "events": [
+        "Unleash"
       ]
     },
     {
@@ -6289,7 +6702,8 @@
       ],
       "patterns": [
         "[a] [new] cylindrical vector [from|with] [radius] %number%, [yaw] %number%(,[ and]| and) [height] %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorRandom",
@@ -6305,7 +6719,8 @@
       ],
       "patterns": [
         "[a] random vector"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorSpherical",
@@ -6323,7 +6738,8 @@
       ],
       "patterns": [
         "[a] [new] spherical vector [(from|with)] [radius] %number%, [yaw] %number%(,[ and]| and) [pitch] %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVersion",
@@ -6340,7 +6756,8 @@
       ],
       "patterns": [
         "(0¦[craft]bukkit|1¦minecraft|2¦skript)( |-)version"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVersionString",
@@ -6359,6 +6776,9 @@
       ],
       "patterns": [
         "[the] [shown|custom] version [string|text]"
+      ],
+      "events": [
+        "Server List Ping"
       ]
     },
     {
@@ -6379,7 +6799,8 @@
       ],
       "patterns": [
         "[the] white[ ]list"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWorldFromName",
@@ -6396,7 +6817,8 @@
       ],
       "patterns": [
         "[the] world [(named|with name)] %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWorlds",
@@ -6413,7 +6835,8 @@
       ],
       "patterns": [
         "[(all [[of] the]|the)] worlds"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "LitConsole",
@@ -6430,7 +6853,8 @@
       ],
       "patterns": [
         "[the] (console|server)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "LitNewLine",
@@ -6448,7 +6872,8 @@
         "nl",
         "new[ ]line",
         "line[ ]break"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "LitPi",
@@ -6464,7 +6889,8 @@
       ],
       "patterns": [
         "(pi|π)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRotate",
@@ -6491,7 +6917,8 @@
         "%quaternions% rotated around [the|its|their] local (:x|:y|:z)(-| )ax(i|e)s by %number%",
         "%quaternions/vectors% rotated around [the] %vector% by %number%",
         "%quaternions% rotated by x %number%, y %number%(, [and]| and) z %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBreedingFamily",
@@ -6511,7 +6938,8 @@
         "[the] breeding father",
         "[the] [bred] (offspring|child)",
         "[the] breeder"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTagsOfType",
@@ -6531,7 +6959,8 @@
       ],
       "patterns": [
         "[all [[of] the]|the] [:minecraft|:datapack|:paper|:custom] [1:item|2:block|3:entity [type]] tags"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLoot",
@@ -6550,7 +6979,8 @@
       ],
       "patterns": [
         "[the] loot"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDamageCause",
@@ -6566,7 +6996,8 @@
       ],
       "patterns": [
         "[the] damage (cause|type)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCommandSender",
@@ -6586,6 +7017,9 @@
       ],
       "patterns": [
         "[the] [command['s]] (sender|executor)"
+      ],
+      "events": [
+        "command"
       ]
     },
     {
@@ -6602,6 +7036,9 @@
       ],
       "patterns": [
         "[the] [thrown] egg"
+      ],
+      "events": [
+        "Egg Throw"
       ]
     },
     {
@@ -6621,8 +7058,9 @@
         "\t\t#Changed by picking up xp orb"
       ],
       "patterns": [
-        "[the] [the] (experience|[e]xp) cooldown change (reason|cause|type)"
-      ]
+        "[the] (experience|[e]xp) cooldown change (reason|cause|type)"
+      ],
+      "events": []
     },
     {
       "id": "ExprHealReason",
@@ -6640,6 +7078,9 @@
       ],
       "patterns": [
         "[the] (regen|health regain|heal[ing]) (reason|cause)"
+      ],
+      "events": [
+        "heal"
       ]
     },
     {
@@ -6656,7 +7097,8 @@
       ],
       "patterns": [
         "[the] inventory action"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItem",
@@ -6674,7 +7116,8 @@
       ],
       "patterns": [
         "[the] item"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprQuitReason",
@@ -6693,7 +7136,8 @@
       ],
       "patterns": [
         "[the] (quit|disconnect) (cause|reason)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpawnReason",
@@ -6711,7 +7155,8 @@
       ],
       "patterns": [
         "[the] spawn[ing] reason"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTeleportCause",
@@ -6729,7 +7174,8 @@
       ],
       "patterns": [
         "[the] teleport (cause|reason|type)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFishingApproachAngle",
@@ -6744,11 +7190,17 @@
       ],
       "examples": [
         "on fish approach:",
-        "\tif fishing approach angle is bigger than 300.5 degrees or fishing approach angle is smaller than 59.5 degrees:",
+        "\tif any:",
+        "\t\tmaximum fishing approach angle is bigger than 300.5 degrees",
+        "\t\tmin fishing approach angle is smaller than 59.5 degrees",
+        "\tthen:",
         "\t\tcancel event"
       ],
       "patterns": [
         "(min:min[imum]|max[imum]) fish[ing] approach[ing] angle"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -6767,6 +7219,9 @@
       ],
       "patterns": [
         "fish[ing] bit(e|ing) [wait] time"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -6785,6 +7240,9 @@
       ],
       "patterns": [
         "[the] fish[ing] (hook|bobber)"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -6803,6 +7261,9 @@
       ],
       "patterns": [
         "hook[ed] entity"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -6817,11 +7278,14 @@
       ],
       "examples": [
         "on fishing line cast:",
-        "\tset min waiting time to 10 seconds",
-        "\tset max waiting time to 20 seconds"
+        "\tset min fish waiting time to 10 seconds",
+        "\tset max fishing waiting time to 20 seconds"
       ],
       "patterns": [
         "(min:min[imum]|max[imum]) fish[ing] wait[ing] time"
+      ],
+      "events": [
+        "Fishing"
       ]
     },
     {
@@ -6839,7 +7303,8 @@
       ],
       "patterns": [
         "[the] loot[ ]context"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAlphabetList",
@@ -6855,7 +7320,8 @@
       ],
       "patterns": [
         "alphabetically sorted %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBannerItem",
@@ -6874,7 +7340,8 @@
       ],
       "patterns": [
         "[a[n]] %*bannerpatterntypes% item[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlock-2",
@@ -6898,7 +7365,8 @@
       ],
       "patterns": [
         "[the] block %direction% [%location%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlocks",
@@ -6924,7 +7392,8 @@
         "[(all [[of] the]|the)] blocks between %location% and %location%",
         "[(all [[of] the]|the)] blocks within %location% and %location%",
         "[(all [[of] the]|the)] blocks (in|within) %chunk%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlockSphere",
@@ -6942,7 +7411,8 @@
       "patterns": [
         "[(all [[of] the]|the)] blocks in radius %number% [(of|around) %location%]",
         "[(all [[of] the]|the)] blocks around %location% in radius %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBreakSpeed",
@@ -6961,7 +7431,8 @@
       "patterns": [
         "[the] break speed[s] [of %blocks%] [for %players%]",
         "%block%'[s] break speed[s] [for %players%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCharacters",
@@ -6986,7 +7457,8 @@
       ],
       "patterns": [
         "[(all [[of] the]|the)] [:alphanumeric] characters (between|from) %string% (and|to) %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprChestInventory",
@@ -7009,7 +7481,8 @@
       "patterns": [
         "[a] [new] chest inventory (named|with name) %string% [with %-number% row[s]]",
         "[a] [new] chest inventory with %number% row[s] [(named|with name) %-string%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprChunk",
@@ -7028,7 +7501,8 @@
         "[(all [[of] the]|the)] chunk[s] (of|%-directions%) %locations%",
         "%locations%'[s] chunk[s]",
         "[(all [[of] the]|the)] loaded chunks (of|in) %worlds%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprColoured",
@@ -7056,7 +7530,8 @@
         "(colo[u]r-|colo[u]red )%strings%",
         "(format-|formatted )%strings%",
         "(un|non)[-](colo[u]r-|colo[u]red |format-|formatted )%strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDamagedItem",
@@ -7078,7 +7553,8 @@
       "patterns": [
         "%itemtype% with (damage|data) [value] %number%",
         "%itemtype% damaged by %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDateAgoLater",
@@ -7097,7 +7573,8 @@
       "patterns": [
         "%timespan% (ago|in the past|before [the] [date] %-date%)",
         "%timespan% (later|(from|after) [the] [date] %-date%)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDefaultValue",
@@ -7113,7 +7590,8 @@
       ],
       "patterns": [
         "%objects% (otherwise|?) %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDequeuedQueue",
@@ -7130,7 +7608,8 @@
       "patterns": [
         "(de|un)queued %queue%",
         "unrolled %queue%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDifference",
@@ -7148,7 +7627,8 @@
       ],
       "patterns": [
         "difference (between|of) %object% and %object%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDirection",
@@ -7181,7 +7661,8 @@
         "[%-number% [(block|met(er|re))[s]]] in %entity/block%'[s] (0¦direction|1¦horizontal direction|2¦facing|3¦horizontal facing) (of|from|)",
         "[%-number% [(block|met(er|re))[s]]] (0¦in[ ]front [of]|0¦forward[s]|2¦behind|2¦backwards|[to the] (1¦right|-1¦left) [of])",
         "[%-number% [(block|met(er|re))[s]]] horizontal[ly] (0¦in[ ]front [of]|0¦forward[s]|2¦behind|2¦backwards|to the (1¦right|-1¦left) [of])"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDistance",
@@ -7198,7 +7679,8 @@
       ],
       "patterns": [
         "[the] distance between %location% and %location%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDropsOfBlock",
@@ -7216,7 +7698,8 @@
       "patterns": [
         "[(all|the|all [of] the)] drops of %blocks% [(using|with) %-itemtype% [(1¦as %-entity%)]]",
         "%blocks%'s drops [(using|with) %-itemtype% [(1¦as %-entity%)]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntityAttribute",
@@ -7237,7 +7720,8 @@
       "patterns": [
         "[the] %attributetype% [(1:(total|final|modified))] attribute [value] of %entities%",
         "%entities%'[s] %attributetype% [(1:(total|final|modified))] attribute [value]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntitySound",
@@ -7269,7 +7753,8 @@
         "%livingentities%'[s] drink[ing] sound[s]",
         "[the] ambient sound[s] of %livingentities%",
         "%livingentities%'[s] ambient sound[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprExplodedBlocks",
@@ -7301,6 +7786,9 @@
       ],
       "patterns": [
         "[the] exploded blocks"
+      ],
+      "events": [
+        "explode"
       ]
     },
     {
@@ -7321,7 +7809,8 @@
       "patterns": [
         "%objects% (where|that match) \\[<.+>\\]",
         "%objects% (where|that match) \\(<.+>\\)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFireworkEffect",
@@ -7340,7 +7829,8 @@
       "patterns": [
         "(1¦|2¦flickering|3¦trailing|4¦flickering trailing|5¦trailing flickering) %fireworktype% [firework [effect]] colo[u]red %colors%",
         "(1¦|2¦flickering|3¦trailing|4¦flickering trailing|5¦trailing flickering) %fireworktype% [firework [effect]] colo[u]red %colors% fad(e|ing) [to] %colors%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFunction",
@@ -7359,7 +7849,8 @@
         "[the|a] function [named] %string% [(in|from) %-script%]",
         "[the] functions [named] %strings% [(in|from) %-script%]",
         "[all [[of] the]|the] functions (in|from) %script%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprGameRule",
@@ -7375,7 +7866,8 @@
       ],
       "patterns": [
         "[the] gamerule %gamerule% of %worlds%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprIndexOf",
@@ -7393,7 +7885,8 @@
       ],
       "patterns": [
         "[the] (0¦|0¦first|1¦last) index of %string% in %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprIndices",
@@ -7424,7 +7917,8 @@
         "%~objects%'[s] (indexes|indices)",
         "[sorted] (indices|indexes) of %~objects% in (ascending|1¦descending) order",
         "[sorted] %~objects%'[s] (indices|indexes) in (ascending|1¦descending) order"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprInput",
@@ -7446,7 +7940,8 @@
         "input",
         "%*classinfo% input",
         "input index"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprInventorySlot",
@@ -7467,7 +7962,8 @@
       "patterns": [
         "[the] slot[s] %numbers% of %inventory%",
         "%inventory%'[s] slot[s] %numbers%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemCooldown",
@@ -7487,7 +7983,8 @@
       "patterns": [
         "[the] [item] cooldown of %itemtypes% for %players%",
         "%players%'[s] [item] cooldown for %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItems",
@@ -7509,7 +8006,8 @@
         "every block[[ ]type]",
         "[all [[of] the]|the|every] block[s] of type[s] %itemtypes%",
         "[all [[of] the]|the|every] item[s] of type[s] %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprJoinSplit",
@@ -7530,7 +8028,8 @@
         "%string% split (at|using|by) [[the] delimiter] %string% [case:with case sensitivity] [trailing:without [the] trailing [empty] (string|text)]",
         "regex split %string% (at|using|by) [[the] delimiter] %string% [trailing:without [the] trailing [empty] (string|text)]",
         "regex %string% split (at|using|by) [[the] delimiter] %string% [trailing:without [the] trailing [empty] (string|text)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocation-2",
@@ -7547,7 +8046,8 @@
       ],
       "patterns": [
         "[the] (location|position) %directions% [%location%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocationAt",
@@ -7564,7 +8064,8 @@
       ],
       "patterns": [
         "[the] (location|position) [at] [\\(][x[ ][=[ ]]]%number%, [y[ ][=[ ]]]%number%, [and] [z[ ][=[ ]]]%number%[\\)] [[(in|of) [[the] world]] %world%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocationFromVector",
@@ -7585,7 +8086,8 @@
         "location (from|of) %vector% in %world%",
         "%vector% [to location] in %world% with yaw %number% and pitch %number%",
         "location (from|of) %vector% in %world% with yaw %number% and pitch %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocationVectorOffset",
@@ -7602,7 +8104,8 @@
       "patterns": [
         "%location% offset by [[the] vectors] %vectors%",
         "%location%[ ]~[~][ ]%vectors%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprName",
@@ -7653,7 +8156,8 @@
         "%offlineplayers/entities/nameds/inventories%'[s] (display|nick|chat|custom)[ ]name[s]",
         "[the] (player|tab)[ ]list name[s] of %players%",
         "%players%'[s] (player|tab)[ ]list name[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNearestEntity",
@@ -7675,7 +8179,29 @@
       "patterns": [
         "[the] nearest %*entitydatas% [[relative] to %entity/location%]",
         "[the] %*entitydatas% nearest [to %entity/location%]"
-      ]
+      ],
+      "events": []
+    },
+    {
+      "id": "ExprNewBannerPattern",
+      "name": "Banner Pattern",
+      "since": [
+        "2.10"
+      ],
+      "description": [
+        "Creates a new banner pattern."
+      ],
+      "examples": [
+        "set {_pattern} to a creeper banner pattern colored red",
+        "add {_pattern} to banner patterns of {_banneritem}",
+        "remove {_pattern} from banner patterns of {_banneritem}",
+        "set the 1st banner pattern of block at location(0,0,0) to {_pattern}",
+        "clear the 1st banner pattern of block at location(0,0,0)"
+      ],
+      "patterns": [
+        "[a] %bannerpatterntype% colo[u]red %color%"
+      ],
+      "events": []
     },
     {
       "id": "ExprNumbers",
@@ -7696,7 +8222,8 @@
       ],
       "patterns": [
         "[(all [[of] the]|the)] (numbers|1¦integers|2¦decimals) (between|from) %number% (and|to) %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprParse",
@@ -7726,7 +8253,8 @@
       ],
       "patterns": [
         "%string% parsed as (%-*classinfo%|\"<.*>\")"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPercent",
@@ -7746,7 +8274,8 @@
       ],
       "patterns": [
         "%number%(\\%| percent) of %numbers%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlain",
@@ -7763,7 +8292,8 @@
       ],
       "patterns": [
         "[a[n]] (plain|unmodified) %itemtype%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPotionEffect",
@@ -7784,7 +8314,8 @@
       "patterns": [
         "[new] potion effect of %potioneffecttype% [potion] [[[of] tier] %-number%] [(1¦without particles)] [for %-timespan%]",
         "[new] ambient potion effect of %potioneffecttype% [potion] [[[of] tier] %-number%] [(1¦without particles)] [for %-timespan%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPotionEffectTier",
@@ -7800,7 +8331,8 @@
       ],
       "patterns": [
         "[the] [potion] (tier|amplifier|level) of %potioneffecttypes% (of|for|on) %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprQueue",
@@ -7817,7 +8349,8 @@
       ],
       "patterns": [
         "[a] [new] queue [(of|with) %-objects%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRandom",
@@ -7834,7 +8367,8 @@
       ],
       "patterns": [
         "[a] random %*classinfo% [out] of %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRandomCharacter",
@@ -7853,7 +8387,8 @@
       ],
       "patterns": [
         "[a|%-integer%] random [:alphanumeric] character[s] (from|between) %string% (to|and) %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRandomNumber",
@@ -7873,7 +8408,8 @@
       ],
       "patterns": [
         "[a|%-integer%] random (:integer|number)[s] (from|between) %number% (to|and) %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRawString",
@@ -7889,7 +8425,8 @@
       ],
       "patterns": [
         "raw %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRepeat",
@@ -7908,7 +8445,8 @@
       ],
       "patterns": [
         "%strings% repeated %integer% time[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprResult",
@@ -7928,7 +8466,8 @@
       ],
       "patterns": [
         "[the] result[plural:s] of [running|executing] %executable% [arguments:with arg[ument]s %-objects%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprReversedList",
@@ -7944,7 +8483,8 @@
       ],
       "patterns": [
         "reversed %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprShuffledList",
@@ -7960,7 +8500,8 @@
       ],
       "patterns": [
         "shuffled %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSortedList",
@@ -7976,7 +8517,8 @@
       ],
       "patterns": [
         "sorted %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSubstring",
@@ -7998,7 +8540,8 @@
         "[the] (1¦first|2¦last) [%-number%] character[s] of %strings%",
         "[the] %number% (1¦first|2¦last) characters of %strings%",
         "[the] character[s] at [(index|position|indexes|indices|positions)] %numbers% (in|of) %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTargetedBlock",
@@ -8023,7 +8566,8 @@
       "patterns": [
         "[the] [actual:(actual[ly]|exact)] target[ed] block[s] [of %livingentities%]",
         "%livingentities%'[s] [actual:(actual[ly]|exact)] target[ed] block[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTernary",
@@ -8039,7 +8583,8 @@
       ],
       "patterns": [
         "%objects% if <.+>[,] (otherwise|else) %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprValueWithin",
@@ -8059,7 +8604,8 @@
       ],
       "patterns": [
         "[the] (%-*classinfo%|value[:s]) (within|in) %~objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorAngleBetween",
@@ -8075,7 +8621,8 @@
       ],
       "patterns": [
         "[the] angle between [[the] vectors] %vector% and %vector%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorBetweenLocations",
@@ -8091,7 +8638,8 @@
       ],
       "patterns": [
         "[the] vector (from|between) %location% (to|and) %location%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorCrossProduct",
@@ -8107,7 +8655,8 @@
       ],
       "patterns": [
         "%vector% cross %vector%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorDotProduct",
@@ -8123,7 +8672,8 @@
       ],
       "patterns": [
         "%vector% dot %vector%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorFromXYZ",
@@ -8139,7 +8689,8 @@
       ],
       "patterns": [
         "[a] [new] vector [(from|at|to)] %number%,[ ]%number%(,[ ]| and )%number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorFromYawAndPitch",
@@ -8156,7 +8707,8 @@
       "patterns": [
         "[a] [new] vector (from|with) yaw %number% and pitch %number%",
         "[a] [new] vector (from|with) pitch %number% and yaw %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorNormalize",
@@ -8173,7 +8725,8 @@
       "patterns": [
         "normalize[d] %vector%",
         "%vector% normalized"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorProjection",
@@ -8189,7 +8742,8 @@
       ],
       "patterns": [
         "[vector] projection [of] %vector% on[to] %vector%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWithItemFlags",
@@ -8209,7 +8763,8 @@
       "patterns": [
         "%itemtypes% with [the] item flag[s] %itemflags%",
         "%itemtypes% with [the] %itemflags% item flag[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTag",
@@ -8236,7 +8791,8 @@
       ],
       "patterns": [
         "[:minecraft|:datapack|:paper|:custom] [1:item|2:block|3:entity [type]] tag %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootItems",
@@ -8257,7 +8813,8 @@
       "patterns": [
         "[the] loot of %loottables% [(with|using) %-lootcontext%]",
         "%loottables%'[s] loot [(with|using) %-lootcontext%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootTableFromString",
@@ -8273,7 +8830,8 @@
       ],
       "patterns": [
         "[the] loot[ ]table[s] %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSecCreateLootContext",
@@ -8294,7 +8852,8 @@
       ],
       "patterns": [
         "[a] loot context %direction% %location%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprActiveItem",
@@ -8313,7 +8872,8 @@
       "patterns": [
         "[the] (raised|active) (tool|item|weapon) of %livingentities%",
         "%livingentities%'[s] (raised|active) (tool|item|weapon)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAge",
@@ -8337,7 +8897,8 @@
       "patterns": [
         "[the] [:max[imum]] age of %blocks/entities%",
         "%blocks/entities%'[s] [:max[imum]] age"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAI",
@@ -8354,7 +8915,8 @@
       "patterns": [
         "[the] (ai|artificial intelligence) of %livingentities%",
         "%livingentities%'[s] (ai|artificial intelligence)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAltitude",
@@ -8373,7 +8935,8 @@
       "patterns": [
         "[the] altitude[s] of %locations%",
         "%locations%'[s] altitude[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAmount",
@@ -8407,7 +8970,8 @@
         "[the] (amount|number|size) of %numbered%",
         "[the] (amount|number|size) of %objects%",
         "[the] recursive (amount|number|size) of %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAmountOfItems",
@@ -8423,7 +8987,8 @@
       ],
       "patterns": [
         "[the] (amount|number) of %itemtypes% (in|of) %inventories%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAnvilRepairCost",
@@ -8449,7 +9014,8 @@
       "patterns": [
         "[the] [anvil] [item] [:max[imum]] repair cost [of %inventories%]",
         "%inventories%'[s] [anvil] [item] [:max[imum]] repair cost"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAnvilText",
@@ -8469,7 +9035,8 @@
       "patterns": [
         "[the] anvil [inventory] (rename|text) input of %inventories%",
         "%inventories%'[s] anvil [inventory] (rename|text) input"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprARGB",
@@ -8488,7 +9055,8 @@
       "patterns": [
         "[the] (:alpha|:red|:green|:blue) (value|component) of %colors%",
         "%colors%'[s] (:alpha|:red|:green|:blue) (value|component)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprArmorSlot",
@@ -8512,7 +9080,8 @@
       "patterns": [
         "[the] ((boots:(boots|shoes)|leggings:leg[ging]s|chestplate:chestplate[s]|helmet:helmet[s]) [(item|:slot)]|armour:armo[u]r[s]|bodyarmor:body armo[u]r) of %livingentities%",
         "%livingentities%'[s] ((boots:(boots|shoes)|leggings:leg[ging]s|chestplate:chestplate[s]|helmet:helmet[s]) [(item|:slot)]|armour:armo[u]r[s]|bodyarmor:body armo[u]r)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprArrowKnockbackStrength",
@@ -8531,7 +9100,8 @@
       "patterns": [
         "[the] arrow knockback strength of %projectiles%",
         "%projectiles%'[s] arrow knockback strength"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprArrowsStuck",
@@ -8547,7 +9117,8 @@
       ],
       "patterns": [
         "[number of] arrow[s] stuck in %livingentities%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAttachedBlock",
@@ -8564,7 +9135,8 @@
       "patterns": [
         "[the] (attached|hit) block of %projectiles%",
         "%projectiles%'[s] (attached|hit) block"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprAttackCooldown",
@@ -8585,7 +9157,8 @@
       "patterns": [
         "[the] attack cooldown of %players%",
         "%players%'[s] attack cooldown"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBannerPatterns",
@@ -8609,7 +9182,8 @@
         "%itemstacks/itemtypes/slots/blocks%'[s] banner pattern[s]",
         "[the] %integer%[st|nd|rd|th] [banner] pattern of %itemstacks/itemtypes/slots/blocks%",
         "%itemstacks/itemtypes/slots/blocks%'[s] %integer%[st|nd|rd|th] [banner] pattern"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBeaconValues",
@@ -8638,6 +9212,11 @@
         "[the] [beacon] range [of %blocks%]",
         "%blocks%['s] [beacon] tier",
         "[the] [beacon] tier [of %blocks%]"
+      ],
+      "events": [
+        "Beacon Effect",
+        "Beacon Toggle",
+        "Beacon Change Effect"
       ]
     },
     {
@@ -8663,7 +9242,8 @@
       "patterns": [
         "[the] [(safe:(safe|valid)|(unsafe|invalid))] bed[s] [location[s]] of %offlineplayers%",
         "%offlineplayers%'[s] [(safe:(safe|valid)|(unsafe|invalid))] bed[s] [location[s]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBiome",
@@ -8686,7 +9266,8 @@
       "patterns": [
         "[the] biome [(of|%direction%) %locations%]",
         "%locations%'[s] biome"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlockData",
@@ -8707,7 +9288,8 @@
       "patterns": [
         "[the] block[ ]data of %blocks/displays%",
         "%blocks/displays%'[s] block[ ]data"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlockHardness",
@@ -8725,7 +9307,8 @@
       "patterns": [
         "[the] [block] hardness of %itemtypes%",
         "%itemtypes%'[s] [block] hardness"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBlockSound",
@@ -8746,7 +9329,8 @@
       "patterns": [
         "[the] (1:break|2:fall|3:hit|4:place|5:step) sound[s] of %blocks/blockdatas/itemtypes%",
         "%blocks/blockdatas/itemtypes%'[s] (1:break|2:fall|3:hit|4:place|5:step) sound[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBookAuthor",
@@ -8764,7 +9348,8 @@
       "patterns": [
         "[the] [book] (author|writer|publisher) of %itemtypes%",
         "%itemtypes%'[s] [book] (author|writer|publisher)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBookPages",
@@ -8789,7 +9374,8 @@
         "%itemtypes/itemstacks%'[s] [book] (pages|content)",
         "[book] page %number% of %itemtypes/itemstacks%",
         "%itemtypes/itemstacks%'[s] [book] page %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprBookTitle",
@@ -8807,7 +9393,8 @@
       "patterns": [
         "[the] book (name|title) of %itemtypes%",
         "%itemtypes%'[s] book (name|title)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCharacterFromCodepoint",
@@ -8832,7 +9419,8 @@
       ],
       "patterns": [
         "character (from|at|with) code([ ]point| position) %integer%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCharges",
@@ -8849,7 +9437,8 @@
       "patterns": [
         "[the] [:max[imum]] charge[s] of %blocks%",
         "%blocks%'[s] [:max[imum]] charge[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprClientViewDistance",
@@ -8867,7 +9456,8 @@
       "patterns": [
         "[the] client view distance[s] of %players%",
         "%players%'[s] client view distance[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCodepoint",
@@ -8900,7 +9490,8 @@
       "patterns": [
         "[the] [unicode|character] code([ ]point| position) of %strings%",
         "%strings%'[s] [unicode|character] code([ ]point| position)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprColorOf",
@@ -8921,7 +9512,8 @@
       "patterns": [
         "[the] colo[u]r[s] of %blocks/itemtypes/entities/fireworkeffects/displays%",
         "%blocks/itemtypes/entities/fireworkeffects/displays%'[s] colo[u]r[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCommandBlockCommand",
@@ -8939,7 +9531,8 @@
       "patterns": [
         "[the] [command[ ]block] command of %blocks/entities%",
         "%blocks/entities%'[s] [command[ ]block] command"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCommandInfo",
@@ -8986,7 +9579,8 @@
         "command[s] %strings%'[s] permission message",
         "[the] plugin [owner] [of [[the] command[s] %-strings%]]",
         "command[s] %strings%'[s] plugin [owner]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCompassTarget",
@@ -9006,7 +9600,8 @@
       "patterns": [
         "[the] compass target of %players%",
         "%players%'[s] compass target"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCoordinate",
@@ -9024,7 +9619,8 @@
       "patterns": [
         "[the] (0¦x|1¦y|2¦z)(-| )(coord[inate]|pos[ition]|loc[ation])[s] of %locations%",
         "%locations%'[s] (0¦x|1¦y|2¦z)(-| )(coord[inate]|pos[ition]|loc[ation])[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCursorSlot",
@@ -9042,7 +9638,8 @@
       "patterns": [
         "[the] cursor slot of %players%",
         "%players%'[s] cursor slot"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCustomModelData",
@@ -9060,7 +9657,8 @@
       "patterns": [
         "[the] [custom] model data of %itemtypes%",
         "%itemtypes%'[s] [custom] model data"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDifficulty",
@@ -9077,7 +9675,8 @@
       "patterns": [
         "[the] difficult(y|ies) of %worlds%",
         "%worlds%'[s] difficult(y|ies)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDomestication",
@@ -9100,7 +9699,8 @@
       "patterns": [
         "[the] [:max[imum]] domestication level of %livingentities%",
         "%livingentities%'[s] [:max[imum]] domestication level"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDurability",
@@ -9119,7 +9719,8 @@
       "patterns": [
         "[the] (damage[s] [value[s]]|1:durabilit(y|ies)) of %itemtypes/itemstacks/slots%",
         "%itemtypes/itemstacks/slots%'[s] (damage[s] [value[s]]|1:durabilit(y|ies))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprElement",
@@ -9152,7 +9753,8 @@
         "[a] random element (of|in) %queue%",
         "[the] %integer%(st|nd|rd|th) [1:[to] last] element (of|in) %queue%",
         "[the] elements (from|between) %integer% (to|and) %integer% (of|in) %queue%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEnchantmentLevel",
@@ -9172,7 +9774,8 @@
         "[the] %enchantments% [enchant[ment]] level[s] (on|of) %itemtypes%",
         "%itemtypes%'[s] %enchantments% [enchant[ment]] level[s]",
         "%itemtypes%'[s] [enchant[ment]] level[s] of %enchantments%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEnchantmentOfferCost",
@@ -9192,7 +9795,8 @@
       "patterns": [
         "[the] [enchant[ment]] cost of %enchantmentoffers%",
         "%enchantmentoffers%'[s] [enchant[ment]] cost"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEnchantments",
@@ -9209,7 +9813,8 @@
       "patterns": [
         "[the] enchantments of %itemtypes%",
         "%itemtypes%'[s] enchantments"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEnderChest",
@@ -9226,7 +9831,8 @@
       "patterns": [
         "[the] ender[ ]chest[s] of %players%",
         "%players%'[s] ender[ ]chest[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntityItemUseTime",
@@ -9247,7 +9853,8 @@
       "patterns": [
         "[the] [elapsed|:remaining] (item|tool) us[ag]e time of %livingentities%",
         "%livingentities%'[s] [elapsed|:remaining] (item|tool) us[ag]e time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntitySnapshot",
@@ -9270,7 +9877,8 @@
       "patterns": [
         "[the] entity snapshot of %entities/entitydatas%",
         "%entities/entitydatas%'[s] entity snapshot"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntityTamer",
@@ -9289,7 +9897,8 @@
       "patterns": [
         "[the] (owner|tamer) of %livingentities%",
         "%livingentities%'[s] (owner|tamer)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprExhaustion",
@@ -9306,7 +9915,8 @@
       "patterns": [
         "[the] exhaustion of %players%",
         "%players%'[s] exhaustion"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprExperienceCooldown",
@@ -9326,9 +9936,10 @@
         "\tclear the experience pickup cooldown of player"
       ],
       "patterns": [
-        "[the] [the] (experience|[e]xp) [pickup|collection] cooldown of %players%",
-        "%players%'[s] [the] (experience|[e]xp) [pickup|collection] cooldown"
-      ]
+        "[the] (experience|[e]xp) [pickup|collection] cooldown of %players%",
+        "%players%'[s] (experience|[e]xp) [pickup|collection] cooldown"
+      ],
+      "events": []
     },
     {
       "id": "ExprExplosionBlockYield",
@@ -9348,6 +9959,9 @@
       "patterns": [
         "[the] [explosion['s]] block (yield|amount)",
         "[the] percentage of blocks dropped"
+      ],
+      "events": [
+        "explosion"
       ]
     },
     {
@@ -9367,7 +9981,8 @@
       "patterns": [
         "[the] explosive (yield|radius|size) of %entities%",
         "%entities%'[s] explosive (yield|radius|size)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEyeLocation",
@@ -9387,7 +10002,8 @@
       "patterns": [
         "[the] (head|eye[s]) [location[s]] of %livingentities%",
         "%livingentities%'[s] (head|eye[s]) [location[s]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFacing",
@@ -9406,7 +10022,8 @@
       "patterns": [
         "[the] (1¦horizontal|) facing of %livingentities/blocks%",
         "%livingentities/blocks%'[s] (1¦horizontal|) facing"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFallDistance",
@@ -9425,7 +10042,8 @@
       "patterns": [
         "[the] fall[en] (distance|height) of %entities%",
         "%entities%'[s] fall[en] (distance|height)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFireTicks",
@@ -9443,7 +10061,8 @@
       "patterns": [
         "[the] [:max[imum]] (burn[ing]|fire) (time|duration) of %entities%",
         "%entities%'[s] [:max[imum]] (burn[ing]|fire) (time|duration)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFlightMode",
@@ -9461,7 +10080,8 @@
       "patterns": [
         "[the] fl(y[ing]|ight) (mode|state) of %players%",
         "%players%'[s] fl(y[ing]|ight) (mode|state)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFoodLevel",
@@ -9478,7 +10098,8 @@
       "patterns": [
         "[the] (food|hunger)[[ ](level|met(er|re)|bar)] [of %players%]",
         "%players%'[s] (food|hunger)[[ ](level|met(er|re)|bar)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFormatDate",
@@ -9498,7 +10119,8 @@
       "patterns": [
         "%dates% formatted [human-readable] [(with|as) %-string%]",
         "[human-readable] formatted %dates% [(with|as) %-string%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFreezeTicks",
@@ -9516,7 +10138,8 @@
       "patterns": [
         "[the] freeze time of %entities%",
         "%entities%'[s] freeze time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprGameMode",
@@ -9534,7 +10157,8 @@
       "patterns": [
         "[the] game[ ]mode of %players%",
         "%players%'[s] game[ ]mode"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprGlidingState",
@@ -9551,7 +10175,8 @@
       "patterns": [
         "[the] (gliding|glider) [state] of %livingentities%",
         "%livingentities%'[s] (gliding|glider) [state]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprGlowing",
@@ -9568,7 +10193,8 @@
       "patterns": [
         "[the] glowing of %entities%",
         "%entities%'[s] glowing"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprGravity",
@@ -9585,7 +10211,8 @@
       "patterns": [
         "[the] gravity of %entities%",
         "%entities%'[s] gravity"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHealth",
@@ -9602,6 +10229,9 @@
       "patterns": [
         "[the] health of %livingentities%",
         "%livingentities%'[s] health"
+      ],
+      "events": [
+        "damage"
       ]
     },
     {
@@ -9619,7 +10249,8 @@
       "patterns": [
         "[(all [[of] the]|the)] hidden players (of|for) %players%",
         "[(all [[of] the]|the)] players hidden (from|for|by) %players%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHotbarSlot",
@@ -9645,7 +10276,8 @@
       "patterns": [
         "[the] [([current:currently] selected|current:current)] hotbar slot[s] [of %players%]",
         "%players%'[s] [([current:currently] selected|current:current)] hotbar slot[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprHumidity",
@@ -9662,7 +10294,8 @@
       "patterns": [
         "[the] humidit(y|ies) of %blocks%",
         "%blocks%'[s] humidit(y|ies)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprInventory",
@@ -9681,7 +10314,8 @@
       "patterns": [
         "[the] inventor(y|ies) of %inventoryholders/itemtypes%",
         "%inventoryholders/itemtypes%'[s] inventor(y|ies)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprInventoryInfo",
@@ -9702,7 +10336,8 @@
       "patterns": [
         "(1¦holder[s]|2¦viewers|3¦[amount of] rows|4¦[amount of] slots) of %inventories%",
         "%inventories%'[s] (1¦holder[s]|2¦viewers|3¦[amount of] rows|4¦[amount of] slots)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprIP",
@@ -9727,7 +10362,8 @@
         "IP[s][( |-)address[es]] of %players%",
         "%players%'[s] IP[s][( |-)address[es]]",
         "IP[( |-)address]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemAmount",
@@ -9744,7 +10380,8 @@
       "patterns": [
         "[the] item[[ ]stack] (amount|size|number) of %slots/itemtypes/itemstacks%",
         "%slots/itemtypes/itemstacks%'[s] item[[ ]stack] (amount|size|number)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemFlags",
@@ -9763,7 +10400,8 @@
       "patterns": [
         "[the] item flags of %itemtypes%",
         "%itemtypes%'[s] item flags"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemsIn",
@@ -9784,7 +10422,8 @@
       "patterns": [
         "[all [[of] the]] items ([with]in|of|contained in|out of) [1:inventor(y|ies)] %inventories%",
         "all [[of] the] %itemtypes% ([with]in|of|contained in|out of) [1:inventor(y|ies)] %inventories%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemWithCustomModelData",
@@ -9801,7 +10440,8 @@
       ],
       "patterns": [
         "%itemtype% with [custom] model data %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemWithEnchantmentGlint",
@@ -9818,7 +10458,8 @@
       ],
       "patterns": [
         "%itemtypes% with[:out] [enchant[ment]] glint"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemWithLore",
@@ -9836,7 +10477,8 @@
       ],
       "patterns": [
         "%itemtype% with [(a|the)] lore %strings%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLanguage",
@@ -9854,7 +10496,8 @@
       "patterns": [
         "[the] [([currently] selected|current)] [game] (language|locale) [setting] of %players%",
         "%players%'[s] [([currently] selected|current)] [game] (language|locale) [setting]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastAttacker",
@@ -9871,7 +10514,8 @@
       "patterns": [
         "[the] last attacker of %entity%",
         "%entity%'[s] last attacker"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastColor",
@@ -9888,7 +10532,8 @@
       "patterns": [
         "[the] last color[s] of %strings%",
         "%strings%'[s] last color[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastDamage",
@@ -9905,7 +10550,8 @@
       "patterns": [
         "[the] last damage of %livingentities%",
         "%livingentities%'[s] last damage"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastDamageCause",
@@ -9922,7 +10568,8 @@
       "patterns": [
         "[the] last damage (cause|reason|type) of %livingentities%",
         "%livingentities%'[s] last damage (cause|reason|type)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastDeathLocation",
@@ -9941,7 +10588,8 @@
       "patterns": [
         "[the] [last] death location[s] of %offlineplayers%",
         "%offlineplayers%'[s] [last] death location[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastLoginTime",
@@ -9961,7 +10609,8 @@
       "patterns": [
         "[the] (1¦last|2¦first) login of %offlineplayers%",
         "%offlineplayers%'[s] (1¦last|2¦first) login"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLastResourcePackResponse",
@@ -9978,7 +10627,8 @@
       "patterns": [
         "[the] [last] resource pack response[s] of %players%",
         "%players%'[s] [last] resource pack response[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLeashHolder",
@@ -9995,7 +10645,8 @@
       "patterns": [
         "[the] leash holder[s] of %livingentities%",
         "%livingentities%'[s] leash holder[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLength",
@@ -10012,7 +10663,8 @@
       "patterns": [
         "[the] length of %strings%",
         "%strings%'[s] length"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLevel",
@@ -10030,6 +10682,9 @@
       "patterns": [
         "[the] level of %players%",
         "%players%'[s] level"
+      ],
+      "events": [
+        "level change"
       ]
     },
     {
@@ -10060,6 +10715,9 @@
       "patterns": [
         "[the] level progress of %players%",
         "%players%'[s] level progress"
+      ],
+      "events": [
+        "level change"
       ]
     },
     {
@@ -10082,7 +10740,8 @@
       ],
       "patterns": [
         "[(1¦sky|1¦sun|2¦block)[ ]]light[ ]level [(of|%direction%) %location%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLocationOf",
@@ -10101,7 +10760,8 @@
       "patterns": [
         "(location|position) of %location%",
         "%location%'[s] (location|position)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLore",
@@ -10122,7 +10782,8 @@
         "[the] line %number% of %itemstack/itemtype%'[s] lore",
         "[the] %number%(st|nd|rd|th) line of [the] lore of %itemstack/itemtype%",
         "[the] %number%(st|nd|rd|th) line of %itemstack/itemtype%'[s] lore"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLowestHighestSolidBlock",
@@ -10141,7 +10802,8 @@
       "patterns": [
         "[the] (highest|:lowest) [solid] block (at|of) %locations%",
         "%locations%'[s] (highest|:lowest) [solid] block"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxDurability",
@@ -10164,7 +10826,8 @@
       "patterns": [
         "[the] max[imum] (durabilit(y|ies)|damage) of %itemtypes/itemstacks/slots%",
         "%itemtypes/itemstacks/slots%'[s] max[imum] (durabilit(y|ies)|damage)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxFreezeTicks",
@@ -10182,7 +10845,8 @@
       "patterns": [
         "[the] max[imum] freeze time of %entities%",
         "%entities%'[s] max[imum] freeze time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxHealth",
@@ -10202,6 +10866,10 @@
       "patterns": [
         "[the] max[imum] health of %livingentities%",
         "%livingentities%'[s] max[imum] health"
+      ],
+      "events": [
+        "damage",
+        "death"
       ]
     },
     {
@@ -10221,7 +10889,8 @@
       "patterns": [
         "[the] max[imum] [item] us(e|age) (time|duration) of %itemstacks%",
         "%itemstacks%'[s] max[imum] [item] us(e|age) (time|duration)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxMinecartSpeed",
@@ -10239,7 +10908,8 @@
       "patterns": [
         "[the] max[imum] minecart (speed|velocity) of %entities%",
         "%entities%'[s] max[imum] minecart (speed|velocity)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxPlayers",
@@ -10258,7 +10928,8 @@
       "patterns": [
         "[the] [1:(real|default)|2:(fake|shown|displayed)] max[imum] player[s] [count|amount|number|size]",
         "[the] [1:(real|default)|2:(fake|shown|displayed)] max[imum] (count|amount|number|size) of players"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMaxStack",
@@ -10279,7 +10950,8 @@
       "patterns": [
         "[the] max[imum] stack[[ ]size] of %itemtypes/inventories%",
         "%itemtypes/inventories%'[s] max[imum] stack[[ ]size]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMetadata",
@@ -10298,7 +10970,8 @@
       "patterns": [
         "metadata [(value|tag)[s]] %strings% of %metadataholders%",
         "%metadataholders%'[s] metadata [(value|tag)[s]] %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMiddleOfLocation",
@@ -10319,7 +10992,8 @@
       "patterns": [
         "[the] (middle|center) [point] of %location%",
         "%location%'[s] (middle|center) [point]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMinecartDerailedFlyingVelocity",
@@ -10337,7 +11011,8 @@
       "patterns": [
         "[the] [minecart] (1¦derailed|2¦flying) velocity of %entities%",
         "%entities%'[s] [minecart] (1¦derailed|2¦flying) velocity"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprMoonPhase",
@@ -10355,7 +11030,8 @@
       "patterns": [
         "[the] (lunar|moon) phase[s] of %worlds%",
         "%worlds%'[s] (lunar|moon) phase[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNamed",
@@ -10374,7 +11050,8 @@
       ],
       "patterns": [
         "%itemtype/inventorytype% (named|with name[s]) %string%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNoDamageTicks",
@@ -10392,7 +11069,8 @@
       "patterns": [
         "[the] (invulnerability|invincibility|no damage) tick[s] of %livingentities%",
         "%livingentities%'[s] (invulnerability|invincibility|no damage) tick[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprNode",
@@ -10414,7 +11092,8 @@
         "%node%'[s] node %string%",
         "[the] nodes (of|in) %nodes%",
         "%node%'[s] nodes"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprOnlinePlayersCount",
@@ -10434,7 +11113,8 @@
       "patterns": [
         "[the] [(1:(real|default)|2:(fake|shown|displayed))] [online] player (count|amount|number)",
         "[the] [(1:(real|default)|2:(fake|shown|displayed))] (count|amount|number|size) of online players"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprOpenedInventory",
@@ -10452,7 +11132,8 @@
       "patterns": [
         "[the] (current|open|top) inventory [of %players%]",
         "%players%'[s] (current|open|top) inventory"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPassenger",
@@ -10480,7 +11161,8 @@
       "patterns": [
         "[the] passenger[s] of %entities%",
         "%entities%'[s] passenger[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPermissions",
@@ -10497,7 +11179,8 @@
       "patterns": [
         "[(all [[of] the]|the)] permissions (from|of) %players%",
         "[(all [[of] the]|the)] %players%'[s] permissions"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPickupDelay",
@@ -10515,7 +11198,8 @@
       "patterns": [
         "[the] pick[ ]up delay of %entities%",
         "%entities%'[s] pick[ ]up delay"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPing",
@@ -10534,7 +11218,8 @@
       "patterns": [
         "[the] ping of %players%",
         "%players%'[s] ping"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlayerChatCompletions",
@@ -10554,7 +11239,8 @@
       "patterns": [
         "[the] [custom] chat completion[s] of %players%",
         "%players%'[s] [custom] chat completion[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlayerlistHeaderFooter",
@@ -10573,7 +11259,8 @@
       "patterns": [
         "[the] (player|tab)[ ]list (header|1¦footer) [(text|message)] of %players%",
         "%players%'[s] (player|tab)[ ]list (header|1¦footer) [(text|message)]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlayerProtocolVersion",
@@ -10592,7 +11279,8 @@
       "patterns": [
         "[the] protocol version of %players%",
         "%players%'[s] protocol version"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlayerViewDistance",
@@ -10616,7 +11304,8 @@
       "patterns": [
         "[the] view distance[s] of %players%",
         "%players%'[s] view distance[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPlayerWeather",
@@ -10635,7 +11324,8 @@
       "patterns": [
         "[the] [(client|custom)] weather of %players%",
         "%players%'[s] [(client|custom)] weather"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPortalCooldown",
@@ -10656,7 +11346,8 @@
       "patterns": [
         "[the] portal cooldown of %entities%",
         "%entities%'[s] portal cooldown"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprPotionEffects",
@@ -10681,7 +11372,8 @@
       "patterns": [
         "[the] [(all [[of] the]|the)] [active] potion effects of %livingentities/itemtypes%",
         "%livingentities/itemtypes%'[s] [(all [[of] the]|the)] [active] potion effects"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprProjectileCriticalState",
@@ -10700,7 +11392,8 @@
       "patterns": [
         "[the] (projectile|arrow) critical (state|ability|mode) of %projectiles%",
         "%projectiles%'[s] (projectile|arrow) critical (state|ability|mode)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprQueueStartEnd",
@@ -10717,7 +11410,8 @@
       "patterns": [
         "[the] (:start|end) of %queue%",
         "%queue%'[s] (:start|end)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRedstoneBlockPower",
@@ -10735,7 +11429,8 @@
       "patterns": [
         "[the] redstone power of %blocks%",
         "%blocks%'[s] redstone power"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRemainingAir",
@@ -10753,7 +11448,8 @@
       "patterns": [
         "[the] remaining air of %livingentities%",
         "%livingentities%'[s] remaining air"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprResonatingTime",
@@ -10771,7 +11467,8 @@
       "patterns": [
         "[the] resonat(e|ing) time of %block%",
         "%block%'[s] resonat(e|ing) time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRingingTime",
@@ -10789,7 +11486,8 @@
       "patterns": [
         "[the] ring[ing] time of %block%",
         "%block%'[s] ring[ing] time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprRound",
@@ -10809,7 +11507,8 @@
         "(a|the|) round[ed] down %number%",
         "(a|the|) round[ed] %number%",
         "(a|the|) round[ed] up %number%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSaturation",
@@ -10826,7 +11525,8 @@
       "patterns": [
         "[the] saturation of %players%",
         "%players%'[s] saturation"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprScoreboardTags",
@@ -10854,7 +11554,8 @@
       "patterns": [
         "[(all [[of] the]|the)] scoreboard tags of %entities%",
         "%entities%'[s] scoreboard tags"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSeaLevel",
@@ -10871,7 +11572,8 @@
       "patterns": [
         "[the] sea level of %worlds%",
         "%worlds%'[s] sea level"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSeaPickles",
@@ -10895,7 +11597,8 @@
       "patterns": [
         "[the] [:(min|max)[imum]] [sea] pickle(s| (count|amount)) of %blocks%",
         "%blocks%'[s] [:(min|max)[imum]] [sea] pickle(s| (count|amount))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSeed",
@@ -10912,7 +11615,8 @@
       "patterns": [
         "[the] seed[s] (from|of) %worlds%",
         "%worlds%'[s] seed[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprServerIcon",
@@ -10932,7 +11636,8 @@
       ],
       "patterns": [
         "[the] [(1¦(default)|2¦(shown|sent))] [server] icon"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSignText",
@@ -10952,7 +11657,8 @@
       "patterns": [
         "[the] line %number% [of %block%]",
         "[the] (1¦1st|1¦first|2¦2nd|2¦second|3¦3rd|3¦third|4¦4th|4¦fourth) line [of %block%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSkull",
@@ -10970,7 +11676,8 @@
       "patterns": [
         "[the] (head|skull) of %offlineplayers%",
         "%offlineplayers%'[s] (head|skull)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSkullOwner",
@@ -10989,7 +11696,8 @@
       "patterns": [
         "[the] (head|skull) owner of %slots/itemtypes/itemstacks/blocks%",
         "%slots/itemtypes/itemstacks/blocks%'[s] (head|skull) owner"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSlotIndex",
@@ -11013,7 +11721,8 @@
       "patterns": [
         "[the] [raw:(raw|unique)] index of %slots%",
         "%slots%'[s] [raw:(raw|unique)] index"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpawn",
@@ -11031,7 +11740,8 @@
       "patterns": [
         "[the] spawn[s] [(point|location)[s]] [of %worlds%]",
         "%worlds%'[s] spawn[s] [(point|location)[s]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpawnEggEntity",
@@ -11061,7 +11771,8 @@
       "patterns": [
         "[the] spawn egg entity of %itemstacks/itemtypes/slots%",
         "%itemstacks/itemtypes/slots%'[s] spawn egg entity"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpawnerType",
@@ -11080,7 +11791,8 @@
       "patterns": [
         "[the] (spawner|entity|creature) type[s] of %blocks%",
         "%blocks%'[s] (spawner|entity|creature) type[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpectatorTarget",
@@ -11102,7 +11814,8 @@
       "patterns": [
         "spectator target [of %-players%]",
         "%players%'[s] spectator target"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprSpeed",
@@ -11121,7 +11834,8 @@
       "patterns": [
         "[the] (0¦walk[ing]|1¦fl(y[ing]|ight))[( |-)]speed of %players%",
         "%players%'[s] (0¦walk[ing]|1¦fl(y[ing]|ight))[( |-)]speed"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTarget",
@@ -11147,7 +11861,8 @@
       "patterns": [
         "[the] target[[ed] %-*entitydata%] [of %livingentities%] [blocks:ignoring blocks] [[with|at] ray[ ]size %-number%]",
         "%livingentities%'[s] target[[ed] %-*entitydata%] [blocks:ignoring blocks] [[with|at] ray[ ]size %-number%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTemperature",
@@ -11164,7 +11879,8 @@
       "patterns": [
         "[the] temperature[s] of %blocks%",
         "%blocks%'[s] temperature[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTime",
@@ -11186,7 +11902,8 @@
       "patterns": [
         "[the] time[s] [([with]in|of) %worlds%]",
         "%worlds%'[s] time[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTimePlayed",
@@ -11208,7 +11925,8 @@
       "patterns": [
         "[the] time played of %offlineplayers%",
         "%offlineplayers%'[s] time played"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTimeSince",
@@ -11227,7 +11945,8 @@
       "patterns": [
         "[the] time since %dates%",
         "[the] (time [remaining]|remaining time) until %dates%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTimespanDetails",
@@ -11245,7 +11964,8 @@
       "patterns": [
         "[the] (:(tick|second|minute|hour|day|week|month|year))s of %timespans%",
         "%timespans%'[s] (:(tick|second|minute|hour|day|week|month|year))s"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTimeState",
@@ -11274,7 +11994,8 @@
         "%~objects% before [the event]",
         "[the] (future|to-be|new) [state] [of] %~objects%",
         "%~objects%(-to-be| after[(wards| the event)])"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTool",
@@ -11294,7 +12015,8 @@
       "patterns": [
         "[the] ((tool|held item|weapon)|1¦(off[ ]hand (tool|item))) [of %livingentities%]",
         "%livingentities%'[s] ((tool|held item|weapon)|1¦(off[ ]hand (tool|item)))"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTotalExperience",
@@ -11318,7 +12040,8 @@
       "patterns": [
         "[the] [total] experience of %entities%",
         "%entities%'[s] [total] experience"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTypeOf",
@@ -11341,7 +12064,8 @@
       "patterns": [
         "[the] type of %entitydatas/itemtypes/inventories/potioneffects/blockdatas/enchantmenttypes%",
         "%entitydatas/itemtypes/inventories/potioneffects/blockdatas/enchantmenttypes%'[s] type"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprUnbreakable",
@@ -11358,7 +12082,8 @@
       ],
       "patterns": [
         "[:un]breakable %itemtypes%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprUnixDate",
@@ -11375,7 +12100,8 @@
       "patterns": [
         "[the] unix date of %numbers%",
         "%numbers%'[s] unix date"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprUnixTicks",
@@ -11392,7 +12118,8 @@
       "patterns": [
         "[the] unix timestamp of %dates%",
         "%dates%'[s] unix timestamp"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprUUID",
@@ -11418,7 +12145,8 @@
       "patterns": [
         "[the] UUID of %offlineplayers/worlds/entities%",
         "%offlineplayers/worlds/entities%'[s] UUID"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprValue",
@@ -11440,7 +12168,8 @@
         "[the] %*classinfo% values of %valueds%",
         "%valued%'s %*classinfo% value",
         "%valueds%'[s] %*classinfo% values"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorFromDirection",
@@ -11462,7 +12191,8 @@
       "patterns": [
         "vector[s] [from] %directions%",
         "%directions% vector[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorLength",
@@ -11482,7 +12212,8 @@
       "patterns": [
         "[the] (vector|standard|normal) length[s] of %vectors%",
         "%vectors%'[s] (vector|standard|normal) length[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorOfLocation",
@@ -11499,7 +12230,8 @@
       "patterns": [
         "[the] vector (of|from|to) %location%",
         "%location%'s vector"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVectorSquaredLength",
@@ -11516,7 +12248,8 @@
       "patterns": [
         "[the] squared length[s] of %vectors%",
         "%vectors%'[s] squared length[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVehicle",
@@ -11534,7 +12267,8 @@
       "patterns": [
         "[the] vehicle[s] of %entities%",
         "%entities%'[s] vehicle[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVelocity",
@@ -11551,7 +12285,8 @@
       "patterns": [
         "[the] velocit(y|ies) of %entities%",
         "%entities%'[s] velocit(y|ies)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVillagerLevel",
@@ -11578,7 +12313,8 @@
       "patterns": [
         "[the] villager (level|:experience) of %livingentities%",
         "%livingentities%'[s] villager (level|:experience)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVillagerProfession",
@@ -11598,7 +12334,8 @@
       "patterns": [
         "[the] villager profession of %livingentities%",
         "%livingentities%'[s] villager profession"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprVillagerType",
@@ -11617,7 +12354,8 @@
       "patterns": [
         "[the] villager type of %livingentities%",
         "%livingentities%'[s] villager type"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWeather",
@@ -11635,6 +12373,9 @@
       "patterns": [
         "[the] weather [(in|of) %worlds%]",
         "%worlds%'[s] weather"
+      ],
+      "events": [
+        "weather change"
       ]
     },
     {
@@ -11654,7 +12395,8 @@
       "patterns": [
         "%itemtype% with[:out] fire[ ]resistance",
         "fire resistant %itemtype%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWorld",
@@ -11674,7 +12416,8 @@
       "patterns": [
         "[the] world [of %locations/entities/chunk%]",
         "%locations/entities/chunk%'[s] world"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWorldEnvironment",
@@ -11692,7 +12435,8 @@
       "patterns": [
         "[the] [world] environment of %worlds%",
         "%worlds%'[s] [world] environment"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprXYZComponent",
@@ -11719,7 +12463,8 @@
       "patterns": [
         "[the] [vector|quaternion] (:w|:x|:y|:z) [component[s]] of %vectors/quaternions%",
         "%vectors/quaternions%'[s] [vector|quaternion] (:w|:x|:y|:z) [component[s]]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprYawPitch",
@@ -11743,7 +12488,8 @@
       "patterns": [
         "[the] (:yaw|pitch) of %entities/locations/vectors%",
         "%entities/locations/vectors%'[s] (:yaw|pitch)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemOfEntity",
@@ -11765,7 +12511,8 @@
       "patterns": [
         "[the] item [inside] of %entities%",
         "%entities%'[s] item [inside]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprQuaternionAxisAngle",
@@ -11787,7 +12534,8 @@
       "patterns": [
         "[the] rotation (angle|:axis) of %quaternions%",
         "%quaternions%'[s] rotation (angle|:axis)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTextOf",
@@ -11805,7 +12553,8 @@
       "patterns": [
         "[the] text[s] of %displays%",
         "%displays%'[s] text[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLoveTime",
@@ -11824,7 +12573,8 @@
       "patterns": [
         "[the] love[d] time of %livingentities%",
         "%livingentities%'[s] love[d] time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayBillboard",
@@ -11843,7 +12593,8 @@
       "patterns": [
         "[the] bill[ |-]board[ing] [setting] [of %displays%]",
         "%displays%'[s] bill[ |-]board[ing] [setting]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayBrightness",
@@ -11866,7 +12617,8 @@
       "patterns": [
         "[the] [:block|:sky] (light [level]|brightness) override[s] of %displays%",
         "%displays%'[s] [:block|:sky] (light [level]|brightness) override[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayGlowOverride",
@@ -11884,7 +12636,8 @@
       "patterns": [
         "[the] glow[ing] colo[u]r[s] override[s] [of %displays%]",
         "%displays%'[s] glow[ing] colo[u]r[s] override[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayHeightWidth",
@@ -11903,7 +12656,8 @@
       "patterns": [
         "[the] display (:height|width) [of %displays%]",
         "%displays%'[s] display (:height|width)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayInterpolation",
@@ -11923,7 +12677,8 @@
       "patterns": [
         "[the] interpolation (:delay|duration)[s] [of %displays%]",
         "%displays%'[s] interpolation (:delay|duration)[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayShadow",
@@ -11940,7 +12695,8 @@
       "patterns": [
         "[the] shadow (:radius|strength) [of %displays%]",
         "%displays%'[s] shadow (:radius|strength)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayTeleportDuration",
@@ -11963,7 +12719,8 @@
       "patterns": [
         "[the] teleport[ation] duration[s] [of %displays%]",
         "%displays%'[s] teleport[ation] duration[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayTransformationRotation",
@@ -11981,7 +12738,8 @@
       "patterns": [
         "[the] (:left|right) [transformation] rotation [of %displays%]",
         "%displays%'[s] (:left|right) [transformation] rotation"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayTransformationScaleTranslation",
@@ -11998,7 +12756,8 @@
       "patterns": [
         "[the] (display|[display] transformation) (:scale|translation) of %displays%",
         "%displays%'[s] (display|[display] transformation) (:scale|translation)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprDisplayViewRange",
@@ -12017,7 +12776,8 @@
       "patterns": [
         "[the] [display] view (range|radius) [of %displays%]",
         "%displays%'[s] [display] view (range|radius)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprItemDisplayTransform",
@@ -12035,7 +12795,8 @@
       "patterns": [
         "[the] item [display] transform [of %displays%]",
         "%displays%'[s] item [display] transform"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTextDisplayAlignment",
@@ -12052,7 +12813,8 @@
       "patterns": [
         "[the] text alignment[s] [of %displays%]",
         "%displays%'[s] text alignment[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTextDisplayLineWidth",
@@ -12069,7 +12831,8 @@
       "patterns": [
         "[the] line width [of %displays%]",
         "%displays%'[s] line width"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTextDisplayOpacity",
@@ -12087,7 +12850,8 @@
       "patterns": [
         "[the] [display] opacity [of %displays%]",
         "%displays%'[s] [display] opacity"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprCurrentInputKeys",
@@ -12104,7 +12868,8 @@
       "patterns": [
         "[the] [current] (inputs|input keys) of %players%",
         "%players%'[s] [current] (inputs|input keys)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTagContents",
@@ -12123,7 +12888,8 @@
       "patterns": [
         "[the] tag (contents|values) of %minecrafttag%",
         "%minecrafttag%'[s] tag (contents|values)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTagKey",
@@ -12142,7 +12908,8 @@
       "patterns": [
         "[the] [namespace[d]] key[s] of %minecrafttags%",
         "%minecrafttags%'[s] [namespace[d]] key[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTagsOf",
@@ -12163,7 +12930,8 @@
       "patterns": [
         "[all [[of] the]|the] [:minecraft|:datapack|:paper|:custom] [1:item|2:block|3:entity [type]] tags of %itemtype/entity/entitydata%",
         "%itemtype/entity/entitydata%'[s] [:minecraft|:datapack|:paper|:custom] [1:item|2:block|3:entity [type]] tags"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprFurnaceEventItems",
@@ -12192,6 +12960,12 @@
         "[the] extracted item[s]",
         "[the] smelting item",
         "[the] burned (fuel|item)"
+      ],
+      "events": [
+        "smelt",
+        "fuel burn",
+        "smelting start",
+        "furnace extract"
       ]
     },
     {
@@ -12218,6 +12992,10 @@
         "%blocks%'[s] fuel slot[s]",
         "[the] (result|output) slot[s] [of %blocks%]",
         "%blocks%'[s] (result|output) slot[s]"
+      ],
+      "events": [
+        "smelt",
+        "fuel burn"
       ]
     },
     {
@@ -12249,7 +13027,8 @@
         "%blocks%'[s]total cook[ing] time",
         "[the] [furnace] fuel burn[ing] time [of %blocks%]",
         "%blocks%'[s]fuel burn[ing] time"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootContextEntity",
@@ -12271,7 +13050,8 @@
       "patterns": [
         "[the] looted entity [of %lootcontexts%]",
         "%lootcontexts%'[s] looted entity"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootContextLocation",
@@ -12292,7 +13072,8 @@
       "patterns": [
         "[the] loot[ing] [context] location [of %lootcontexts%]",
         "%lootcontexts%'[s] loot[ing] [context] location"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootContextLooter",
@@ -12314,7 +13095,8 @@
       "patterns": [
         "[the] (looter|looting player) [of %lootcontexts%]",
         "%lootcontexts%'[s] (looter|looting player)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootContextLuck",
@@ -12336,7 +13118,8 @@
       "patterns": [
         "[the] loot[ing] [context] luck [value|factor] [of %lootcontexts%]",
         "%lootcontexts%'[s] loot[ing] [context] luck [value|factor]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootTable",
@@ -12358,7 +13141,8 @@
       "patterns": [
         "[the] loot[ ]table[s] of %entities/blocks%",
         "%entities/blocks%'[s] loot[ ]table[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprLootTableSeed",
@@ -12376,7 +13160,8 @@
       "patterns": [
         "[the] loot[[ ]table] seed[s] of %entities/blocks%",
         "%entities/blocks%'[s] loot[[ ]table] seed[s]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprArithmetic",
@@ -12414,7 +13199,8 @@
         "\\(%object%\\)[ ]^[ ]%object%",
         "%object%[ ]^[ ]\\(%object%\\)",
         "%object%[ ]^[ ]%object%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntities",
@@ -12440,7 +13226,8 @@
         "[(all [[of] the]|the)] entities of type[s] %entitydatas% in radius %number% (of|around) %location%",
         "[(all [[of] the]|the)] %*entitydatas% within %location% and %location%",
         "[(all [[of] the]|the)] entities of type[s] %entitydatas% within %location% and %location%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprEntity",
@@ -12460,30 +13247,8 @@
       ],
       "patterns": [
         "[the] [event-]<.+>"
-      ]
-    },
-    {
-      "id": "ExprNewBannerPattern",
-      "name": "Banner Pattern",
-      "since": [
-        "2.10"
       ],
-      "description": [
-        "Creates a new banner pattern."
-      ],
-      "examples": [
-        "set {_pattern} to a creeper banner pattern colored red",
-        "add {_pattern} to banner patterns of {_banneritem}",
-        "remove {_pattern} from banner patterns of {_banneritem}",
-        "set the 1st banner pattern of block at location(0,0,0) to {_pattern}",
-        "clear the 1st banner pattern of block at location(0,0,0)",
-        "",
-        "set {_pattern} to a red mojang banner pattern"
-      ],
-      "patterns": [
-        "[a] %bannerpatterntype% colo[u]red %color%",
-        "[a] %*color% %bannerpatterntype%"
-      ]
+      "events": []
     },
     {
       "id": "ExprSets",
@@ -12501,7 +13266,8 @@
       ],
       "patterns": [
         "[all [[of] the]|the|every] %*classinfo%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprTransform",
@@ -12523,7 +13289,8 @@
       "patterns": [
         "%objects% (transformed|mapped) (using|with) \\[<.+>\\]",
         "%objects% (transformed|mapped) (using|with) \\(<.+>\\)"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprWhether",
@@ -12540,7 +13307,8 @@
       ],
       "patterns": [
         "whether <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "ExprXOf",
@@ -12556,7 +13324,8 @@
       ],
       "patterns": [
         "%number% of %itemstacks/itemtypes/entitytype%"
-      ]
+      ],
+      "events": []
     }
   ],
   "events": [
@@ -16610,7 +17379,8 @@
       ],
       "patterns": [
         "aliases"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "StructCommand",
@@ -16637,7 +17407,8 @@
       ],
       "patterns": [
         "command <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "StructFunction",
@@ -16662,7 +17433,8 @@
       ],
       "patterns": [
         "[:local] function <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "StructOptions",
@@ -16693,7 +17465,8 @@
       ],
       "patterns": [
         "options"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "StructUsing",
@@ -16711,7 +17484,8 @@
       ],
       "patterns": [
         "using <.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "StructVariables",
@@ -16735,7 +17509,8 @@
       ],
       "patterns": [
         "variables"
-      ]
+      ],
+      "events": []
     }
   ],
   "sections": [
@@ -16756,7 +17531,8 @@
       "patterns": [
         "shoot %entitydatas% [from %livingentities/locations%] [(at|with) (speed|velocity) %-number%] [%-direction%]",
         "(make|let) %livingentities/locations% shoot %entitydatas% [(at|with) (speed|velocity) %-number%] [%-direction%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "EffSecSpawn",
@@ -16787,7 +17563,8 @@
       "patterns": [
         "(spawn|summon) %entitytypes/entitysnapshots% [%directions% %locations%]",
         "(spawn|summon) %number% of %entitytypes/entitysnapshots% [%directions% %locations%]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "SecConditional",
@@ -16828,7 +17605,8 @@
         "[:parse] if <.+>",
         "then [run]",
         "implicit:<.+>"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "SecFilter",
@@ -16852,7 +17630,8 @@
       ],
       "patterns": [
         "filter %~objects% to match [:any|all]"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "SecLoop",
@@ -16896,7 +17675,8 @@
       ],
       "patterns": [
         "loop %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "SecFor",
@@ -16927,7 +17707,8 @@
         "(for [each]|loop) [value] %~object% in %objects%",
         "(for [each]|loop) (key|index) %~object% in %objects%",
         "(for [each]|loop) [key|index] %~object%(,| and) [value] %~object% in %objects%"
-      ]
+      ],
+      "events": []
     },
     {
       "id": "SecWhile",
@@ -16956,7 +17737,8 @@
       ],
       "patterns": [
         "[:do] while <.+>"
-      ]
+      ],
+      "events": []
     }
   ],
   "functions": [
