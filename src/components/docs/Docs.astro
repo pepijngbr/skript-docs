@@ -18,14 +18,14 @@ const docTypes: Documentation[] = all.map(doc => ({
         : [doc.since]).some(since => since?.includes(latest)),
 
     type: type(doc),
-    since: (doc.since as string),
-    description: doc.description,
-    examples: (doc.examples?.length === 1 && doc.examples?.[0] === "") ? null : (doc.examples || null),
-    patterns: (doc.patterns?.length === 1 && doc.patterns?.[0] === "") ? null : (doc.patterns || null),
-    requirements: null,
+    since: (doc as any)["since"] || null,
+    description: (doc as any)["description"] || null,
+    examples: (doc as any)["examples"] || null,
+    patterns: (doc as any)["patterns"] || null,
+    requirements: (doc as any)["requirements"] || null,
     eventValues: null,
     returnType: (doc as any)["return-type"] || null,
-    events: doc.events?.length === 0 ? null : (doc.events || null),
+    events: (doc as any)["events"] || null,
 }));
 
 export enum DocType {
