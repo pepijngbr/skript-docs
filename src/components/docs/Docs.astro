@@ -4,7 +4,7 @@ import DocsFilters from './DocsFilters.astro';
 import DocsSyntaxes from './DocsSyntaxes.astro';
 import docs from '../../assets/docs/docs.json';
 
-const latest = docs.skriptVersion;
+const latest = docs.skriptVersion.split(".").slice(0, 2).join(".");
 const all = [...docs.classes, ...docs.conditions, ...docs.effects, 
             ...docs.events, ...docs.expressions, ...docs.functions,
             ...docs.sections, ...docs.structures].toSorted((x, y) => x.name.localeCompare(y.name));
@@ -12,7 +12,11 @@ const all = [...docs.classes, ...docs.conditions, ...docs.effects,
 const docTypes: Documentation[] = all.map(doc => ({
     id: doc.id,
     name: doc.name,
-    new: doc.since?.includes(latest.split(".").slice(0, 2).join(".")) || false,
+
+    new: (doc.since instanceof Array 
+        ? doc.since 
+        : [doc.since]).some(since => since?.includes(latest)),
+
     type: type(doc),
     since: (doc.since as string),
     description: doc.description,

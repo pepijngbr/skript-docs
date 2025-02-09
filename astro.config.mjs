@@ -8,13 +8,13 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   redirects: {
-    "tutorials": "tutorials/getting-started",
-    "events": "docs",
-    "conditions": "docs",
-    "effects": "docs",
-    "types": "docs",
-    "structures": "docs",
-    "functions": "docs",
-    "sections": "docs",
+    "tutorials": "/tutorials/getting-started",
+    "events": "/docs",
+    "conditions": "/docs",
+    "effects": "/docs",
+    "types": "/docs",
+    "structures": "/docs",
+    "functions": "/docs",
+    "sections": "/docs",
   }
 });
