@@ -1,5 +1,5 @@
 {
-  "skriptVersion": "2.10.1-nightly-ee313e82f",
+  "skriptVersion": "2.10.1",
   "conditions": [
     {
       "id": "CondAlphanumeric",
