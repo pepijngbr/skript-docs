@@ -124,14 +124,21 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
         expand.click();
     }
 
-    // Update position of filters to be below the nav bar,
-    // since filters is sticky this cant be done directly
     const filters = document.getElementById("filters")!!;
-    filters.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;
-    
+    function updatePosition() {
+        // Update position of filters to be below the nav bar,
+        // since filters is sticky this cant be done directly
+        filters.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;   
+    }
+
+
+    updatePosition();
     window.addEventListener("DOMContentLoaded", () => {
+        updatePosition();
         filters.classList.remove("!fixed"); // fix layout shift on load
     });
+
+    window.addEventListener("resize", updatePosition);
 </script>
 
 <div id="filters" class="sticky !fixed right-0 top-30
