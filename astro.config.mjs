@@ -16,5 +16,12 @@ export default defineConfig({
     "structures": "/docs",
     "functions": "/docs",
     "sections": "/docs",
+    "docs/events": "/docs",
+    "docs/conditions": "/docs",
+    "docs/effects": "/docs",
+    "docs/types": "/docs",
+    "docs/structures": "/docs",
+    "docs/functions": "/docs",
+    "docs/sections": "/docs",
   }
 });

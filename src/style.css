@@ -46,6 +46,8 @@ body, .dark {
 }
 
 h1 {
+    @apply break-words;
+
     font-family: Outfit, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
     font-size: 32px;
