@@ -29,8 +29,6 @@ const docTypes: Documentation[] = all.map(doc => ({
 }));
 
 export enum DocType {
-    UNKNOWN = "All",
-    NEW = "New",
     TYPE = "Type",
     CONDITION = "Condition",
     EFFECT = "Effect",
@@ -48,8 +46,7 @@ function type(doc: any): DocType {
     docs.events.includes(doc) ? DocType.EVENT :
     docs.expressions.includes(doc) ? DocType.EXPRESSION :
     docs.functions.includes(doc) ? DocType.FUNCTION :
-    docs.sections.includes(doc) ? DocType.SECTION :
-    docs.structures.includes(doc) ? DocType.STRUCTURE : DocType.UNKNOWN;
+    docs.sections.includes(doc) ? DocType.SECTION : DocType.STRUCTURE;
 }
 ---
 

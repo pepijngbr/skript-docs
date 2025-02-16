@@ -1,12 +1,10 @@
 ---
-const rtTypes = ["All", "New", "Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures", "Types"]
-const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
+const rtTypes = ["Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures", "Types"]
+const versions = ["New", "2.10", "2.9", "2.8", "2.7"]
 ---
 
 <script>
     enum _DocType {
-        UNKNOWN = "All",
-        NEW = "New",
         TYPE = "Type",
         CONDITION = "Condition",
         EFFECT = "Effect",
@@ -18,8 +16,6 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
     }
 
     const types: any = {
-        "All": _DocType.UNKNOWN,
-        "New": _DocType.NEW,
         "Types": _DocType.TYPE,
         "Conditions": _DocType.CONDITION,
         "Effects": _DocType.EFFECT,
@@ -30,19 +26,29 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
         "Structures": _DocType.STRUCTURE
     }
 
-    export interface Filter {
-        type: string;
-        version: string;
+    function toggle<T>(array: Array<T>, value: T) {
+        const index = array.indexOf(value);
+
+        if (index === -1) {
+            array.push(value);
+        } else {
+            array.splice(index, 1);
+        }
     }
 
-    let filter: Filter = {type: "All", version: "All"}
+    export interface Filter {
+        types: string[];
+        versions: string[];
+    }
+
+    let filter: Filter = {types: [], versions: []}
 
     function handleClick(button: HTMLButtonElement) {
         const isType = button.getAttribute("data-type") === "type";
         if (isType) {
-            filter.type = button.textContent!!.trim();
+            toggle(filter.types, button.textContent!!.trim());
         } else {
-            filter.version = button.textContent!!.trim();
+            toggle(filter.versions, button.textContent!!.trim());
         }
 
         // update rest of buttons
@@ -50,9 +56,9 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
         buttons.forEach(button => {
             let match = false;
             if (button.getAttribute("data-type") === "type") {
-                match = filter.type == button.textContent!!.trim();
+                match = filter.types.includes(button.textContent!!.trim());
             } else {
-                match = filter.version == button.textContent!!.trim();
+                match = filter.versions.includes(button.textContent!!.trim());
             }
 
             if (match) {
@@ -72,27 +78,49 @@ const versions = ["All", "2.10", "2.9", "2.8", "2.7"]
             }
 
             if (isType) {
-                if (filter.type == "All") {
+                if (filter.types.length === 0) {
                     element.classList.remove("hidden-by-type");
-                } else if (filter.type == "New") {
-                    element.classList.toggle("hidden-by-type", element.getAttribute("data-new") !== "true");
-                } else {      
-                    element.classList.toggle("hidden-by-type", element.getAttribute("data-type") !== types[filter.type].toString());
+                    return;
                 }
+
+                for (const t of filter.types) {
+                    if (element.getAttribute("data-type")?.includes(types[t])) {
+                        element.classList.remove("hidden-by-type");
+                        return;
+                    }
+                }
+
+                element.classList.add("hidden-by-type");
             } else {
-                if (filter.version == "All") {
+                if (filter.versions.length === 0) {
                     element.classList.remove("hidden-by-version");
-                } else {
-                    element.classList.toggle("hidden-by-version", !element.getAttribute("data-since")?.includes(filter.version));
+                    return;
                 }
+
+                if (filter.versions.includes("New") && element.getAttribute("data-new") === "true") {
+                    element.classList.remove("hidden-by-version");
+                    return;
+                }
+
+                for (const v of filter.versions) {
+                    if (element.getAttribute("data-since")?.includes(v)) {
+                        element.classList.remove("hidden-by-version");
+                        return;
+                    }
+                }
+
+                element.classList.add("hidden-by-version");
             }
         });
     }
-
+    
     function resetButtons() {
         const buttons = document.querySelectorAll("#filters .filter-button");
-        (buttons[0] as HTMLButtonElement).click();
-        (buttons[[...buttons].filter(b => b.getAttribute("data-type") === "type").length] as HTMLButtonElement).click();
+        buttons.forEach(button => {
+            if (button.classList.contains("text-white")) {
+                (button as HTMLButtonElement).click();
+            }
+        });
     }
 
     document.addEventListener("DOMContentLoaded", () => {
