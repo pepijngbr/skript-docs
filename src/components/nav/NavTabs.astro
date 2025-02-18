@@ -1,5 +1,5 @@
 ---
-import { PageType } from '../Nav.astro';
+import { PageType } from './Nav.astro';
 
 interface Props {
     type: PageType;
@@ -33,11 +33,11 @@ switch (type) {
 }
 ---
 
-<div class="w-fit pt-1 m-auto flex flex-row gap-2 sm:gap-4 text-xl text-white">
+<div class="w-fit pt-1 m-auto flex flex-row gap-4 text-xl text-white">
     {pages.map(page => {
         if (active?.name === page.name) {
             return <div class="flex flex-col gap-1">
-                <a href={page.link} class="outfit px-4 sm:px-8 py-1 m-auto rounded-md font-bold shadow-lg"
+                <a href={page.link} class="outfit px-8 py-1 m-auto rounded-md font-bold shadow-lg"
                     style={{ backgroundColor: `#${page.color}` }}>
                     {page.name}
                 </a>
@@ -45,7 +45,7 @@ switch (type) {
             </div>
         } else {
             return <div class="flex flex-col gap-1">
-                <a href={page.link} class="outfit mt-0 px-4 sm:px-8 py-1 m-auto rounded-md hover:cursor-pointer"
+                <a href={page.link} class="outfit mt-0 px-8 py-1 m-auto rounded-md hover:cursor-pointer"
                     style={{ backgroundColor: `#${page.color}` }}>
                     {page.name}
                 </a>
