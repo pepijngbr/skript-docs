@@ -1,6 +1,7 @@
 ---
 import { PageType } from './Nav.astro';
 import NavSearch from './NavSearch.astro';
+import NavSearchMobile from './NavSearchMobile.astro';
 
 
 interface Props {
@@ -60,7 +61,7 @@ switch (type) {
         })}
     </div>
     <div id="search-mobile-container" class="w-full hidden">
-        <NavSearch/>
+        <NavSearchMobile/>
     </div>
     <button id="search-mobile" class="rounded-full hover:bg-l-icon-hover dark:hover:bg-d-icon-hover hover:cursor-pointer p-2">
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
