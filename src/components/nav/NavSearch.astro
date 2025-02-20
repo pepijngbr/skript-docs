@@ -46,10 +46,22 @@
                 }
             }
 
+            const id = parent.querySelector(`div .id`)?.id;
+            if (id == null) {
+                return;
+            }
+
+            const a = syntax.querySelectorAll(`a[href="#${id}"]`);
+            if (a == null) {
+                return;
+            }
+
             if (contains) {
                 parent.classList.remove("hidden-by-search");
+                a.forEach(x => x.classList.remove("hidden-by-search"));
             } else {
                 parent.classList.add("hidden-by-search");
+                a.forEach(x => x.classList.add("hidden-by-search"));
             }
         });
     });
