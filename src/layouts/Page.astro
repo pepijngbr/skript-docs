@@ -32,6 +32,26 @@ const { title }: Props = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Primary Meta Tags -->
+		<meta name="title" content={title} />
+		<meta name="description" content="All things Skript - documentation, tutorials and more." />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://skriptlang.org" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="All things Skript - documentation, tutorials and more." />
+		<meta property="og:image" content="/banner.png" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://skriptlang.org" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content="All things Skript - documentation, tutorials and more." />
+		<meta property="twitter:image" content="/banner.png" />
+
+		<!-- Meta Tags Generated with https://metatags.io -->
 	</head>
 	<body class="bg-l-bg dark:bg-d-bg 
 				text-black dark:text-white 
