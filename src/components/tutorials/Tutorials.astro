@@ -50,10 +50,10 @@ const { selected }: Props = Astro.props;
 <section class="flex flex-col lg:flex-row">
     <TutorialsOverview selected={selected} tutorials={tutorials}/>
     <div class="flex flex-col gap-4">
-        <div class="m-4 px-4 md:pl-24 md:pr-64 py-4 rounded-md flex-auto h-fit flex flex-col gap-2">
+        <div class="md:m-4 px-4 md:pl-24 md:pr-64 py-4 rounded-md flex-auto h-fit flex flex-col gap-4">
             <slot/>
         </div>
-        <div class="m-4 px-4 md:pl-24 md:pr-64 mb-32 flex flex-row gap-6">
+        <div class="md:m-4 px-4 md:pl-24 md:pr-64 mb-32 flex flex-row gap-6">
             <button class="share">
                 <p class="p-2 hidden absolute w-64 my-auto shadow-lg 
                     rounded-full bg-l-icon-hover dark:bg-d-icon-hover">Copied to clipboard</p>

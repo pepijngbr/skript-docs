@@ -17,7 +17,8 @@ const { selected, tutorials }: Props = Astro.props;
 
 <div id="tutorials" class="sticky top-30 left-0 w-full md:w-64 md:h-[100vh] overflow-y-hidden p-4
             flex flex-col gap-2 shrink-0
-            border-b-2 md:border-b-0 md:border-r-2 border-l-border dark:border-d-border">
+            border-b-2 md:border-b-0 md:border-r-2 border-l-border dark:border-d-border
+            bg-l-bg dark:bg-d-bg">
     {tutorials.map(x => {
         if (x.title === selected) {
             return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 

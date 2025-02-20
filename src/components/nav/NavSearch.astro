@@ -24,13 +24,14 @@
         const value = input.value.toLowerCase().trim();
 
         const docs = document.getElementById("docs");
+        const syntax = document.getElementById("syntax");
 
-        if (docs == null) {
+        if (docs == null || syntax == null) {
             return;
         }
 
         [...docs.children].forEach(parent => {
-            const elements = [...parent.querySelectorAll("a, p, h1")!!];
+            const elements = [...parent.querySelectorAll("a, p, h1, span")!!];
 
             let contains = false
             for (let i = 0; i < elements.length; i++) {
