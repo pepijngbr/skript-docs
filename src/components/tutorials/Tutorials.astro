@@ -50,8 +50,10 @@ const { selected }: Props = Astro.props;
 <section class="flex flex-col lg:flex-row">
     <TutorialsOverview selected={selected} tutorials={tutorials}/>
     <div class="flex flex-col gap-4">
-        <div class="md:m-4 px-4 md:pl-24 md:pr-64 py-4 rounded-md flex-auto h-fit flex flex-col gap-4">
-            <slot/>
+        <div class="md:m-4 px-4 md:pl-24 md:pr-64 py-4">
+            <div class="max-w-[896px] rounded-md flex-auto h-fit flex flex-col gap-4">
+                <slot/>
+            </div>
         </div>
         <div class="md:m-4 px-4 md:pl-24 md:pr-64 mb-32 flex flex-row gap-6">
             <button class="share">
