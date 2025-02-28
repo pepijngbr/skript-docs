@@ -1540,7 +1540,7 @@
       "id": "CondIsBlocking",
       "name": "Is Blocking",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -1678,7 +1678,7 @@
       "id": "CondIsEmpty",
       "name": "Is Empty",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -3913,7 +3913,7 @@
       "id": "EffExit",
       "name": "Exit",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -8285,7 +8285,7 @@
       "id": "ExprItem",
       "name": "Item",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -12418,7 +12418,7 @@
       "id": "ExprLevel",
       "name": "Level",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -13761,7 +13761,7 @@
       "id": "ExprSpeed",
       "name": "Speed",
       "since": [
-        "<i>unknown</i> (before 2.1)"
+        "unknown (before 2.1)"
       ],
       "deprecated": false,
       "description": [
@@ -15594,7 +15594,7 @@
     {
       "id": "break_mine",
       "name": "On Break / Mine",
-      "since": "1.0 (break), <i>unknown</i> (mine), 2.6 (BlockData support)",
+      "since": "1.0 (break), unknown (mine), 2.6 (BlockData support)",
       "cancellable": true,
       "patterns": [
         "[block] (break[ing]|min(e|ing)) [[of] %item types/block datas%]"
@@ -16144,7 +16144,7 @@
     {
       "id": "endermansheepsilverfishfalling_block",
       "name": "On Enderman/Sheep/Silverfish/Falling Block",
-      "since": "<i>unknown</i>, 2.5.2 (falling block), 2.8.0 (any entity support)",
+      "since": "unknown, 2.5.2 (falling block), 2.8.0 (any entity support)",
       "cancellable": true,
       "patterns": [
         "enderman place",
@@ -16604,7 +16604,7 @@
     {
       "id": "dispense",
       "name": "On Dispense",
-      "since": "<i>unknown</i> (before 2.1)",
+      "since": "unknown (before 2.1)",
       "cancellable": true,
       "patterns": [
         "dispens(e|ing) [[of] %item types%]"
@@ -16640,7 +16640,7 @@
     {
       "id": "item_spawn",
       "name": "On Item Spawn",
-      "since": "<i>unknown</i> (before 2.1)",
+      "since": "unknown (before 2.1)",
       "cancellable": true,
       "patterns": [
         "item spawn[ing] [[of] %item types%]"
@@ -16680,7 +16680,7 @@
     {
       "id": "drop",
       "name": "On Drop",
-      "since": "<i>unknown</i> (before 2.1), 2.7 (entity)",
+      "since": "unknown (before 2.1), 2.7 (entity)",
       "cancellable": true,
       "patterns": [
         "[player|entity] drop[ping] [[of] %item types%]"
@@ -16768,7 +16768,7 @@
     {
       "id": "craft",
       "name": "On Craft",
-      "since": "<i>unknown</i> (before 2.1)",
+      "since": "unknown (before 2.1)",
       "cancellable": true,
       "patterns": [
         "[player] craft[ing] [[of] %item types%]"
@@ -16819,7 +16819,7 @@
     {
       "id": "pick_up",
       "name": "On Pick Up",
-      "since": "<i>unknown</i> (before 2.1), 2.5 (entity)",
+      "since": "unknown (before 2.1), 2.5 (entity)",
       "cancellable": true,
       "patterns": [
         "[(player|entity)] (pick[ ]up|picking up) [[of] %item types%]"
