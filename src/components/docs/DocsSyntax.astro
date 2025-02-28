@@ -7,6 +7,7 @@ export interface Syntax {
     type: DocType;
     since: string;
     name: string;
+    deprecated: boolean;
 }
 
 interface Props {
@@ -18,6 +19,7 @@ const { syntax }: Props = Astro.props;
 
 <a href={`#${syntax.id}`}
     data-new={syntax.isNew} data-type={syntax.type} data-since={syntax.since} 
-    class="syntax">
+    class="syntax"
+    style={syntax.deprecated ? 'text-decoration: line-through; opacity: 0.5;' : ''}>
     {syntax.name}
 </a>
