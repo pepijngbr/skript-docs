@@ -119,6 +119,11 @@ pre {
         flex flex-row gap-2 text-white;
 }
 
+.eventValues {
+    @apply pl-2 pr-4 py-1 w-fit rounded-md hover:cursor-pointer font-bold
+        flex flex-row gap-2 text-white;
+}
+
 td, th {
     @apply p-1;
 }

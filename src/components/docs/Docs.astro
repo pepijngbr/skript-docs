@@ -67,9 +67,17 @@ function type(doc: any): DocType {
 
     document.querySelectorAll("button.examples").forEach((button) => {
         button.addEventListener("click", () => {
-            const example = button.parentElement!!.querySelector(`.example`)!!;
+            const example = button.parentElement!!.parentElement!!.querySelector(`.example`)!!;
             button.querySelector("svg")?.classList.toggle("-r-90");
             example.classList.toggle("hidden");
+        });
+    });
+
+    document.querySelectorAll("button.eventValues").forEach((button) => {
+        button.addEventListener("click", () => {
+            const eventValue = button.parentElement!!.parentElement!!.querySelector(`.event-value`)!!;
+            button.querySelector("svg")?.classList.toggle("-r-90");
+            eventValue.classList.toggle("hidden");
         });
     });
 
