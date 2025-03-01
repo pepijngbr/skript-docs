@@ -69,10 +69,11 @@ function color(): string {
     <div class="flex flex-col gap-1">
         <div class="flex flex-row gap-3 flex-wrap">
             {docType.deprecated ? <h2 class="opacity-50 line-through">{docType.name}</h2> : <h2>{docType.name}</h2>}
-            {[docType.deprecated].filter(x => x).map(x => <DocsFiche text="Deprecated" color="520f0f"/>)}
             {[docType.new].filter(x => x).map(x => <DocsFiche text="New" color="B10003"/>)}
-
             <DocsFiche text={docType.type} color={color()}/>
+            {[docType.deprecated].filter(x => x).map(x => <DocsFiche text="Deprecated" color="520f0f"/>)}
+            {[docType.cancellable].filter(x => x).map(x => <DocsFiche text="Cancellable" color="112998"/>)}
+
             <div class="id flex-auto relative -top-37" id={docType.id}></div> <!-- Anchor all the way up or else its in the nav bar -->
             <button class="share">
                 <p class="p-2 hidden absolute w-64 my-auto shadow-lg 
@@ -91,7 +92,6 @@ function color(): string {
 
     <div>
         <DocData text="Since" value={docType.since}/>
-        <DocData text="Cancellable" value={docType.cancellable != null ? (docType.cancellable ? "Yes" : "No") : null}/>
         <DocData text="Requirements" value={docType.requirements}/>
         <DocData text="Supported events" value={docType.events}/>
         <DocData text="Returns" value={docType.returnType?.name ?? null}/>
@@ -113,8 +113,7 @@ function color(): string {
         {[docType.eventValues]
             .filter(x => x !== null)
             .map(_ => 
-            <button class="eventValues"
-                style={{ backgroundColor: `#${color()}` }}>
+            <button class="eventValues bg-l-icon-hover dark:bg-d-icon-hover">
                 <svg class="transition my-auto fill-white" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.60627 10.8563L5.88752 8.1375C5.85002 8.1 5.82202 8.0595 5.80352 8.016C5.78502 7.9725 5.77552 7.9255 5.77502 7.875C5.77502 7.775 5.80952 7.6875 5.87852 7.6125C5.94752 7.5375 6.03802 7.5 6.15002 7.5H11.85C11.9625 7.5 12.0533 7.5375 12.1223 7.6125C12.1913 7.6875 12.2255 7.775 12.225 7.875C12.225 7.9 12.1875 7.9875 12.1125 8.1375L9.39377 10.8563C9.33127 10.9188 9.26877 10.9625 9.20627 10.9875C9.14377 11.0125 9.07502 11.025 9.00002 11.025C8.92502 11.025 8.85627 11.0125 8.79377 10.9875C8.73127 10.9625 8.66877 10.9188 8.60627 10.8563Z"/>
                     </svg>
