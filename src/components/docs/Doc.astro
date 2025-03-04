@@ -132,8 +132,8 @@ function color(): string {
             .filter(x => x !== null)
             .map(x => <Code code={`${x.map(y => {
                 const name = y.name;
-                if (name.includes(" ")) {
-                    const parts = name.split(" ");
+                if (name.includes("past ") || name.includes("future ")) {
+                    const parts = name.split(" ", 2);
                     return `${parts[0]} event-${parts[1]}`;
                 } else {
                     return `event-${name}`;
