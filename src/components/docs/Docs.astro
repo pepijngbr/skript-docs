@@ -83,7 +83,7 @@ function type(doc: any): DocType {
 
     document.querySelectorAll(".share").forEach((button) => {
         button.addEventListener("click", () => {
-            const id = button.parentElement!!.querySelector(`.id`)!!.id;
+            const id = button.parentElement!!.parentElement!!.querySelector(`.id`)!!.id;
             const url = `${window.location.origin}${window.location.pathname}#${id}`;
             navigator.clipboard.writeText(url);
 
@@ -150,7 +150,8 @@ function type(doc: any): DocType {
         }
     })}/>
 
-    <div id="docs" class="p-2 md:p-6 flex-auto h-fit flex flex-col gap-2 md:gap-4">
+    <div id="docs" class="p-2 md:p-6 flex-auto h-fit flex flex-col gap-2 md:gap-4 
+        overflow-x-hidden">
         {docTypes.map(x => <Doc docType={x}/>)}
     </div>
 
