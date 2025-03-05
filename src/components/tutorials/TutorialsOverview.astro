@@ -33,7 +33,7 @@ const { selected, tutorials }: Props = Astro.props;
     window.addEventListener("resize", updatePosition);
 </script>
 
-<div id="tutorials" class="sticky top-[118px] left-0 w-full md:w-64 md:h-[100vh] overflow-y-hidden p-4
+<div id="tutorials" class="sticky top-[35px] sm:top-[118px] left-0 w-full md:w-64 md:h-[100vh] overflow-y-hidden p-4
             flex flex-col gap-2 shrink-0
             border-b-2 md:border-b-0 md:border-r-2 border-l-border dark:border-d-border
             bg-l-bg dark:bg-d-bg">
@@ -48,7 +48,7 @@ const { selected, tutorials }: Props = Astro.props;
         </button>
     </div>
     <div id="tutorials-expand-area" class="hidden sm:flex flex-col gap-2">
-        {tutorials.map(x => {
+        {tutorials.toSorted().map(x => {
             if (x.title === selected) {
                 return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
                     bg-skript hover:cursor-pointer
