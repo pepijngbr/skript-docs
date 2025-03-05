@@ -73,6 +73,17 @@ function color(): string {
             <DocsFiche text={docType.type} color={color()}/>
             {[docType.deprecated].filter(x => x).map(x => <DocsFiche text="Deprecated" color="520f0f"/>)}
             {[docType.cancellable].filter(x => x).map(x => <DocsFiche text="Cancellable" color="112998"/>)}
+            {[docType.requirements?.join("")].filter(x => x).map(x => {
+                x = x?.replaceAll(/[.+0-9]/g, "")?.trim();
+
+                if (x?.toLowerCase() === "paper") {
+                    return <DocsFiche text="Paper" color="7d037f"/>;
+                } else if (x?.toLowerCase().includes("paper")) {
+                    return <DocsFiche text="Partially Paper" color="7d037f"/>;
+                } else {
+                    return null;
+                }
+            })}
 
             <div class="id flex-auto relative -top-37" id={docType.id}></div> <!-- Anchor all the way up or else its in the nav bar -->
             <button class="share">
