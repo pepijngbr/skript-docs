@@ -46,7 +46,7 @@ function color(): string {
         case DocType.CONDITION:
             return "6f1896";
         case DocType.EFFECT:
-            return "337A00";
+            return "6d9604";
         case DocType.EXPRESSION:
             return "006e43";
         case DocType.FUNCTION:
@@ -56,7 +56,7 @@ function color(): string {
         case DocType.SECTION:
             return "718400";
         case DocType.STRUCTURE:
-            return "7a0074";
+            return "966518";
         default:
             return "000000";
     }
@@ -67,7 +67,7 @@ function color(): string {
     class="doc-container">
 
     <div class="flex sm:flex-row flex-col gap-y-2 -mb-2">
-        <div class="flex flex-row gap-3 flex-shrink-0">
+        <div class="flex flex-row gap-4 flex-shrink-0">
             {docType.deprecated ? <h2 class="opacity-50 line-through">{docType.name}</h2> : <h2>{docType.name}</h2>}
             <div class="flex-auto sm:flex-0"></div>
             <button class="share flex sm:hidden">
@@ -85,12 +85,12 @@ function color(): string {
             {[docType.deprecated].filter(x => x).map(x => <DocsFiche text="Deprecated" color="520f0f"/>)}
             {[docType.cancellable].filter(x => x).map(x => <DocsFiche text="Cancellable" color="112998"/>)}
             {[docType.requirements?.join("")].filter(x => x).map(x => {
-                x = x?.replaceAll(/[.+0-9]/g, "")?.trim();
+                x = x?.replaceAll(/[.+0-9]|(or newer)/g, "")?.trim();
 
                 if (x?.toLowerCase() === "paper") {
-                    return <DocsFiche text="Paper" color="7d037f"/>;
+                    return <DocsFiche text="Paper" color="c900a0"/>;
                 } else if (x?.toLowerCase().includes("paper")) {
-                    return <DocsFiche text="Partially Paper" color="7d037f"/>;
+                    return <DocsFiche text="Partially Paper" color="c900a0"/>;
                 } else {
                     return null;
                 }
@@ -139,6 +139,7 @@ function color(): string {
     
         {[docType.eventValues]
             .filter(x => x !== null)
+            .toSorted()
             .map(_ => 
             <button class="eventValues bg-l-icon-hover dark:bg-d-icon-hover">
                 <svg class="transition my-auto fill-white" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">

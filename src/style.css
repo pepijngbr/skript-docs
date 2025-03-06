@@ -22,7 +22,7 @@
     --color-l-search-text: #333333;
     --color-d-search-text: #CCCCCC;
 
-    --color-l-icon-hover: #DEDEDE;
+    --color-l-icon-hover: #A8A8A8;
     --color-d-icon-hover: #373737;
 
     --color-l-bg-secondary: #DCDCDC;
@@ -94,7 +94,7 @@ pre {
 }
 
 .syntax-active {
-    @apply bg-skript;
+    @apply bg-skript text-white font-bold;
 }
 
 .doc-container {
