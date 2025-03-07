@@ -77,7 +77,7 @@ h3 {
 }
 
 p a {
-    @apply underline text-blue-300;
+    @apply underline text-blue-500 dark:text-blue-300;
 }
 
 .outfit {

@@ -163,7 +163,7 @@ const versions = ["New", "2.10", "2.9", "2.8", "2.7"]
     updatePosition();
     window.addEventListener("DOMContentLoaded", () => {
         updatePosition();
-        filters.classList.remove("!fixed"); // fix layout shift on load
+        filters.classList.remove("fixed"); // fix layout shift on load
         filters.classList.add("sticky"); // fix layout shift on load
     });
 
