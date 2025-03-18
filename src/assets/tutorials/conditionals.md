@@ -35,9 +35,12 @@ Generic conditions are used when a dedicated condition does not exist or you hav
 if player's balance < 20
 ```
 
-{% hint style="info" %}
-You can see all of the various generic condition syntaxes [here, under the Comparison condition](https://docs.skriptlang.org/conditions.html#CondCompare).
-{% endhint %}
+<div class="hint info">
+<h3>Info</h3>
+<span>
+You can see all of the various generic condition syntaxes by clicking <a href="https://docs.skriptlang.org/docs#CondCompare">here, to view the comparison condition</a>.
+</span>
+</div>
 
 ## If Statements
 
@@ -159,9 +162,10 @@ send "hello" if distance between player and {spawn} <= 10
 
 Notice how there is no indentation differences, colons, and how the effect comes first and then the condition.
 
-{% hint style="warning" %}
+<div class="hint info">
+<h3>Info</h3>
 Keep note that there is no `else if` or `else` options with this method.
-{% endhint %}
+</div>
 
 ## If Any and If All
 
@@ -181,9 +185,10 @@ else:
     send "You didn't meet all the conditions! to player
 ```
 
-{% hint style="info" %}
+<div class="hint info">
+<h3>Info</h3>
 Notice the `else` statement! These multi-conditions can include `else if` and `else` statements inside of them!
-{% endhint %}
+</div>
 
 This works well because we can check multiple conditions without losing code quality. But what if we only need a single condition to be met out of many? For example, what if we want **both** admins and builders to have build permission? In that case, we can use `if any` like this:
 

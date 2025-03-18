@@ -6,3 +6,8 @@ url: https://github.com/SkriptLang/docs/blob/master/src/assets/tutorials/getting
 ---
 
 # Getting Started
+
+We're happy to see you're interested in learning Skript. 
+On the left, you'll find the list of all official tutorials currently available.
+
+Have fun!

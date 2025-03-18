@@ -148,9 +148,10 @@ command /test:
        
 ```
 
-{% hint style="danger" %}
+<div class="hint alert">
+<h3>Alert</h3>
 If two commands have the same name but different prefixes, only one will be registered.
-{% endhint %}
+</div>
 
 ### Aliases
 
@@ -165,7 +166,8 @@ command /teleport <number> <number> <number>:
         teleport player to location(arg-1, arg-2, arg-3)
 ```
 
-{% hint style="danger" %}
+<div class="hint alert">
+<h3>Alert</h3>
 Aliases will not overwrite commands registered by other plugins. Say another plugin registers `/spawn`, and you have the following command:
 
 ```applescript
@@ -176,7 +178,7 @@ command /tp-to-spawn:
 ```
 
 If you run `/spawn`, that other plugin's command will run. You'll need to register a new command with that name and have it run your first command.
-{% endhint %}
+</div>
 
 ### Executable by
 
@@ -223,9 +225,10 @@ There are also a number of expressions you can use to interact with the cooldown
 
 If you've enabled `keep command last usage dates` in your `config.sk` file, you can get the last time the player used the command with `last usage date`.
 
-{% hint style="info" %}
+<div class="hint info">
+<h3>Info</h3>
 You can see the full syntax for these expressions [here](https://docs.skriptlang.org/expressions.html#ExprCmdCooldownInfo).
-{% endhint %}
+</div>
 
 ```applescript
 # The same vote command but with an improved cooldown message.

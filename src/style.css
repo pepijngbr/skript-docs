@@ -149,3 +149,19 @@ ul {
 .-r-90 {
     @apply transform -rotate-90;
 }
+
+.hint {
+    @apply flex flex-col gap-4 p-4 rounded-md;
+}
+
+.info {
+    @apply bg-[#38b6e2] dark:bg-[#10799e];
+}
+
+.warning {
+    @apply bg-[#e4b03f] dark:bg-[#b98004];
+}
+
+.alert {
+    @apply bg-[#f96b6b] dark:bg-[#9e1010];
+}

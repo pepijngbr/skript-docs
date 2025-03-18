@@ -29,7 +29,8 @@ Now, whenever someone joins, Skript sees `test()` and runs our function, broadca
 
 Function can be called from anywhere, and at (nearly) any time. You can use them across files! The only restriction is using them in `on load` events. Be careful there. You can also restrict a function to work only in 1 file by using `local`, which we'll get to later.
 
-{% hint style="info" %}
+<div class="hint info">
+<h3>Info</h3>
 This might seem a little, well, useless. Why come up with this whole function thing when you can just write the code when you want it? Why couldn't we just write the following?
 
 ```applescript
@@ -40,7 +41,7 @@ on join:
 And you'd be right. These two scripts behave exactly the same. In general, you can always just take the code from a function, plop it right into the place you're calling it from with some minor changes, and have it work the same.&#x20;
 
 The main benefits come from when you're using the same code in multiple different locations. Functions allow you to only write that code once.
-{% endhint %}
+</div>
 
 ## Function Definitions
 
@@ -91,11 +92,12 @@ function giveTenApples2(player: player, number-list: numbers):
     # imagine code here
 ```
 
-{% hint style="warning" %}
-Note that I used `()` around the number list. This is so that Skript doesn't get confused and think that `10, 20, 30` are all different parameters.&#x20;
+<div class="hint warning">
+<h3>Warning</h3>
+Note that I used `()` around the number list. This is so that Skript doesn't get confused and think that `10, 20, 30` are all different parameters.
 
 If you're ever experiencing errors or weird bugs with your parameters, try making sure they're surrounded with `()`, it can solve a lot of issues.
-{% endhint %}
+</div>
 
 But we skipped over something earlier. We can give parameters **default values**, too.
 
@@ -139,9 +141,10 @@ Secondly, notice how the function definition has changed. We now have this `retu
 
 Finally, notice the new syntax at the end of the function: `return {_item}`. This is how we tell the function what value it should return. In this case, it's `{_item}`. Return will also stop execution of the function there, like `stop` does.&#x20;
 
-{% hint style="warning" %}
+<div class="hint warning">
+<h3>Warning</h3>
 Note that you cannot use `wait` in a function that returns a value. It has to return it instantly, without delay.
-{% endhint %}
+</div>
 
 ### Local Functions
 
@@ -153,7 +156,8 @@ This is where **local** functions come into play. By putting `local` in front of
 [local] function functionName(...)...
 ```
 
-{% hint style="warning" %}
+<div class="hint warning">
+<h3>Warning</h3>
 If there's a global function of the same name, your local function will **always** be prioritized over the global version. If that's a bit confusing, here's an example:
 
 ```applescript
@@ -179,7 +183,7 @@ on quit:
 When a player joins, the `join` event in `script-1.sk` runs. This calls the **local** function `test()`, which broadcasts `"local!"`.&#x20;
 
 When a player quits, the `quit` event in `script-2.sk` runs. This can't see the local version of `test()`, so it calls the **global** `test()`, which broadcasts `"global!"`.
-{% endhint %}
+</div>
 
 ## Full Definition
 
@@ -282,6 +286,7 @@ To wrap up, functions are very useful tools to have in your belt. They're powerf
 
 I hope now you've got a grasp on how functions work, at least enough to go and experiment on your own. All the tutorials in the world can't teach you what good old trial and error can.
 
-{% hint style="danger" %}
-If you didn't like anything about this tutorial, or found it hard to understand, message me on Discord at Sovde#0001, or tag me in the SkUnity discord.
-{% endhint %}
+<div class="hint alert">
+<h3>Alert</h3>
+If you didn't like anything about this tutorial, or found it hard to understand, message me on Discord at @sovdeeth, or tag me in the SkUnity discord.
+</div>
