@@ -9,20 +9,40 @@ const { title }: Props = Astro.props;
 ---
 
 <script>
-	if (!document.cookie.includes("theme=")) {
-		document.cookie = "theme=auto; path=/; max-age=31536000; SameSite=Strict";
-	}
+const prefersDarkScheme = () => localStorage.theme === "dark" 
+	|| (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
-	const auto =
-		window.matchMedia &&
-		window.matchMedia("(prefers-color-scheme: dark)").matches &&
-		document.cookie.includes("theme=auto");
+document.documentElement.classList.toggle(
+	"dark",
+	prefersDarkScheme()
+);
 
-	const dark = document.cookie.includes("theme=dark");
+const darkToggle = document.getElementById("dark-toggle");
+const lightToggle = document.getElementById("light-toggle");
 
-	if (dark || auto) {
-		document.body.classList.add("dark");
-	}
+if (prefersDarkScheme()) {
+	localStorage.theme = "dark";
+	lightToggle.classList.remove("hidden");
+	darkToggle.classList.add("hidden");
+} else {
+	localStorage.theme = "light";
+	lightToggle.classList.add("hidden");
+	darkToggle.classList.remove("hidden");
+}
+
+lightToggle.addEventListener("click", () => {
+	document.documentElement.classList.remove("dark");
+	localStorage.theme = "light";
+	lightToggle.classList.add("hidden");
+	darkToggle.classList.remove("hidden");
+});
+
+darkToggle.addEventListener("click", () => {
+	document.documentElement.classList.add("dark");
+	localStorage.theme = "dark";
+	lightToggle.classList.remove("hidden");
+	darkToggle.classList.add("hidden");
+});
 </script>
 
 <html lang="en">
