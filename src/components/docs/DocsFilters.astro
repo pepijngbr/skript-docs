@@ -1,6 +1,16 @@
 ---
 const rtTypes = ["Conditions", "Effects", "Events", "Expressions", "Functions", "Sections", "Structures", "Types"]
-const versions = ["New", "2.10", "2.9", "2.8", "2.7"]
+
+import docs from "../../assets/docs/docs.json";
+
+const latest = docs.skriptVersion.match(/\d+\.(\d+)/)!!;
+const latestMinor = parseInt(latest[1], 10)!! - 1;
+
+let versions = ["New"];
+for (let i = latestMinor; i > latestMinor - 4; i--) {
+    versions.push(`2.${i}`);
+}
+
 ---
 
 <script>
