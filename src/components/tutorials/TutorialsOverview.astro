@@ -2,11 +2,19 @@
 import type { Tutorial } from './Tutorials.astro';
 
 interface Props {
-    selected: string;
+    id: string;
     tutorials: Tutorial[];
 }
 
-const { selected, tutorials }: Props = Astro.props;
+const { id, tutorials }: Props = Astro.props;
+
+const bySection = tutorials.reduce((acc, tutorial) => {
+    const section = tutorial.section;
+    if (!acc[section]) acc[section] = [];
+    acc[section].push(tutorial);
+    return acc;
+}, {} as Record<string, Tutorial[]>);
+
 ---
 
 <script>
@@ -48,20 +56,27 @@ const { selected, tutorials }: Props = Astro.props;
         </button>
     </div>
     <div id="tutorials-expand-area" class="hidden sm:flex flex-col gap-2">
-        {tutorials.toSorted().map(x => {
-            if (x.title === selected) {
-                return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
-                    bg-skript hover:cursor-pointer
-                    font-bold text-white">
-                    {x.title}
-                </a>
-            } else {
-                return <a href={`/tutorials/${x.id}`} class="text-left px-4 py-3 rounded-md 
-                    bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer
-                    font-bold">
-                    {x.title}
-                </a>
-            }
-        })}
+        {Object.entries(bySection).map(([sectionName, tutorials]) => (
+           <div class="flex flex-col gap-1">
+                <h2 class="text-lg font-semibold mt-1">{sectionName}</h2>
+                <div class="flex flex-col gap-2 border-l-1 border-l-neutral-700">
+                    { tutorials.toSorted((x, y) => x.index - y.index).map(x => {
+                    if (x.id === id) {
+                        return <a href={`/tutorials/${x.id}`} class="ml-2 text-left px-4 py-3 rounded-md 
+                            bg-skript hover:cursor-pointer
+                            font-bold text-white">
+                            {x.title}
+                        </a>
+                    } else {
+                        return <a href={`/tutorials/${x.id}`} class="ml-2 text-left px-4 py-3 rounded-md 
+                            bg-l-bg-secondary dark:bg-d-bg-secondary hover:cursor-pointer
+                            font-bold">
+                            {x.title}
+                        </a>
+                    }
+                })}
+                </div>
+           </div>
+        ))}
     </div>
 </div>

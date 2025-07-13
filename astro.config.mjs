@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   redirects: {
-    "tutorials": "/tutorials/getting-started",
+    "tutorials": "/tutorials/scripting/getting-started",
     "events": "/docs",
     "conditions": "/docs",
     "effects": "/docs",

@@ -45,8 +45,8 @@ const { title }: Props = Astro.props;
 				prefersDarkScheme()
 			);
 
-			const darkToggle = document.getElementById("dark-toggle");
-			const lightToggle = document.getElementById("light-toggle");
+			const darkToggle = document.getElementById("dark-toggle")!!;
+			const lightToggle = document.getElementById("light-toggle")!!;
 
 			if (prefersDarkScheme()) {
 				localStorage.theme = "dark";

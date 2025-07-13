@@ -3,6 +3,8 @@ title: Text
 author: Efnilite, bensku
 date: 2/2/2024
 url: https://github.com/SkriptLang/docs/blob/master/src/assets/tutorials/text.md
+section: Scripting
+index: 1
 ---
 
 # Text

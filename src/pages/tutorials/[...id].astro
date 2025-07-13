@@ -22,9 +22,9 @@ const title = tutorial.data.title;
 const { Content } = await render(tutorial);
 ---
 
-<Page title={`${title} - Tutorials - Skript Docs`}>
+<Page title={`${title} | Tutorials | Skript Docs`}>
     <Nav type={PageType.TUTORIALS} />
-    <Tutorials selected={title}>
-        <Content/>
+    <Tutorials id={tutorial.id}>
+        <Content />
     </Tutorials>
 </Page>

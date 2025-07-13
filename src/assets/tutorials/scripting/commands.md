@@ -3,6 +3,8 @@ title: Commands
 author: sovde, blueyescat
 date: 2/20/2024
 url: https://github.com/SkriptLang/docs/blob/master/src/assets/tutorials/commands.md
+section: Scripting
+index: 4
 ---
 
 # Commands

@@ -6,7 +6,7 @@ import docs from "../../assets/docs/docs.json";
 const latest = docs.skriptVersion.match(/\d+\.(\d+)/)!!;
 const latestMinor = parseInt(latest[1], 10)!! - 1;
 
-let versions = ["New"];
+let versions = [latest[0] + " (New)"];
 for (let i = latestMinor; i > latestMinor - 4; i--) {
     versions.push(`2.${i}`);
 }
@@ -107,7 +107,7 @@ for (let i = latestMinor; i > latestMinor - 4; i--) {
                     return;
                 }
 
-                if (filter.versions.includes("New") && element.getAttribute("data-new") === "true") {
+                if (filter.versions.find(it => it.includes("New")) && element.getAttribute("data-new") === "true") {
                     element.classList.remove("hidden-by-version");
                     return;
                 }

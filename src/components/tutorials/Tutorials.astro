@@ -2,11 +2,13 @@
 import { getCollection } from "astro:content";
 import TutorialsOverview from "./TutorialsOverview.astro";
 
-interface PreTutorial {
+interface TutorialData {
     id: string;
     data: {
         title: string;
         url: string;
+        section: string;
+        index: number;
     }
 }
 
@@ -14,22 +16,37 @@ export interface Tutorial {
     id: string;
     title: string;
     url: string;
+    section: string;
+    index: number;
 }
 
-const tutorials: Tutorial[] = (await getCollection("tutorials") as PreTutorial[])
+interface Frontmatter {
+    title: string;
+    author: string;
+    date: string;
+    url: string;
+    section: string;
+    index: number;
+}
+
+const tutorials: Tutorial[] = (await getCollection("tutorials"))
     .map(post => {
+        const fm = post.rendered?.metadata?.frontmatter as Frontmatter;
+
         return {
-            id: post.id,
-            title: post.data.title,
-            url: post.data.url,
+            id: post.id!!,
+            title: fm.title,
+            url: fm.url,
+            section: fm.section,
+            index: fm.index,
         }
     });
 
 interface Props {
-    selected: string;
+    id: string;
 }
 
-const { selected }: Props = Astro.props;
+const { id }: Props = Astro.props;
 ---
 
 <script>
@@ -48,7 +65,7 @@ const { selected }: Props = Astro.props;
 </script>
 
 <section class="flex flex-col lg:flex-row">
-    <TutorialsOverview selected={selected} tutorials={tutorials}/>
+    <TutorialsOverview id={id} tutorials={tutorials}/>
     <div class="flex flex-col gap-4">
         <div class="md:m-4 px-4 md:pl-24 md:pr-64 py-4">
             <div class="max-w-[896px] rounded-md flex-auto h-fit flex flex-col gap-4">
