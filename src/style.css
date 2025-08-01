@@ -94,7 +94,11 @@ pre {
     display: none !important;
 }
 
-.hidden-by-version {
+.hidden-by-supported {
+    display: none !important;
+}
+
+.hidden-by-changed {
     display: none !important;
 }
 

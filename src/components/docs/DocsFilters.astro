@@ -48,32 +48,64 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
 
     export interface Filter {
         types: string[];
-        version: string;
+        supported: string;
+        changed: string;
     }
 
-    let filter: Filter = {types: [], version: ""};
+    let filter: Filter = {
+        types: [], 
+        supported: "",
+        changed: "",
+    };
 
     function handleClick(button: HTMLButtonElement) {
         const text = button.textContent!!.trim();
-        const isType = button.getAttribute("data-type") === "type";
-        if (isType) {
-            toggle(filter.types, text);
-        } else {
-            if (text === filter.version) {
-                filter.version = "";
-            } else {
-                filter.version = text;
-            } 
+        const attribute = button.getAttribute("data-type")!!;
+
+        switch (attribute) {
+            case "type":
+                toggle(filter.types, text);
+                break;
+            case "supported":
+                if (text === filter.supported) {
+                    filter.supported = "";
+                    filter.changed = "";
+                } else {
+                    filter.supported = text;
+                    filter.changed = "";
+                }
+                break;
+            case "changed":
+                if (text === filter.changed) {
+                    filter.changed = "";
+                    filter.supported = "";
+                } else {
+                    filter.changed = text;
+                    filter.supported = "";
+                }
+                break;
+            default:
+                console.warn(`Unknown filter type: ${button.getAttribute("data-type")}`);
+                return;
         }
 
         // update rest of buttons
         const buttons = document.querySelectorAll("#filters button");
         buttons.forEach(button => {
             let match = false;
-            if (button.getAttribute("data-type") === "type") {
-                match = filter.types.includes(button.textContent!!.trim());
-            } else {
-                match = filter.version === button.textContent!!.trim();
+
+            switch (button.getAttribute("data-type")) {
+                case "type":
+                    match = filter.types.includes(button.textContent!!.trim());
+                    break;
+                case "supported":
+                    match = filter.supported === button.textContent!!.trim();
+                    break;
+                case "changed":
+                    match = filter.changed === button.textContent!!.trim(); 
+                    break;
+                default:
+                    return;
             }
 
             if (match) {
@@ -92,46 +124,56 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
                 return;
             }
 
-            if (isType) {
-                if (filter.types.length === 0) {
-                    element.classList.remove("hidden-by-type");
-                    return;
-                }
+            element.classList.remove("hidden-by-type", "hidden-by-changed", "hidden-by-supported");
 
-                for (const t of filter.types) {
-                    if (element.getAttribute("data-type")?.includes(types[t])) {
-                        element.classList.remove("hidden-by-type");
+            switch (attribute) {
+                case "type":
+                    if (filter.types.length === 0) {
                         return;
                     }
-                }
 
-                element.classList.add("hidden-by-type");
-            } else {
-                if (filter.version === "") {
-                    element.classList.remove("hidden-by-version");
-                    return;
-                }
+                    for (const t of filter.types) {
+                        if (element.getAttribute("data-type")?.includes(types[t])) {
+                            return;
+                        }
+                    }
 
-                if (filter.version.includes("New") && element.getAttribute("data-new") === "true") {
-                    element.classList.remove("hidden-by-version");
-                    return;
-                }
-
-                const since = element.getAttribute("data-since");
-                if (since === null) {
-                    element.classList.remove("hidden-by-version");
-                    return;
-                }
-
-                const minor = parseInt(filter.version.match(/\d+\.(\d+)/)!![1], 10);
-                since.matchAll(/\d+\.(\d+)/g).forEach((match) => {
-                    const otherMinor = parseInt(match[1], 10);
-                
-                    if (otherMinor > minor) {
-                        element.classList.add("hidden-by-version");
+                    element.classList.add("hidden-by-type");
+                    break;
+                case "supported":
+                    if (filter.supported === "") {
                         return;
                     }
-                });
+
+                    const since1 = element.getAttribute("data-since");
+                    if (since1 === null) {
+                        return;
+                    }
+
+                    const minor1 = parseInt(filter.supported.match(/\d+\.(\d+)/)!![1], 10);
+                    since1.matchAll(/\d+\.(\d+)/g).forEach((match) => {
+                        const otherMinor = parseInt(match[1], 10);
+                    
+                        if (otherMinor > minor1) {
+                            element.classList.add("hidden-by-supported");
+                            return;
+                        }
+                    });
+                    break;
+                case "changed":
+                    const since = element.getAttribute("data-since");
+                    if (since === null) {
+                        return;
+                    }
+
+                    if (!since.includes(filter.changed)) {
+                        element.classList.add("hidden-by-changed");
+                        return;
+                    }
+                    break;
+                default:
+                    console.warn(`Unknown filter type: ${button.getAttribute("data-type")}`);
+                    return;
             }
         });
     }
@@ -213,7 +255,7 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
         </button>
     </div>
     <div id="filter-expand-area" class="hidden flex-col gap-2 transition">
-        <h3>Type</h3>
+        <h3>Syntax type</h3>
         
         <div class="w-fit flex flex-row flex-wrap gap-2">
             {rtTypes.map(x => 
@@ -225,15 +267,21 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
             )}
         </div>
 
-        <h3>Supported in</h3>
+        <h3>Syntax is supported in</h3>
         <div class="flex flex-wrap gap-2">
-            <button data-type="version" class="filter-button p-2 rounded-md text-center 
-                    bg-skript text-white font-bold
+            {versions.map(x => 
+                <button data-type="supported" class="filter-button p-2 rounded-md text-center 
+                    bg-l-bg-secondary dark:bg-d-bg-secondary 
                     hover:cursor-pointer hover:opacity-80 transition">
-                    {versions[0]}
+                    {x}
                 </button>
-            {versions.slice(1).map(x => 
-                <button data-type="version" class="filter-button p-2 rounded-md text-center 
+            )}
+        </div>
+
+        <h3>Syntax was changed in</h3>
+        <div class="flex flex-wrap gap-2">
+            {versions.map(x => 
+                <button data-type="changed" class="filter-button p-2 rounded-md text-center 
                     bg-l-bg-secondary dark:bg-d-bg-secondary 
                     hover:cursor-pointer hover:opacity-80 transition">
                     {x}
