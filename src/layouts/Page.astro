@@ -37,6 +37,32 @@ const { title }: Props = Astro.props;
 		<!-- Meta Tags Generated with https://metatags.io -->
 
 		<script>
+			const toggleMode = (darkToggle: HTMLButtonElement, lightToggle: HTMLButtonElement) => {
+				if (prefersDarkScheme()) {
+					localStorage.theme = "dark";
+					lightToggle.classList.remove("hidden");
+					darkToggle.classList.add("hidden");
+				} else {
+					localStorage.theme = "light";
+					lightToggle.classList.add("hidden");
+					darkToggle.classList.remove("hidden");
+				}
+
+				lightToggle.addEventListener("click", () => {
+					document.documentElement.classList.remove("dark");
+					localStorage.theme = "light";
+					lightToggle.classList.add("hidden");
+					darkToggle.classList.remove("hidden");
+				});
+
+				darkToggle.addEventListener("click", () => {
+					document.documentElement.classList.add("dark");
+					localStorage.theme = "dark";
+					lightToggle.classList.remove("hidden");
+					darkToggle.classList.add("hidden");
+				});
+			}
+
 			const prefersDarkScheme = () => localStorage.theme === "dark" 
 				|| (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
@@ -48,32 +74,15 @@ const { title }: Props = Astro.props;
 			const darkToggle = document.getElementById("dark-toggle")!!;
 			const lightToggle = document.getElementById("light-toggle")!!;
 
-			if (prefersDarkScheme()) {
-				localStorage.theme = "dark";
-				lightToggle.classList.remove("hidden");
-				darkToggle.classList.add("hidden");
-			} else {
-				localStorage.theme = "light";
-				lightToggle.classList.add("hidden");
-				darkToggle.classList.remove("hidden");
-			}
+			toggleMode(darkToggle as HTMLButtonElement, lightToggle as HTMLButtonElement);
 
-			lightToggle.addEventListener("click", () => {
-				document.documentElement.classList.remove("dark");
-				localStorage.theme = "light";
-				lightToggle.classList.add("hidden");
-				darkToggle.classList.remove("hidden");
-			});
+			const darkToggleM = document.getElementById("dark-toggle-mobile")!!;
+			const lightToggleM = document.getElementById("light-toggle-mobile")!!;
 
-			darkToggle.addEventListener("click", () => {
-				document.documentElement.classList.add("dark");
-				localStorage.theme = "dark";
-				lightToggle.classList.remove("hidden");
-				darkToggle.classList.add("hidden");
-			});
+			toggleMode(darkToggleM as HTMLButtonElement, lightToggleM as HTMLButtonElement);
 			</script>
 	</head>
-	<body class="bg-l-bg dark:bg-d-bg 
+	<body id="body" class="bg-l-bg dark:bg-d-bg 
 				text-black dark:text-white 
 				fill-black dark:fill-white
 				overflow-x-hidden">

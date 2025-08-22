@@ -1,7 +1,8 @@
 ---
+import NavMenu from "./mobile/NavMenu.astro";
 import NavIcons from "./NavIcons.astro";
 import NavLogo from "./NavLogo.astro";
-import NavMobile from "./NavMobile.astro";
+import NavMobile from "./mobile/NavMobile.astro";
 import NavSearch from "./NavSearch.astro";
 import NavTabs from "./NavTabs.astro";
 
@@ -42,3 +43,5 @@ const { type }: Props = Astro.props;
         <NavTabs type={type}/>
     </div>
 </nav>
+
+<NavMenu/>
