@@ -220,7 +220,7 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
     function updatePosition() {
         // Update position of filters to be below the nav bar,
         // since filters is sticky this cant be done directly
-        filters.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;   
+        filters.style.top = `${document.getElementById("nav")!!.offsetHeight - 1}px`;   
     }
 
     updatePosition();

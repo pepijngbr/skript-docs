@@ -20,7 +20,7 @@ const bySection = tutorials.reduce((acc, tutorial) => {
 <script>
     // Update position of filters to be below the nav bar,
     // since filters is sticky this cant be done directly
-    document.getElementById("tutorials")!!.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;
+    document.getElementById("tutorials")!!.style.top = `${document.getElementById("nav")!!.offsetHeight - 1}px`;
 
     const tutorials = document.getElementById("tutorials-expand-area")!!;
     const expand = document.getElementById("tutorials-expand-button")!!;
@@ -34,7 +34,7 @@ const bySection = tutorials.reduce((acc, tutorial) => {
     function updatePosition() {
         // Update position of filters to be below the nav bar,
         // since filters is sticky this cant be done directly
-        tutorials.style.top = `${document.getElementById("nav")!!.offsetHeight}px`;   
+        tutorials.style.top = `${document.getElementById("nav")!!.offsetHeight - 1}px`;   
     }
 
     window.addEventListener("DOMContentLoaded", updatePosition);

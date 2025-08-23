@@ -172,10 +172,15 @@ ul {
     @apply bg-[#f96b6b] dark:bg-[#9e1010];
 }
 
-#nav-menu-mobile > div > a, #nav-menu-mobile > div > button {
-    @apply flex flex-row gap-3 text-xl p-2 -m-2 rounded-xl hover:bg-l-icon-hover dark:hover:bg-d-icon-hover hover:cursor-pointer;
+#nav-menu-mobile > div > a {
+    @apply flex flex-row gap-3 text-xl p-2 -m-2 rounded-xl 
+        hover:bg-l-icon-hover dark:hover:bg-d-icon-hover hover:cursor-pointer;
 }
 
-#nav-menu-mobile > div > a > svg, #nav-menu-mobile > div > button > svg {
+#nav-menu-mobile > div > a > svg, #nav-menu-mobile > div > a > span {
+    @apply my-auto;
+}
+
+#nav-menu-mobile > div > a > span {
     @apply my-auto;
 }
