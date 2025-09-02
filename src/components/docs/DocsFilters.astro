@@ -209,58 +209,71 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
 
             element.classList.remove("hidden-by-type", "hidden-by-changed", "hidden-by-supported");
 
-            switch (attribute) {
-                case "type":
-                    if (filter.types.length === 0) {
-                        return;
-                    }
-
-                    for (const t of filter.types) {
-                        if (element.getAttribute("data-type")?.includes(types[t])) {
-                            return;
-                        }
-                    }
-
-                    element.classList.add("hidden-by-type");
-                    break;
-                case "supported":
-                    if (filter.supported === "") {
-                        return;
-                    }
-
-                    const since1 = element.getAttribute("data-since");
-                    if (since1 === null) {
-                        return;
-                    }
-
-                    const minor1 = parseInt(filter.supported.match(/\d+\.(\d+)/)!![1], 10);
-                    since1.matchAll(/\d+\.(\d+)/g).forEach((match) => {
-                        const otherMinor = parseInt(match[1], 10);
-                    
-                        if (otherMinor > minor1) {
-                            element.classList.add("hidden-by-supported");
-                            return;
-                        }
-                    });
-                    break;
-                case "changed":
-                    const since = element.getAttribute("data-since");
-                    if (since === null) {
-                        return;
-                    }
-
-                    if (!since.includes(filter.changed)) {
-                        element.classList.add("hidden-by-changed");
-                        return;
-                    }
-                    break;
-                default:
-                    console.warn(`Unknown filter type: ${button.getAttribute("data-type")}`);
-                    return;
-            }
+            checkType(element);
+            checkSupported(element);
+            checkSince(element);
         });
     }
     
+    /**
+     * Check if the element matches the current type filter.
+     * @param element The element to check.
+     */
+    function checkType(element: Element) {
+        if (filter.types.length === 0) {
+            return;
+        }
+
+        for (const t of filter.types) {
+            if (element.getAttribute("data-type")?.includes(types[t])) {
+                return;
+            }
+        }
+
+        element.classList.add("hidden-by-type");
+    }
+
+    /**
+     * Check if the element matches the current supported filter.
+     * @param element The element to check.
+     */
+    function checkSupported(element: Element) {
+        if (filter.supported === "") {
+            return;
+        }
+
+        const since1 = element.getAttribute("data-since");
+        if (since1 === null) {
+            return;
+        }
+
+        const minor1 = parseInt(filter.supported.match(/\d+\.(\d+)/)!![1], 10);
+        since1.matchAll(/\d+\.(\d+)/g).forEach((match) => {
+            const otherMinor = parseInt(match[1], 10);
+        
+            if (otherMinor > minor1) {
+                element.classList.add("hidden-by-supported");
+                return;
+            }
+        });
+    }
+
+    /**
+     * Check if the element matches the current since filter.
+     * @param element The element to check.
+     */
+    function checkSince(element: Element) {
+        const since = element.getAttribute("data-since");
+        if (since === null) {
+            return;
+        }
+
+        if (!since.includes(filter.changed)) {
+            element.classList.add("hidden-by-changed");
+            return;
+        }
+    }
+
     /**
      * Reset all filter buttons to their default state.
      */
@@ -324,8 +337,8 @@ for (let i = latestMinor + 1; i > latestMinor - 4; i--) {
             button.addEventListener("click", () => handleClick(button as HTMLButtonElement));
         });
 
-        (buttons[0] as HTMLButtonElement).click();
-        (buttons[0] as HTMLButtonElement).click();
+        (buttons[1] as HTMLButtonElement).click();
+        (buttons[1] as HTMLButtonElement).click();
     });
 </script>
 
