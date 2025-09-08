@@ -26,7 +26,7 @@ set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
 
 ## Creating a new builder
 
-First, create a new builder to start building our function. This builder takes the `SkriptAddon`
+First, create a new `DefaultFunction.Builder`. This builder takes the `SkriptAddon`
 instance of your addon, the name of the function, and the return type of the function. Since our
 function always returns an array of strings, we can specify the return type as `String[].class`.
 If our function only returned a single string value, the return type would be `String.class`.
@@ -39,7 +39,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
 ## Documentation
 
-After creating the builder, the documentation should be specified. 
+The documentation should be specified next. 
 This allows documentation sites to view more information about the function.
 
 - The description features a brief description of the function and information about how it works.
@@ -62,12 +62,11 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
 ## Parameters
 
-Next, we should specify what arguments our function can take. To do this, we use the `parameter` function.
-This starts by specifying the parameter name, and then the type it accepts. Like the return type,
+Next, we should specify what arguments our function with the `parameter` function.
+This specifies the parameter name and the type it accepts. Like the return type,
 using an array indicates that multiple values can be passed to the argument. 
 
-Additionally, the `char` parameter contains a modifier, which changes the behaviour of a parameter.
-The optional modifier indicates that no value has to be passed to the argument. 
+Note that the `char` parameter contains a modifier which indicates that no value is required to be passed to the argument. 
 
 ```java
 DefaultFunction.builder(addon, "remove", String[].class)
@@ -86,7 +85,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
 ## Implementation
 
-To complete our function, we add the implementation. This is the part that will handle the actual function logic.
+To complete our function, we add the actual implementation code.
 The `build` method provides you with a `FunctionArguments` instance, called `args` in our example. This contains
 all the values for the parameters that are passed when a function is called. These values are associated by the name
 of the parameter. 
@@ -157,4 +156,53 @@ DefaultFunction<String[]> remove = DefaultFunction.builder(addon, "remove", Stri
     });
 
 Functions.register(remove);
+```
+
+## Other examples
+
+These are some other implementations that are currently being used by Skript.
+
+```java
+DefaultFunction.builder(skript, "concat", String.class)
+    .description("Joins the provided texts (and other things) into a single text.")
+    .examples(
+        "concat(\"hello \", \"there\") # hello there",
+        "concat(\"foo \", 100, \" bar\") # foo 100 bar"
+    )
+    .since("2.9.0")
+    .parameter("texts", Object[].class)
+    .build(args -> {
+        StringBuilder builder = new StringBuilder();
+        Object[] objects = args.get("texts");
+        for (Object object : objects) {
+            builder.append(Classes.toString(object));
+        }
+        return builder.toString();
+    });
+```
+
+```java
+Functions.register(DefaultFunction.builder(skript, "location", Location.class)
+    .description(
+        "Creates a location from a world and 3 coordinates, with an optional yaw and pitch.",
+        "If for whatever reason the world is not found, it will fallback to the server's main world."
+    )
+    .examples("""
+        # TELEPORTING
+        teleport player to location(1,1,1, world "world")"""
+    )
+    .since("2.2")
+    .parameter("x", Number.class)
+    .parameter("y", Number.class)
+    .parameter("z", Number.class)
+    .parameter("world", World.class, Modifier.OPTIONAL)
+    .parameter("yaw", Float.class, Modifier.OPTIONAL)
+    .parameter("pitch", Float.class, Modifier.OPTIONAL)
+    .build(args -> {
+        World world = args.getOrDefault("world", Bukkit.getWorlds().get(0));
+
+        return new Location(world,
+            args.<Number>get("x").doubleValue(), args.<Number>get("y").doubleValue(), args.<Number>get("z").doubleValue(),
+            args.getOrDefault("yaw", 0f), args.getOrDefault("pitch", 0f));
+    }));
 ```
