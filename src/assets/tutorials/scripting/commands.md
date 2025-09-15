@@ -90,7 +90,7 @@ command /test [command]:
 command /name [of] <player>:
     trigger:
         # here 'to player' refers to the player executing the command
-        send "Player's name: %arg-1%, %argument 1%, or %player-argument%" to player 
+        send "Player's name: %arg-1%, %argument 1%, or %player-argument%" to player
 
 # heals the player in the argument. If no player is given, it will heal the sender.
 command /heal [<player=%player%>]:
@@ -107,15 +107,15 @@ command /kill <entity types> [in [the] radius <number = 20>]:
             if loop-entity is arg-1:
                 kill loop-entity
 
-# broadcasts the text given in the command. If no text is given, 
+# broadcasts the text given in the command. If no text is given,
 # it will broadcast the default value of "default text".
 # note that the text is referenced as {_text input}, rather than arg-1 or similar.
 command /broadcast [<text input:text="default text">]:
     trigger:
         broadcast {_text input}
-        
+
 # Using optional commands for flags
-# eg: 
+# eg:
 # /give-item stone sword with name Sword in the Stone and with lore Haha, get it?
 # or
 # /give-item heart of the sea with lore &bA murky blue orb.
@@ -142,12 +142,12 @@ command /test:
    prefix: testing_prefix
    trigger:
        broadcast "test"
-       
+
 # This command can be run by "/test" or "/skript:test"
 command /test:
    trigger:
        broadcast "test"
-       
+
 ```
 
 <div class="hint alert">
@@ -180,6 +180,7 @@ command /tp-to-spawn:
 ```
 
 If you run `/spawn`, that other plugin's command will run. You'll need to register a new command with that name and have it run your first command.
+
 </div>
 
 ### Executable by

@@ -50,6 +50,7 @@ If you're looping a specific expression, like `all players`, you can use `loop-t
 loop all players:
     send "hey!" to loop-player
 ```
+
 </div>
 
 **Looping Over Lists**
@@ -95,6 +96,7 @@ while true is true:
     send "hi"
     wait 1 tick
 ```
+
 </div>
 
 While loops are most often used to do periodic work while a condition is true, say, to do something every 5 ticks while a player is online. However, you do need to be careful that you can stop a while loop at will, since **reloading a script will not stop a running while loop**.
@@ -117,6 +119,7 @@ command abort-loop:
     trigger:
         set {abort-while-loop} to true
 ```
+
 </div>
 
 ### Do While
@@ -128,7 +131,7 @@ Like while loops, but they check the condition at the end of the loop, rather th
 add 1 to {_test}
 while {check::%{_test}%} is set:
     add 1 to {_test}
-    
+
 # cool, epic do while loop
 do while {check::%{_test}%} is set:
     add 1 to {_test}
@@ -136,7 +139,7 @@ do while {check::%{_test}%} is set:
 
 ## Loop-specific Syntax
 
-As briefly referenced in the while loop section, loops have special syntaxes that can be used to control them.  These syntaxes are critical to making efficient and readable code with loops. These come in two main categories, the information syntaxes and the control syntaxes.
+As briefly referenced in the while loop section, loops have special syntaxes that can be used to control them. These syntaxes are critical to making efficient and readable code with loops. These come in two main categories, the information syntaxes and the control syntaxes.
 
 ### Informational
 
@@ -171,11 +174,11 @@ loop {_list::*}:
 ```applescript
 # broadcast the square of all even numbers between 1 and arg 1:
 loop integers between 1 and arg 1:
-    # skip odd numbers 
+    # skip odd numbers
     # (mod() gives the remainder, so dividing odd numbers by 2 gives a remainder of 1)
     if mod(loop-number, 2) == 1:
         continue
-        
+
     broadcast loop-number * loop-number
 ```
 
@@ -234,20 +237,19 @@ It also means that for short waits, like 1 to 5 ticks, the benefits of spreading
 
 **Every x, loop all players:**
 
-* Simple to set up,
-* Safe,
-* Reload-friendly,
-* Can cause lag spikes if the work done is too much to do in one tick.
+- Simple to set up,
+- Safe,
+- Reload-friendly,
+- Can cause lag spikes if the work done is too much to do in one tick.
 
 **On join, while online:**
 
-* Can spread work over multiple ticks if the delay is long enough ( >5 ticks),
-* Not reload-friendly,
-* Needs extra work to make safe (prevent multiple loops from running at once for one player).
+- Can spread work over multiple ticks if the delay is long enough ( >5 ticks),
+- Not reload-friendly,
+- Needs extra work to make safe (prevent multiple loops from running at once for one player).
 
 **Conclusion:**
 
-* Prefer using `every x, loop all players` when you are working with fast timings or smaller amounts of work.
-* Prefer `on join, while online` when you are working with slower timings or larger amounts of work (updating scoreboards is a good example, you only need to do this at most once a second.)
+- Prefer using `every x, loop all players` when you are working with fast timings or smaller amounts of work.
+- Prefer `on join, while online` when you are working with slower timings or larger amounts of work (updating scoreboards is a good example, you only need to do this at most once a second.)
 </div>
-

@@ -51,7 +51,7 @@ The traditional way conditions are used is the following:
 ```applescript
 if <condition>:
     send "hello"
-    
+
 # example:
 if player's y-coordinate is greater than 10:
     send "yay!"
@@ -70,7 +70,7 @@ if <condition>:
     send "hello"
 else if <other condition>:
     send "bye"
-    
+
 # example:
 if player's y-coordinate is greater than 10:
     send "yay!"
@@ -100,7 +100,7 @@ else if <other condition>:
     send "bye"
 else:
     send ":("
-    
+
 # example:
 if player's y-coordinate is greater than 10:
     send "yay!"
@@ -171,7 +171,7 @@ Keep note that there is no `else if` or `else` options with this method.
 
 ## If Any and If All
 
-So what happens if you want to check a bunch of conditions? While you *can* use Inline Ifs or create a huge indentation pyramids, there is a much better way. Skript's `if any` and `if all` statements allow for multiple conditions in *the same condition*. This is super useful when you have tons of conditions like so:
+So what happens if you want to check a bunch of conditions? While you _can_ use Inline Ifs or create a huge indentation pyramids, there is a much better way. Skript's `if any` and `if all` statements allow for multiple conditions in _the same condition_. This is super useful when you have tons of conditions like so:
 
 ```applescript
 if:
@@ -196,7 +196,7 @@ This works well because we can check multiple conditions without losing code qua
 
 ```applescript
 on block place:
-    if any: 
+    if any:
         player is op
         player's gamemode is creative
         name of player is "BobTheBuilder"
@@ -214,13 +214,13 @@ When **at least** one condition is met, the player will be able to place the blo
 Ternaries are similar to the `do if` effect, but they're expressions instead. They're designed to return one thing if a condition passes and a different thing if it does not pass. A simple but straight forward example looks something like:
 
 ```applescript
-send "hello player" if player is not op, else "hello admin" 
+send "hello player" if player is not op, else "hello admin"
 ```
 
 If it seems a bit hard to understand, let's highlight the expression itself:
 
 ```applescript
-"hello player" if player is not op, else "hello admin" 
+"hello player" if player is not op, else "hello admin"
 ```
 
 This is saying the following:

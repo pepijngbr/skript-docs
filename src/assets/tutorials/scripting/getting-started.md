@@ -9,7 +9,7 @@ index: 0
 
 # Getting Started
 
-We're happy to see you're interested in learning Skript. 
+We're happy to see you're interested in learning Skript.
 On the left, you'll find the list of all official tutorials currently available.
 
 Have fun!

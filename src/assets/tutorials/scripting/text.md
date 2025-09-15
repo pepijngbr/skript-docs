@@ -15,10 +15,10 @@ If an effect, expression, condition, trigger or function accepts something of ty
 
 ## Colors
 
-Minecraft has 16 pre-set color codes to be used in text. 
+Minecraft has 16 pre-set color codes to be used in text.
 
-* Color name tags, for example `red`
-* Minecraft color codes, like `§c` (or `&c`)
+- Color name tags, for example `red`
+- Minecraft color codes, like `§c` (or `&c`)
 
 Here's a table of all colors, including both Skript names and color codes.
 
@@ -132,7 +132,7 @@ Here's a table of all colors, including both Skript names and color codes.
 </table>
 
 In Minecraft 1.16, support was added for 6-digit hexadecimal colors.
-A tag can be used to format with these colors, which looks like this: 
+A tag can be used to format with these colors, which looks like this:
 
 ```
 <#ABCDEF>
@@ -145,18 +145,17 @@ Here's what the tag would look like when used in a script:
 send "<#123456>Hey %player%!" to player
 ```
 
-For information not related to Skript, see Minecraft Wiki page concerning colors. 
+For information not related to Skript, see Minecraft Wiki page concerning colors.
 
-
-Depending on the Skript configuration, 
-color codes may do more than just change color of text after them. 
-By default, for backwards compatibility, they clear following styles: 
-magic, bold, strikethrough, underlined, italic. 
+Depending on the Skript configuration,
+color codes may do more than just change color of text after them.
+By default, for backwards compatibility, they clear following styles:
+magic, bold, strikethrough, underlined, italic.
 Other styles are not affected, and this feature can be toggled of in config.sk.
 
 ## Formatting
 
-Minecraft also has various other styles available. 
+Minecraft also has various other styles available.
 The following are available everywhere, including item and entity names:
 
 <table>
@@ -211,8 +210,9 @@ The following are available everywhere, including item and entity names:
 </table>
 
 ### Chat-only formatting
+
 Skript also supports certain newer features, which are only available in chat. Those do not have formatting codes, so you must use tags for them.
-                        
+
 <table>
     <thead>
         <tr>
@@ -255,7 +255,7 @@ Skript also supports certain newer features, which are only available in chat. T
     </tbody>
 </table>
 
-These chat-only formats use the following tag format:  
+These chat-only formats use the following tag format:
 
 ```applescript
 <name:parameter>
@@ -268,17 +268,18 @@ For example:
 <run command:/gamemode creative>
 ```
 
-For a link, parameter must be either http or https url 
-if you want clients to recognize it. 
+For a link, parameter must be either http or https url
+if you want clients to recognize it.
 For others, it can be any text, including invalid commands.
 
 ## Unicode
 
-Skript supports Unicode characters in any text. To add them to your scripts, 
-paste the character inside the text, or use the provided Unicode tag. 
+Skript supports Unicode characters in any text. To add them to your scripts,
+paste the character inside the text, or use the provided Unicode tag.
 
-The tag uses the character's codepoint to replace it with the actual 
+The tag uses the character's codepoint to replace it with the actual
 character when the text is loaded.
+
 ```applescript
 "🐛 hello <u:1F41B>" # 🐛 hello 🐛
 "<unicode:03B5> <unicode:2245> <unicode:0194>, right?" # ε ≅ Ɣ, right?

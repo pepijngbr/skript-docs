@@ -10,9 +10,9 @@ index: 1
 # Functions
 
 Skript's functions allow users to perform specific actions at multiple points in a code base.
-To allow addons to easily add their own functions, Skript 2.13 introduced a new API for registering functions, 
-which uses the DefaultFunction class. Compared to the previous way of dealing with functions, 
-this new API is a drastic improvement in several key ways. 
+To allow addons to easily add their own functions, Skript 2.13 introduced a new API for registering functions,
+which uses the DefaultFunction class. Compared to the previous way of dealing with functions,
+this new API is a drastic improvement in several key ways.
 
 As an example, let's register a function that removes a specific character from some strings,
 which defaults to removing all spaces.
@@ -21,7 +21,7 @@ which defaults to removing all spaces.
 # Intended result
 set {_x::*} to remove("  hello  ") # "hello"
 set {_y::*} to remove("  hello  ", " hey ") # "hello", "hey"
-set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey " 
+set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
 ```
 
 ## Creating a new builder
@@ -39,12 +39,12 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
 ## Documentation
 
-The documentation should be specified next. 
+The documentation should be specified next.
 This allows documentation sites to view more information about the function.
 
 - The description features a brief description of the function and information about how it works.
 - The examples contain example use cases or examples of what the function returns.
-- The since method specifies the version history of the function. Any changes or additions to the function's workings should be added here. 
+- The since method specifies the version history of the function. Any changes or additions to the function's workings should be added here.
 - The keywords contain words that may be associated with this function.
 
 ```java
@@ -54,7 +54,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
     .examples("""
         set {_x::*} to remove("  hello  ") # "hello"
         set {_y::*} to remove("  hello  ", " hey ") # "hello", "hey"
-        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey " 
+        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
         """)
     .since("3.0")
     .keywords("format", "strings")
@@ -64,9 +64,9 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
 Next, we should specify what arguments our function with the `parameter` function.
 This specifies the parameter name and the type it accepts. Like the return type,
-using an array indicates that multiple values can be passed to the argument. 
+using an array indicates that multiple values can be passed to the argument.
 
-Note that the `char` parameter contains a modifier which indicates that no value is required to be passed to the argument. 
+Note that the `char` parameter contains a modifier which indicates that no value is required to be passed to the argument.
 
 ```java
 DefaultFunction.builder(addon, "remove", String[].class)
@@ -75,7 +75,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
     .examples("""
         set {_x::*} to remove("  hello  ") # "hello"
         set {_y::*} to remove("  hello  ", " hey ") # "hello", "hey"
-        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey " 
+        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
         """)
     .since("3.0")
     .keywords("format", "strings")
@@ -88,7 +88,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
 To complete our function, we add the actual implementation code.
 The `build` method provides you with a `FunctionArguments` instance, called `args` in our example. This contains
 all the values for the parameters that are passed when a function is called. These values are associated by the name
-of the parameter. 
+of the parameter.
 
 ```java
 DefaultFunction.builder(addon, "remove", String[].class)
@@ -97,7 +97,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
     .examples("""
         set {_x::*} to remove("  hello  ") # "hello"
         set {_y::*} to remove("  hello  ", " hey ") # "hello", "hey"
-        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey " 
+        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
         """)
     .since("3.0")
     .keywords("format", "strings")
@@ -109,7 +109,7 @@ DefaultFunction.builder(addon, "remove", String[].class)
 
         // what the user entered, or, if the user passed nothing, returns " "
         // this is only necessary because char has Modifier.OPTIONAL
-        String chr = args.getOrDefault("char", " "); 
+        String chr = args.getOrDefault("char", " ");
 
         // actually replace all the characters
         for (int i = 0; i < strings.length; i++) {
@@ -132,7 +132,7 @@ DefaultFunction<String[]> remove = DefaultFunction.builder(addon, "remove", Stri
     .examples("""
         set {_x::*} to remove("  hello  ") # "hello"
         set {_y::*} to remove("  hello  ", " hey ") # "hello", "hey"
-        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey " 
+        set {_z::*} to remove(("  hello  ", " hey "), "h") # "  ello  ", " ey "
         """)
     .since("3.0")
     .keywords("format", "strings")
@@ -144,7 +144,7 @@ DefaultFunction<String[]> remove = DefaultFunction.builder(addon, "remove", Stri
 
         // what the user entered, or, if the user passed nothing, returns " "
         // this is only necessary because char has Modifier.OPTIONAL
-        String chr = args.getOrDefault("char", " "); 
+        String chr = args.getOrDefault("char", " ");
 
         // actually replace all the characters
         for (int i = 0; i < strings.length; i++) {

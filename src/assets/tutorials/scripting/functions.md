@@ -20,7 +20,7 @@ function test():
     broadcast "hello world!"
 ```
 
-This is called a **function definition**. It's composed of the function's name and its code,  as well as some other optional stuff we'll get into later. This function is named "test" and all it does is broadcast "hello world!" when it runs. However,  there's nothing to make it run yet. Let's run it every time a player joins:
+This is called a **function definition**. It's composed of the function's name and its code, as well as some other optional stuff we'll get into later. This function is named "test" and all it does is broadcast "hello world!" when it runs. However, there's nothing to make it run yet. Let's run it every time a player joins:
 
 ```applescript
 on join:
@@ -43,6 +43,7 @@ on join:
 And you'd be right. These two scripts behave exactly the same. In general, you can always just take the code from a function, plop it right into the place you're calling it from with some minor changes, and have it work the same.&#x20;
 
 The main benefits come from when you're using the same code in multiple different locations. Functions allow you to only write that code once.
+
 </div>
 
 ## Function Definitions
@@ -88,8 +89,8 @@ See how the parameter value just goes inside the ()? If you have multiple parame
 ```applescript
 on join:
     # a random function that take a player and a number list
-    giveTenApples2(event-player, (10, 20, 30)) 
-    
+    giveTenApples2(event-player, (10, 20, 30))
+
 function giveTenApples2(player: player, number-list: numbers):
     # imagine code here
 ```
@@ -99,6 +100,7 @@ function giveTenApples2(player: player, number-list: numbers):
 Note that I used `()` around the number list. This is so that Skript doesn't get confused and think that `10, 20, 30` are all different parameters.
 
 If you're ever experiencing errors or weird bugs with your parameters, try making sure they're surrounded with `()`, it can solve a lot of issues.
+
 </div>
 
 But we skipped over something earlier. We can give parameters **default values**, too.
@@ -114,7 +116,7 @@ Now we have a parameter for the amount of apples we're giving to the player. But
 on join:
     # gives 10 apples
     giveApples(event-player)
-    
+
     # gives 20 apples
     giveApples(event-player, 20)
 ```
@@ -128,10 +130,10 @@ We've looked at functions as ways to simply run code, but one of the most powerf
 ```applescript
 on join:
     give player customItem((name of player), golden apple)
-    
+
 function customItem(name: string, base-item: item) returns item:
     set {_item} to {_base-item} named {_name}
-    set lore of {_item} to "&fWelcome back!"  
+    set lore of {_item} to "&fWelcome back!"
     return {_item}
 ```
 
@@ -185,6 +187,7 @@ on quit:
 When a player joins, the `join` event in `script-1.sk` runs. This calls the **local** function `test()`, which broadcasts `"local!"`.&#x20;
 
 When a player quits, the `quit` event in `script-2.sk` runs. This can't see the local version of `test()`, so it calls the **global** `test()`, which broadcasts `"global!"`.
+
 </div>
 
 ## Full Definition
@@ -197,12 +200,12 @@ Now that we've explained all the parts, let's show the whole function at once:
 
 Hopefully by now you know all these parts, but let's recap:
 
-* **\[local]**: Whether this function is local or global. (global is default)
-* **functionName:** the name of the function, starts with a letter and can use letters, numbers, and underscores
-* **paramName:** Optional. The name of the parameter, follows the same rules as variable names. Will be accessible as a local variable of the same name in the function.
-  * **paramType:** Required if you have a parameter. Tells Skript what type the parameter will be. Use `object` if you're unsure.
-  * **defaultValue:** Optional. Allows the function calls to omit this parameter, and Skript will automatically use this value instead.
-* **returnType:** Optional, only use if you intend to return something. Again, use `object` if you're unsure. Remember, functions that return values can't use `wait`.
+- **\[local]**: Whether this function is local or global. (global is default)
+- **functionName:** the name of the function, starts with a letter and can use letters, numbers, and underscores
+- **paramName:** Optional. The name of the parameter, follows the same rules as variable names. Will be accessible as a local variable of the same name in the function.
+  - **paramType:** Required if you have a parameter. Tells Skript what type the parameter will be. Use `object` if you're unsure.
+  - **defaultValue:** Optional. Allows the function calls to omit this parameter, and Skript will automatically use this value instead.
+- **returnType:** Optional, only use if you intend to return something. Again, use `object` if you're unsure. Remember, functions that return values can't use `wait`.
 
 And calling a function looks like this:
 
