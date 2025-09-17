@@ -16,7 +16,7 @@
   import { useRoute, RouterView } from 'vue-router'
   import Header from '@/components/header/Header.vue'
   import Footer from '@/components/footer/Footer.vue'
-  import TutorialsNavigation from './components/TutorialsNavigation.vue'
+  import TutorialsNavigation from '@/components/tutorials/TutorialsNavigation.vue'
 
   const route = useRoute()
   const showTutorialsNav = computed(() => route.path.startsWith('/tutorials'))
