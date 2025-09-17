@@ -1,8 +1,8 @@
 <template>
-  <footer class="flex">
+  <footer class="flex w-full items-center justify-center bg-black text-white py-4">
     <p>
-      By <a href="https://github.com/efnilite">Efnilite</a> &
-      <a href="https://github.com/pepijngbr">pepijngbr</a>
+      By <a href="https://github.com/efnilite" target="_blank" class="underline">Efnilite</a> &
+      <a href="https://github.com/pepijngbr" target="_blank" class="underline">pepijngbr</a>
     </p>
     <p class="mx-2">·</p>
     <p>Last updated at {{ currentDate }}</p>

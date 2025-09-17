@@ -8,35 +8,36 @@
 </template>
 
 <script>
-export default {
-  name: 'Button',
-  props: {
-    click: {
-      type: [Function, String],
-      required: true,
-      default: null,
+  export default {
+    name: 'Button',
+    props: {
+      click: {
+        type: [Function, String],
+        required: true,
+        default: null,
+      },
     },
-  },
-  computed: {
-    isLink() {
-      return typeof this.click === 'string';
+    computed: {
+      isLink() {
+        return typeof this.click === 'string'
+      },
     },
-  },
-  methods: {
-    handleClick(event) {
-      if (typeof this.click === 'function') {
-        this.click(event);
-      }
+    methods: {
+      handleClick(event) {
+        if (typeof this.click === 'function') {
+          this.click(event)
+        }
+      },
     },
   }
-}
 </script>
 
 <style scoped>
-@reference "../../styles/app.css";
+  @reference "../../styles/app.css";
 
-button, a {
-    @apply my-auto p-2 -m-2 transition hidden
-        hover:bg-d-icon-hover rounded-full fill-white hover:cursor-pointer;
-}
+  button,
+  a {
+    @apply flex items-center justify-center w-12 h-12 transition hover:bg-d-icon-hover rounded-full fill-white hover:cursor-pointer;
+
+  }
 </style>
