@@ -15,8 +15,8 @@
         </a>
 
         <!-- Searchbar -->
-        <div class="flex items-center w-[500px] bg-[var(--color-d-search-fill)] text-white rounded-lg px-3 py-2 cursor-pointer 
-         ring-2 ring-[var(--color-d-search-border)] focus-within:ring-[var(--color-skript)] 
+        <div class="flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer 
+         ring-2 ring-d-search-border focus-within:ring-skript
          transition-all duration-200 ease-in-out" @click="$refs.searchInput.focus()">
           <i class="bi bi-search text-gray-500 mr-2 text-lg"></i>
           <input ref="searchInput" type="text" placeholder="Search"
@@ -40,25 +40,24 @@
       <!-- Navigation menu -->
       <ul class="flex gap-4 pt-2 pb-4 justify-center">
         <li>
-          <RouterLink :to="{ name: 'docs' }" class="text-white text-xl px-8 py-1.5 rounded-lg font-outfit"
-            :style="{ backgroundColor: 'var(--color-bg-docs)' }" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'docs' }" class="text-white bg-docs text-xl px-8 py-1.5 rounded-lg font-outfit"
+            exact-active-class="font-bold">
             Docs
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tutorials' }" class="text-white text-xl px-8 py-1.5 rounded-lg font-outfit"
-            :style="{ backgroundColor: 'var(--color-bg-tutorials)' }" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'tutorials' }"
+            class="text-white bg-tutorials text-xl px-8 py-1.5 rounded-lg font-outfit" exact-active-class="font-bold">
             Tutorials
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tools' }" class="text-white text-xl px-8 py-1.5 rounded-lg font-outfit"
-            :style="{ backgroundColor: 'var(--color-bg-tools)' }" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'tools' }" class="text-white bg-tools text-xl px-8 py-1.5 rounded-lg font-outfit"
+            exact-active-class="font-bold">
             Tools
           </RouterLink>
         </li>
       </ul>
-
     </div>
   </header>
 </template>
