@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Home</h1>
+    <h1>Skript</h1>
   </main>
 </template>
 

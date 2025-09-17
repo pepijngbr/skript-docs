@@ -10,20 +10,20 @@
 </template>
 
 <script>
-export default {
-  name: 'MainFooter',
-  data() {
-    return {
-      currentDate: this.formatDate(new Date()),
-    }
-  },
-  methods: {
-    formatDate(date) {
-      const year = date.getFullYear()
-      const month = String(date.getMonth() + 1)
-      const day = String(date.getDate())
-      return `${day}/${month}/${year}`
+  export default {
+    name: 'MainFooter',
+    data() {
+      return {
+        currentDate: this.formatDate(new Date()),
+      }
     },
-  },
-}
+    methods: {
+      formatDate(date) {
+        const year = date.getFullYear()
+        const month = String(date.getMonth() + 1)
+        const day = String(date.getDate())
+        return `${day}/${month}/${year}`
+      },
+    },
+  }
 </script>
