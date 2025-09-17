@@ -20,6 +20,10 @@
 
   --color-skript: #d87c0b;
 
+  --color-docs: #9c0505;
+  --color-tutorials: #1b8c17;
+  --color-tools: #0099b3;
+
   --color-l-bg: #efefef;
   --color-d-bg: #0e0e0e;
 
@@ -49,10 +53,6 @@
 
   --color-l-examples: #5a5a5a;
   --color-d-examples: #373737;
-
-  --color-bg-docs: #9c0505;
-  --color-bg-tutorials: #1b8c17;
-  --color-bg-tools: #0099b3;
 }
 
 @layer base {

@@ -38,22 +38,21 @@
       <!-- Navigation menu -->
       <ul class="flex gap-4 pt-2 pb-4 justify-center">
         <li>
-          <RouterLink :to="{ name: 'docs' }" class="page bg-bg-docs" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'docs' }" class="page bg-docs" exact-active-class="font-bold">
             Docs
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tutorials' }" class="page bg-bg-tutorials" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'tutorials' }" class="page bg-tutorials" exact-active-class="font-bold">
             Tutorials
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tools' }" class="page bg-bg-tools" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'tools' }" class="page bg-tools" exact-active-class="font-bold">
             Tools
           </RouterLink>
         </li>
       </ul>
-
     </div>
   </header>
 </template>
@@ -82,7 +81,7 @@
 
   .input {
     @apply flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer 
-         ring-2 ring-d-search-border focus-within:ring-skript 
+         ring-2 ring-d-search-border focus-within:ring-skript
          transition-all duration-200 ease-in-out;
   }
 
