@@ -4,4 +4,13 @@
   </main>
 </template>
 
-<script setup></script>
+<script>
+  import { RouterLink } from 'vue-router';
+
+  export default {
+    name: 'TutorialsView',
+    components: {
+      RouterLink
+    },
+  }
+</script>

@@ -43,7 +43,8 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tutorials' }" class="page bg-tutorials" exact-active-class="font-bold">
+          <RouterLink :to="{ name: 'tutorials' }" class="page bg-tutorials"
+            :class="{ 'font-bold': $route.path.startsWith('/tutorials') }">
             Tutorials
           </RouterLink>
         </li>
@@ -80,9 +81,7 @@
   @reference "../../styles/app.css";
 
   .input {
-    @apply flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer 
-         ring-2 ring-d-search-border focus-within:ring-skript
-         transition-all duration-200 ease-in-out;
+    @apply flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer ring-2 ring-d-search-border focus-within:ring-skript transition-all duration-200 ease-in-out;
   }
 
   .page {
