@@ -1,19 +1,18 @@
 <template>
   <header
-    class="hidden sticky top-0 md:flex justify-center items-center bg-[var(--color-d-nav-bg)] text-white border-b-2 border-gray-500">
+    class="hidden sticky top-0 md:flex justify-center items-center bg-d-nav-bg text-white border-b-2 border-gray-500">
     <div class="flex flex-col m-auto">
       <div class="flex justify-between items-center px-2 gap-6">
         <!-- Logo -->
-        <RouterLink :to="{ name: 'home' }" title="Skriptlang" class="max-w-[80px]">
-          <img src="/sk-logo.svg" alt="Skriptlang Logo" />
+        <RouterLink :to="{ name: 'home' }" title="SkriptLang" class="max-w-[80px]">
+          <img src="/sk-logo.svg" alt="SkriptLang Logo" />
         </RouterLink>
 
-        <!-- Latest release version -->
-        <a v-if="latestRelease" href="https://github.com/SkriptLang/Skript/releases/latest" target="_blank"
+        <!-- Version -->
+        <a :href="'https://github.com/SkriptLang/Skript/releases/tag/' + version" target="_blank"
           rel="noopener noreferrer" class="font-bold hover:underline">
-          {{ latestRelease }}
+          {{ version }}
         </a>
-        <span v-else>Loading…</span>
 
         <!-- Searchbar -->
         <div class="flex items-center w-[500px] bg-[var(--color-d-search-fill)] text-white rounded-lg px-3 py-2 cursor-pointer 
@@ -67,36 +66,18 @@
 <script>
   import { RouterLink } from 'vue-router'
   import Button from './Button.vue'
+  import docs from '@/assets/docs/docs.json'
 
   export default {
     name: 'Header',
     data() {
       return {
-        latestRelease: '',
-        isFocused: false
+        version: docs.skriptVersion
       }
     },
     components: {
       RouterLink,
       Button,
-    },
-    mounted() {
-      this.retrieveLatestRelease()
-    },
-    methods: {
-      async retrieveLatestRelease() {
-        try {
-          const response = await fetch(
-            'https://api.github.com/repos/SkriptLang/Skript/releases/latest',
-          )
-          const data = await response.json()
-
-          this.latestRelease = data.tag_name
-        } catch (error) {
-          console.error('Error fetching release: ', error)
-          this.latestRelease = 'Error'
-        }
-      },
     },
   }
 </script>

@@ -1,20 +1,20 @@
 <template>
   <Header />
   <RouterView />
-  <MainFooter />
+  <Footer />
 </template>
 
 <script>
   import { RouterView } from 'vue-router'
   import Header from '@/components/header/Header.vue'
-  import MainFooter from '@/components/MainFooter.vue'
+  import Footer from '@/components/footer/Footer.vue'
 
   export default {
     name: 'App',
     components: {
       RouterView,
       Header,
-      MainFooter,
+      Footer,
     },
   }
 </script>
