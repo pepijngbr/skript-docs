@@ -23,15 +23,15 @@
 
         <!-- External links / Darkmode toggle -->
         <div class="flex gap-2">
-          <Button click="https://discord.com/invite/skript">
+          <HeaderButton click="https://discord.com/invite/skript">
             <i class="bi bi-discord text-3xl"></i>
-          </Button>
-          <Button click="https://github.com/SkriptLang">
+          </HeaderButton>
+          <HeaderButton click="https://github.com/SkriptLang">
             <i class="bi bi-github text-3xl"></i>
-          </Button>
-          <Button>
+          </HeaderButton>
+          <HeaderButton>
             <i class="bi bi-sun text-3xl"></i>
-          </Button>
+          </HeaderButton>
         </div>
       </div>
 
