@@ -60,11 +60,11 @@
 
 <script>
   import { RouterLink } from 'vue-router'
-  import Button from './Button.vue'
+  import HeaderButton from './HeaderButton.vue'
   import docs from '@/assets/docs/docs.json'
 
   export default {
-    name: 'Header',
+    name: 'MainHeader',
     data() {
       return {
         version: docs.skriptVersion
@@ -72,7 +72,7 @@
     },
     components: {
       RouterLink,
-      Button,
+      HeaderButton,
     },
   }
 </script>

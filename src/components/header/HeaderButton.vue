@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'Button',
+    name: 'HeaderButton',
     props: {
       click: {
         type: [Function, String],

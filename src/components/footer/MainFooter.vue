@@ -13,7 +13,7 @@
 
 <script>
   export default {
-    name: 'Footer',
+    name: 'MainFooter',
     data() {
       return {
         currentDate: this.formatDate(new Date()),
