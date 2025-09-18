@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen dark:bg-d-bg">
+  <div class="flex flex-col min-h-screen bg-white dark:bg-d-bg text-black dark:text-white">
     <Header />
     <div class="flex flex-1">
       <TutorialsNavigation v-if="showTutorialsNav" />
