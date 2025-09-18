@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-[700px] mx-auto">
+  <main class="max-w-[700px] mx-auto text-black dark:text-white">
     <h1>Tools</h1>
     <a href="https://docs.skriptlang.org/javadocs/" class="flex flex-col p-4 bg-l-bg-secondary dark:bg-d-bg-secondary rounded-md
             hover:bg-l-icon-hover hover:dark:bg-d-icon-hover transition text-white" target="_blank" rel="noopener">

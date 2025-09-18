@@ -1,29 +1,32 @@
 <template>
-    <nav class="w-64 p-4 bg-gray-50 border-r h-full">
+    <nav
+        class="w-64 p-4 bg-gray-50 dark:bg-d-bg-secondary text-black dark:text-white border-r-2 border-l-border dark:border-d-border h-full">
         <div class="mb-2">
             <h3 class="text-md font-bold mb-1 cursor-pointer" @click="showApi = !showApi">API</h3>
             <ul v-if="showApi" class="space-y-1 mb-4">
                 <li>
-                    <RouterLink :to="{ name: 'tutorials.api' }" exact-active-class="link-active"
-                        class="link">Getting Started</RouterLink>
+                    <RouterLink :to="{ name: 'tutorials.api' }" exact-active-class="link-active" class="link">Getting
+                        Started</RouterLink>
                 </li>
                 <li>
-                    <RouterLink :to="{ name: 'tutorials.api.functions' }" exact-active-class="link-active"
-                        class="link">Functions</RouterLink>
+                    <RouterLink :to="{ name: 'tutorials.api.functions' }" exact-active-class="link-active" class="link">
+                        Functions</RouterLink>
                 </li>
             </ul>
-            <h3 class="text-md font-bold mb-1 mt-4 cursor-pointer" @click="showScripting = !showScripting">Scripting</h3>
+            <h3 class="text-md font-bold mb-1 mt-4 cursor-pointer" @click="showScripting = !showScripting">Scripting
+            </h3>
             <ul v-if="showScripting" class="space-y-1">
                 <li>
-                    <RouterLink :to="{ name: 'tutorials.scripting' }" exact-active-class="link-active"
-                        class="link">Getting Started</RouterLink>
+                    <RouterLink :to="{ name: 'tutorials.scripting' }" exact-active-class="link-active" class="link">
+                        Getting Started</RouterLink>
                 </li>
                 <li>
                     <RouterLink :to="{ name: 'tutorials.scripting.text' }" exact-active-class="link-active"
                         class="link">Text</RouterLink>
                 </li>
                 <li>
-                    <RouterLink :to="{ name: 'tutorials.scripting.conditionals' }" exact-active-class="link-active" class="link">
+                    <RouterLink :to="{ name: 'tutorials.scripting.conditionals' }" exact-active-class="link-active"
+                        class="link">
                         Conditionals
                     </RouterLink>
                 </li>
