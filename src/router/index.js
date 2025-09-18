@@ -2,10 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  scrollBehavior() {
-    return {
-      top: 0,
-      behavior: 'smooth',
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 150,
+      }
+    } else if (savedPosition) {
+      return { ...savedPosition }
+    } else {
+      return { top: 0 }
     }
   },
   routes: [
@@ -68,6 +74,7 @@ const router = createRouter({
       name: 'tutorials.scripting.functions',
       component: () => import('../views/tutorials/scripting/FunctionsView.vue'),
     },
+    // Tools
     {
       path: '/tools',
       name: 'tools',

@@ -4,5 +4,3 @@
         official tutorials currently available.</p>
     <p>Have fun!</p>
 </template>
-
-<script setup></script>
