@@ -17,183 +17,22 @@
       <i class="bi bi-arrow-up"></i>
     </button>
     <h1>Docs</h1>
-    <section id="conditions">
-      <h2>Conditions</h2>
-      <div v-for="(item, idx) in docs.conditions" :key="'cond-' + idx"
-        :id="'condition-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#condition-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="effects">
-      <h2>Effects</h2>
-      <div v-for="(item, idx) in docs.effects" :key="'eff-' + idx"
-        :id="'effect-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#effect-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="events">
-      <h2>Events</h2>
-      <div v-for="(item, idx) in docs.events" :key="'event-' + idx"
-        :id="'event-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#event-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="expressions">
-      <h2>Expressions</h2>
-      <div v-for="(item, idx) in docs.expressions" :key="'expr-' + idx"
-        :id="'expression-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#expression-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="functions">
-      <h2>Functions</h2>
-      <div v-for="(item, idx) in docs.functions" :key="'func-' + idx"
-        :id="'function-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#function-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="sections">
-      <h2>Sections</h2>
-      <div v-for="(item, idx) in docs.sections" :key="'section-' + idx"
-        :id="'section-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#section-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="structures">
-      <h2>Structures</h2>
-      <div v-for="(item, idx) in docs.structures" :key="'structure-' + idx"
-        :id="'structure-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#structure-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="classes">
-      <h2>Classes</h2>
-      <div v-for="(item, idx) in docs.classes" :key="'class-' + idx"
-        :id="'class-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#class-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="types">
-      <h2>Types</h2>
-      <div v-for="(item, idx) in docs.types" :key="'type-' + idx"
-        :id="'type-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-        class="border-2 border-gray-200 rounded-lg bg-gray-50 mb-8 p-6">
-        <h3>
-          <a :href="'#type-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)"
-            class="text-gray-900 no-underline hover:text-blue-700 hover:border-b hover:border-blue-700">
-            {{ item.name || 'Unknown name' }}
-          </a>
-        </h3>
-        <ul class="list-none p-0 m-0">
-          <li v-for="(val, key) in item" :key="key" class="mb-1">
-            <strong class="text-blue-700">{{ key }}:</strong> <span v-if="typeof val === 'object' && val !== null">{{
-              JSON.stringify(val) }}</span><span v-else>{{ val }}</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <DocsSection title="Conditions" :items="docs.conditions" prefix="condition" />
+    <DocsSection title="Effects" :items="docs.effects" prefix="effect" />
+    <DocsSection title="Events" :items="docs.events" prefix="event" />
+    <DocsSection title="Expressions" :items="docs.expressions" prefix="expression" />
+    <DocsSection title="Functions" :items="docs.functions" prefix="function" />
+    <DocsSection title="Sections" :items="docs.sections" prefix="section" />
+    <DocsSection title="Structures" :items="docs.structures" prefix="structure" />
+    <DocsSection title="Classes" :items="docs.classes" prefix="class" />
+    <DocsSection title="Types" :items="docs.types" prefix="type" />
   </main>
 </template>
 
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
   import docs from '../assets/docs/docs.json'
+  import DocsSection from '../components/docs/DocsSection.vue'
 
   const showBackToTop = ref(false)
 
