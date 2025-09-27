@@ -28,7 +28,17 @@ hljs.registerLanguage('skript', (hljs) => {
             },
             {
                 scope: 'choice',
-                begin : /\(.*?\)/
+                begin : /\(/, end: /\)/,
+                contains: [
+                    {
+                        scope: 'choice',
+                        begin : /\(/, end: /\)/,
+                    },
+                   {
+                        scope: 'optional',
+                        begin : /\[.*?\]/
+                    },
+                ]
             },
             {
                 scope: 'variable',
