@@ -24,7 +24,6 @@
     <DocsSection title="Functions" :items="docs.functions" prefix="function" id="functions" />
     <DocsSection title="Sections" :items="docs.sections" prefix="section" id="sections" />
     <DocsSection title="Structures" :items="docs.structures" prefix="structure" id="structures" />
-    <DocsSection title="Classes" :items="docs.classes" prefix="class" id="classes" />
     <DocsSection title="Types" :items="docs.types" prefix="type" id="types" />
   </main>
 </template>

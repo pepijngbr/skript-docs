@@ -4,12 +4,15 @@
         <div v-for="(item, idx) in items" :key="prefix + '-' + idx"
             :id="prefix + '-' + (item.name ? item.name.replace(/\s+/g, '-').toLowerCase() : idx)">
             <DocElement
-                :name="item.name"
-                :description="item.description"
-                :since="item.since"
-                :code="item.examples"
-                :eventValues="item.eventValues"
                 :prefix="prefix"
+                :name="item.name"
+                :since="item.since"
+                :deprecated="item.deprecated"
+                :description="item.description"
+                :patterns="item.patterns"
+                :examples="item.examples"
+                :requirements="item.requirements"
+                :eventValues="item.eventValues"
             />
         </div>
     </section>
