@@ -1,11 +1,33 @@
 <template>
-  <main>
+  <main class="max-w-4xl m-auto flex flex-col gap-4">
     <h1>Skript</h1>
-    <p>... is a scripting plugin for the Bukkit platform. The syntax of Skript is close to English, but it is still not
-      magic. While you might succeed with experimentation for simple tasks, for anything more complex you will need some
-      guidance. </p>
-    <p>This is Skript's documentation. You will find all supported features of the plugin here, along with some useful
-      examples. </p>
-    <!-- TODO: add more content -->
+    <p>is a scripting plugin for Paper. The syntax of Skript is close to English, 
+      and allows you to modify Minecraft server behavior without any prior programming knowledge.</p>
+    <p>This is Skript's documentation. Here, you will find all syntax that you can use, along with examples.
+      If you want to get started, we have an ever-expanding list of tutorials to get you started.
+    </p>
+    <!-- Code Section -->
+    <pre v-highlightjs><code class="applescript">command /sethome:
+	permission: skript.home # Permission required for this command
+	description: Set your home # Description of this command
+	executable by: players # Console won't be able to run this command
+	trigger: # The actual trigger/code that will run when someone do /sethome
+		# Set a unique variable to sender's location
+		set {home::%uuid of player%} to location of player
+		# Send a message to the sender
+		message "Set your home to &lt;grey>%location of player%&lt;reset>"
+
+command /home:
+	permission: skript.home
+	description: Teleport yourself to your home
+	trigger:
+		# Check if that variable we used in /sethome has been set (in other words, if player ever ran /sethome)
+		if {home::%uuid of player%} is not set:
+			message "You have not set your home yet!"
+			stop trigger # stop the code here, lines below won't run
+		# Teleport the player to their home
+		teleport player to {home::%uuid of player%}
+		send "&aYou have been teleported."
+</code></pre>
   </main>
 </template>

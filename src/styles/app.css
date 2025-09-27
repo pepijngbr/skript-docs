@@ -87,4 +87,8 @@
   h6 {
     @apply text-base;
   }
+
+  code {
+    @apply rounded-xl;
+  }
 }
