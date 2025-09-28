@@ -11,7 +11,7 @@
       </a>
     </h3>
 
-    <vue-markdown-it v-if="description" :source="description.join('\n')" :options="mdOptions"/>
+    <vue-markdown-it v-if="description" :source="description.join('\n')"/>
 
     <highlightjs v-if="patterns" language="skript" :code="Array.isArray(patterns) ? patterns.join('\n') : patterns" />
 
