@@ -38,6 +38,13 @@ code.hljs {
   color: #7ee787;
 }
 
+
+.hljs-trigger {
+  /* prettylights-syntax-type */
+  color: #f05757;
+  font-weight: bold;
+}
+
 .hljs-title,
 .hljs-title.class_,
 .hljs-title.class_.inherited__,
@@ -69,7 +76,8 @@ code.hljs {
 }
 
 .hljs-built_in,
-.hljs-symbol {
+.hljs-symbol,
+.hljs-function {
   /* prettylights-syntax-variable */
   color: #ffa657;
 }
@@ -95,10 +103,9 @@ code.hljs {
   color: #c9d1d9;
 }
 
-.hljs-section {
+.hljs-section, .hljs-evalue {
   /* prettylights-syntax-markup-heading */
-  color: #1f6feb;
-  font-weight: bold;
+  color: #1dab22;
 }
 
 .hljs-bullet {

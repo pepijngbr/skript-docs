@@ -16,15 +16,33 @@ hljs.registerLanguage('skript', (hljs) => {
         name: 'Skript',
         case_insensitive: true,
         keywords: 'if else loop while for in return function -> :: returns break continue stop exit switch case try catch do command ' +
-            'set add remove delete clear on',
+            'set add remove delete clear on cancel event',
         contains: [
             {
                 scope: 'comment',
                 begin: /#/, end: /$/
             },
             {
+                className: 'function',
+                begin: /\b[a-zA-Z_0-9]+\(.*?\)\b/
+            },
+            {
+                scope: 'trigger',
+                begin : /^(?:on|function|command) .*:$/
+            },
+            {
                 scope: 'optional',
-                begin : /\[.*?\]/
+                begin : /\[/, end: /\]/,
+                contains: [
+                    {
+                        scope: 'choice',
+                        begin : /\(/, end: /\)/,
+                    },
+                   {
+                        scope: 'optional',
+                        begin : /\[/, end: /\]/,
+                    },
+                ]
             },
             {
                 scope: 'choice',
@@ -50,16 +68,20 @@ hljs.registerLanguage('skript', (hljs) => {
             },
             {
                 scope: 'number',
-                begin: /\b\d+(\.\d+)?\b/
+                begin: /\b\d+(?:\.\d+)?\b/
             },
             {
                 scope: 'type',
-                begin: /%[^%]+%/
+                begin: /%[^%:]+%/
             },
             {
                 className: 'literal',
-                begin: /\b(true|false|yes|no|on|off)\b/
-            }
+                begin: /\b(?:true|false|yes|no|on|off)\b/
+            },
+            {
+                className: 'evalue',
+                begin: /\b(?:event(-| ))?(?:player|world|block|item([ ]stack|)|location|(living[ ])?entit(y[ ]type|y|ie)|number|int|long|double|inventor(y|ie|y[ ]type)|time([ ]span)?|loop(-| )[^ ]*?)[s]?\b/
+            },
         ]       
     }
 });
