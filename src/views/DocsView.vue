@@ -1,5 +1,5 @@
 <template>
-  <nav class="docs-category-nav bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border">
+  <nav class="docs-category-nav w-fit mx-auto bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border">
     <a href="#conditions">Conditions</a>
     <a href="#effects">Effects</a>
     <a href="#events">Events</a>
@@ -7,7 +7,6 @@
     <a href="#functions">Functions</a>
     <a href="#sections">Sections</a>
     <a href="#structures">Structures</a>
-    <a href="#classes">Classes</a>
     <a href="#types">Types</a>
   </nav>
 
@@ -16,22 +15,21 @@
       class="fixed right-9 bottom-9 z-[100] bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border text-white dark:text-white rounded-xl w-12 h-12 flex items-center justify-center text-2xl cursor-pointer shadow-lg transition duration-200 opacity-90 hover:bg-skript hover:border-gray-300 dark:hover:bg-skript dark:hover:text-white dark:hover:border-skript hover:opacity-100">
     <i class="bi bi-arrow-up"></i>
     </button>
-    <h1>Docs</h1>
-    <DocsSection title="Conditions" :items="docs.conditions" prefix="condition" id="conditions" />
-    <DocsSection title="Effects" :items="docs.effects" prefix="effect" id="effects" />
-    <DocsSection title="Events" :items="docs.events" prefix="event" id="events" />
-    <DocsSection title="Expressions" :items="docs.expressions" prefix="expression" id="expressions" />
-    <DocsSection title="Functions" :items="docs.functions" prefix="function" id="functions" />
-    <DocsSection title="Sections" :items="docs.sections" prefix="section" id="sections" />
-    <DocsSection title="Structures" :items="docs.structures" prefix="structure" id="structures" />
-    <DocsSection title="Types" :items="docs.types" prefix="type" id="types" />
+    <DocSection title="Conditions" :items="docs.conditions" prefix="condition" id="conditions" />
+    <DocSection title="Effects" :items="docs.effects" prefix="effect" id="effects" />
+    <DocSection title="Events" :items="docs.events" prefix="event" id="events" />
+    <DocSection title="Expressions" :items="docs.expressions" prefix="expression" id="expressions" />
+    <DocSection title="Functions" :items="docs.functions" prefix="function" id="functions" />
+    <DocSection title="Sections" :items="docs.sections" prefix="section" id="sections" />
+    <DocSection title="Structures" :items="docs.structures" prefix="structure" id="structures" />
+    <DocSection title="Types" :items="docs.types" prefix="type" id="types" />
   </main>
 </template>
 
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue'
   import docs from '../assets/docs/docs.json'
-  import DocsSection from '../components/docs/DocsSection.vue'
+  import DocSection from '../components/docs/DocSection.vue'
 
   const showBackToTop = ref(false)
 
