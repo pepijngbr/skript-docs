@@ -7,15 +7,15 @@
       If you want to get started, we have an ever-expanding list of tutorials to get you started.
     </p>
     <!-- Code Section -->
-    <pre v-highlightjs><code class="applescript">command /sethome:
+    <highlightjs language="skript" code='command /sethome:
 	permission: skript.home # Permission required for this command
 	description: Set your home # Description of this command
-	executable by: players # Console won't be able to run this command
+	executable by: players # Console wont be able to run this command
 	trigger: # The actual trigger/code that will run when someone do /sethome
-		# Set a unique variable to sender's location
+		# Set a unique variable to senders location
 		set {home::%uuid of player%} to location of player
 		# Send a message to the sender
-		message "Set your home to &lt;grey>%location of player%&lt;reset>"
+		message "Set your home to <grey>%location of player%<reset>"
 
 command /home:
 	permission: skript.home
@@ -24,10 +24,9 @@ command /home:
 		# Check if that variable we used in /sethome has been set (in other words, if player ever ran /sethome)
 		if {home::%uuid of player%} is not set:
 			message "You have not set your home yet!"
-			stop trigger # stop the code here, lines below won't run
+			stop trigger # stop the code here, lines below wont run
 		# Teleport the player to their home
 		teleport player to {home::%uuid of player%}
-		send "&aYou have been teleported."
-</code></pre>
+		send "&aYou have been teleported."'/>
   </main>
 </template>

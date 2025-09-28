@@ -1,10 +1,13 @@
-pre code.hljs {
+pre code {
   display: block;
   overflow-x: auto;
   padding: 1em
 }
-code.hljs {
-  padding: 3px 5px
+
+code {
+  padding: 3px 5px;
+  color: #c9d1d9;
+  background: #0d1117;
 }
 
 /*!
@@ -17,11 +20,6 @@ code.hljs {
   Outdated base version: https://github.com/primer/github-syntax-dark
   Current colors taken from GitHub's CSS
 */
-
-.hljs {
-  color: #c9d1d9;
-  background: #0d1117;
-}
 
 .hljs-doctag,
 .hljs-keyword,

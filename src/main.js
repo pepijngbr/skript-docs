@@ -24,7 +24,7 @@ hljs.registerLanguage('skript', (hljs) => {
             },
             {
                 className: 'function',
-                begin: /\b[a-zA-Z_0-9]+\(.*?\)\b/
+                begin: /[a-zA-Z_0-9]+\(.*?\)/
             },
             {
                 scope: 'trigger',
