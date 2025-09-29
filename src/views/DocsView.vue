@@ -10,6 +10,8 @@
     <a href="#types">Types</a>
   </nav>
 
+  <DocSidebar />
+
   <main class="bg-white dark:bg-d-bg text-black dark:text-white max-w-4xl mx-auto px-4 py-8">
     <button v-if="showBackToTop" @click="scrollToTop" title="Back to top" aria-label="Back to top"
       class="fixed right-9 bottom-9 z-[100] bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border text-white dark:text-white rounded-xl w-12 h-12 flex items-center justify-center text-2xl cursor-pointer shadow-lg transition duration-200 opacity-90 hover:bg-skript hover:border-gray-300 dark:hover:bg-skript dark:hover:text-white dark:hover:border-skript hover:opacity-100">
@@ -84,8 +86,9 @@
 
 <script setup>
   import { ref, onMounted, onUnmounted, Suspense } from 'vue'
-  import docs from '../assets/docs/docs.json'
-  import DocSection from '../components/docs/DocSection.vue'
+  import docs from '@/assets/docs/docs.json'
+  import DocSection from '@/components/docs/DocSection.vue'
+  import DocSidebar from '@/components/docs/DocSidebar.vue'
 
   const showBackToTop = ref(false)
 

@@ -67,7 +67,7 @@
     name: 'MainHeader',
     data() {
       return {
-        version: docs.skriptVersion
+        version: docs.source.version.substring(0, 8)
       }
     },
     components: {
