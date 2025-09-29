@@ -3,14 +3,14 @@
         <h2>Categories</h2>
         <ul>
             <li v-for="category in Object.keys(categories).sort()" :key="category"
-                class="text-white transition-all duration-100 cursor-pointer"
-                @click="toggleCategory(category)">
+                class="text-white transition-all duration-100 cursor-pointer">
                 <p class="text-white transition-all duration-100 hover:text-skript hover:font-bold"
-                    v-bind:style="{'font-weight': openCategories[category] ? 'bold' : 'normal'}">{{ category }}</p>
+                    v-bind:style="{'font-weight': openCategories[category] ? 'bold' : 'normal'}"
+                    @click="toggleCategory(category)">{{ category }}</p>
                 <ul v-show="openCategories[category]">
                     <li v-for="element in categories[category]" :key="element.name"
                         class="ml-3 text-white transition-all duration-100 hover:text-skript hover:font-bold cursor-pointer">
-                        <a :href="'#' + (element.name).toLowerCase()">{{ element.name }}</a>
+                        <a :href="'#' + element.prefix + '-' + element.name.replace(/\s+/g, '-').toLowerCase()">{{ element.name }}</a>
                     </li>
                 </ul>
             </li>
@@ -21,7 +21,9 @@
 <script scoped>
     import docs from "@/assets/docs/docs.json";
 
-    const elements = [...docs.expressions, ...docs.conditions, ...docs.effects, ...docs.events, ...docs.functions, ...docs.sections, ...docs.structures, ...docs.types];
+    const elements = [...docs.expressions, ...docs.conditions, 
+    ...docs.effects, ...docs.events, ...docs.functions, 
+    ...docs.sections, ...docs.structures, ...docs.types];
 
     const categories = {};
 
