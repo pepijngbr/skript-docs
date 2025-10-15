@@ -1,6 +1,6 @@
 <template>
   <header
-    class="hidden sticky top-0 md:flex justify-center items-center bg-d-nav-bg text-white border-b-2 border-l-border dark:border-d-border">
+    class="hidden sticky top-0 md:flex justify-center items-center bg-white text-black dark:bg-d-nav-bg dark:text-white border-b-2 border-l-border dark:border-d-border">
     <div class="flex flex-col m-auto">
       <div class="flex justify-between items-center px-2 gap-6">
         <!-- Logo -->
@@ -29,8 +29,8 @@
           <HeaderButton click="https://github.com/SkriptLang">
             <i class="bi bi-github text-3xl"></i>
           </HeaderButton>
-          <HeaderButton>
-            <i class="bi bi-sun text-3xl"></i>
+          <HeaderButton @click="toggleDarkMode" title="Toggle dark mode">
+            <i :class="isDark ? 'bi bi-moon text-3xl' : 'bi bi-sun text-3xl'"></i>
           </HeaderButton>
         </div>
       </div>
@@ -62,18 +62,34 @@
   import { RouterLink } from 'vue-router'
   import HeaderButton from './HeaderButton.vue'
   import docs from '@/assets/docs/docs.json'
+  import { useThemeStore } from '@/stores/theme'
 
   export default {
     name: 'MainHeader',
-    data() {
-      return {
-        version: docs.source.version.substring(0, 8)
-      }
-    },
     components: {
       RouterLink,
       HeaderButton,
     },
+    data() {
+      return {
+        version: docs.skriptVersion,
+        theme: null,
+      }
+    },
+    mounted() {
+      this.theme = useThemeStore();
+      this.theme.initTheme();
+    },
+    methods: {
+      toggleDarkMode() {
+        this.theme.toggleDark();
+      }
+    },
+    computed: {
+      isDark() {
+        return this.theme ? this.theme.isDark : false;
+      }
+    }
   }
 </script>
 

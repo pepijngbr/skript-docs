@@ -92,3 +92,12 @@
     @apply rounded-xl;
   }
 }
+
+@layer utilities {
+  .dark .dark\:bg-d-nav-bg {
+    background-color: var(--color-d-nav-bg);
+  }
+  .dark .dark\:text-white {
+    color: var(--color-white);
+  }
+}
