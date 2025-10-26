@@ -1,6 +1,6 @@
 <template>
   <header
-    class="hidden sticky top-0 md:flex justify-center items-center bg-white text-black dark:bg-d-nav-bg dark:text-white border-b-2 border-l-border dark:border-d-border">
+    class="flex sticky z-999 top-0 justify-center items-center bg-white text-black dark:bg-d-nav-bg dark:text-white border-b-2 border-l-border dark:border-d-border">
     <div class="flex flex-col m-auto">
       <div class="flex justify-between items-center px-2 gap-6">
         <!-- Logo -->
@@ -16,7 +16,7 @@
 
         <!-- Searchbar -->
         <div class="input" @click="$refs.searchInput.focus()">
-          <i class="bi bi-search text-gray-500 mr-2 text-lg"></i>
+          <i class="bi bi-search text-d-search-border mr-2 text-lg"></i>
           <input ref="searchInput" type="text" placeholder="Search"
             class="flex-1 outline-none bg-transparent cursor-pointer" />
         </div>
@@ -31,6 +31,9 @@
           </HeaderButton>
           <HeaderButton @click="toggleDarkMode" title="Toggle dark mode">
             <i :class="isDark ? 'bi bi-moon text-3xl' : 'bi bi-sun text-3xl'"></i>
+          </HeaderButton>
+          <HeaderButton class="btn-search" title="Search">
+            <i class="bi bi-search text-3xl"></i>
           </HeaderButton>
         </div>
       </div>
@@ -77,19 +80,19 @@
       }
     },
     mounted() {
-      this.theme = useThemeStore();
-      this.theme.initTheme();
+      this.theme = useThemeStore()
+      this.theme.initTheme()
     },
     methods: {
       toggleDarkMode() {
-        this.theme.toggleDark();
-      }
+        this.theme.toggleDark()
+      },
     },
     computed: {
       isDark() {
-        return this.theme ? this.theme.isDark : false;
-      }
-    }
+        return this.theme ? this.theme.isDark : false
+      },
+    },
   }
 </script>
 
@@ -97,7 +100,7 @@
   @reference "../../styles/app.css";
 
   .input {
-    @apply flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer ring-2 ring-d-search-border focus-within:ring-skript transition-all duration-200 ease-in-out;
+    @apply hidden md:flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer ring-2 ring-d-search-border focus-within:ring-skript transition-all duration-200 ease-in-out;
   }
 
   .page {

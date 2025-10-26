@@ -3,7 +3,7 @@
     <MainHeader />
     <div class="flex flex-1">
       <TutorialsNavigation v-if="showTutorialsNav" />
-      <div class="flex-1 md:m-4 px-4 py-4">
+      <div class="relative flex-1 md:m-4 px-4 py-4">
         <RouterView />
       </div>
     </div>

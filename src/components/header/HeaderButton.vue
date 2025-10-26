@@ -38,6 +38,9 @@
   button,
   a {
     @apply flex items-center justify-center w-12 h-12 transition hover:bg-d-icon-hover rounded-full fill-white hover:cursor-pointer;
+  }
 
+  .btn-search {
+    @apply flex md:hidden;
   }
 </style>
