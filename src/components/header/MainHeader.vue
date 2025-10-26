@@ -21,7 +21,7 @@
             class="flex-1 outline-none bg-transparent cursor-pointer" />
         </div>
 
-        <!-- External links / Darkmode toggle -->
+        <!-- External links and other buttons -->
         <div class="flex gap-2">
           <HeaderButton click="https://discord.com/invite/skript">
             <i class="bi bi-discord text-3xl"></i>
@@ -76,21 +76,21 @@
     data() {
       return {
         version: docs.skriptVersion,
-        theme: null,
+        theme: useThemeStore(),
       }
     },
     mounted() {
       this.theme = useThemeStore()
       this.theme.initTheme()
     },
+    computed: {
+      isDark() {
+        return this.theme.isDark
+      },
+    },
     methods: {
       toggleDarkMode() {
         this.theme.toggleDark()
-      },
-    },
-    computed: {
-      isDark() {
-        return this.theme ? this.theme.isDark : false
       },
     },
   }

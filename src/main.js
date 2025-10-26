@@ -5,11 +5,17 @@ import './styles/app.css'
 import './styles/syntax-colors.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { createPinia } from 'pinia'
+import { useThemeStore } from '@/stores/theme'
 
 const app = createApp(App)
 
-app.use(createPinia())
+const pinia = createPinia()
+app.use(pinia)
+
 app.use(router)
+
+const themeStore = useThemeStore()
+themeStore.initTheme()
 
 import hljs from 'highlight.js/lib/core'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
