@@ -1,14 +1,14 @@
 <template>
   <footer
-    class="flex w-full items-center justify-center bg-white text-black dark:bg-black dark:text-white py-2"
+    class="flex flex-col sm:flex-row items-center justify-center bg-l-bg text-black dark:bg-d-bg dark:text-white py-2"
   >
     <p>SkriptLang Docs Preview</p>
-    <span class="mx-2">&middot;</span>
+    <span class="mx-2 hidden sm:inline">&middot;</span>
     <p>
       By <a href="https://github.com/efnilite" target="_blank" class="underline">Efnilite</a> &
       <a href="https://github.com/pepijngbr" target="_blank" class="underline">pepijngbr</a>
     </p>
-    <span class="mx-2">&middot;</span>
+    <span class="mx-2 hidden sm:inline">&middot;</span>
     <p>Last updated: {{ latestCommitDate }}</p>
   </footer>
 </template>
