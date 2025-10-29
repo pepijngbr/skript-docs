@@ -1,7 +1,7 @@
 pre code {
   display: block;
   overflow-x: auto;
-  padding: 1em
+  padding: 1em;
 }
 
 code {
@@ -35,7 +35,6 @@ code {
   /* prettylights-syntax-type */
   color: #7ee787;
 }
-
 
 .hljs-trigger {
   /* prettylights-syntax-type */
@@ -101,7 +100,8 @@ code {
   color: #c9d1d9;
 }
 
-.hljs-section, .hljs-evalue {
+.hljs-section,
+.hljs-evalue {
   /* prettylights-syntax-markup-heading */
   color: #1dab22;
 }

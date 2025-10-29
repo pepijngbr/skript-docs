@@ -33,7 +33,7 @@
   --color-l-search-border: #919191;
   --color-d-search-border: #767676;
 
-  --color-l-search-fill: #bfbfbf;
+  --color-l-search-fill: #efefef;
   --color-d-search-fill: #3d3d3d;
 
   --color-l-search-icon: #6f6f6f;
@@ -93,11 +93,4 @@
   }
 }
 
-@layer utilities {
-  .dark .dark\:bg-d-nav-bg {
-    background-color: var(--color-d-nav-bg);
-  }
-  .dark .dark\:text-white {
-    color: var(--color-white);
-  }
-}
+@custom-variant dark (&:where(.dark, .dark *));

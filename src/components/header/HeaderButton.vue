@@ -8,39 +8,39 @@
 </template>
 
 <script>
-  export default {
-    name: 'HeaderButton',
-    props: {
-      click: {
-        type: [Function, String],
-        required: true,
-        default: null,
-      },
+export default {
+  name: 'HeaderButton',
+  props: {
+    click: {
+      type: [Function, String],
+      required: true,
+      default: null,
     },
-    computed: {
-      isLink() {
-        return typeof this.click === 'string'
-      },
+  },
+  computed: {
+    isLink() {
+      return typeof this.click === 'string'
     },
-    methods: {
-      handleClick(event) {
-        if (typeof this.click === 'function') {
-          this.click(event)
-        }
-      },
+  },
+  methods: {
+    handleClick(event) {
+      if (typeof this.click === 'function') {
+        this.click(event)
+      }
     },
-  }
+  },
+}
 </script>
 
 <style scoped>
-  @reference "../../styles/app.css";
+@reference "../../styles/app.css";
 
-  button,
-  a {
-    @apply flex items-center justify-center w-12 h-12 transition hover:bg-d-icon-hover rounded-full fill-white hover:cursor-pointer;
-  }
+button,
+a {
+  @apply flex items-center justify-center w-12 h-12 transition hover:bg-d-icon-hover hover:text-white rounded-full hover:cursor-pointer;
+}
 
-  .btn-search {
-    @apply flex md:hidden;
-  }
+.btn-search {
+  @apply flex md:hidden;
+}
 </style>

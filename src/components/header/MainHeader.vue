@@ -1,24 +1,33 @@
 <template>
   <header
-    class="flex sticky z-999 top-0 justify-center items-center bg-white text-black dark:bg-d-nav-bg dark:text-white border-b-2 border-l-border dark:border-d-border">
+    class="flex sticky z-999 top-0 justify-center items-center bg-white text-black dark:bg-d-nav-bg dark:text-white border-b-2 border-l-border dark:border-d-border"
+  >
     <div class="flex flex-col m-auto">
       <div class="flex justify-between items-center px-2 gap-6">
         <!-- Logo -->
         <RouterLink :to="{ name: 'home' }" title="SkriptLang" class="max-w-[80px]">
-          <img src="/sk-logo.svg" alt="SkriptLang Logo" />
+          <img :src="logoSrc" alt="SkriptLang Logo" />
         </RouterLink>
 
         <!-- Version -->
-        <a :href="'https://github.com/SkriptLang/Skript/releases/tag/' + version" target="_blank"
-          rel="noopener noreferrer" class="font-bold hover:underline">
+        <a
+          :href="'https://github.com/SkriptLang/Skript/releases/tag/' + version"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold hover:underline"
+        >
           {{ version }}
         </a>
 
         <!-- Searchbar -->
         <div class="input" @click="$refs.searchInput.focus()">
           <i class="bi bi-search text-d-search-border mr-2 text-lg"></i>
-          <input ref="searchInput" type="text" placeholder="Search"
-            class="flex-1 outline-none bg-transparent cursor-pointer" />
+          <input
+            ref="searchInput"
+            type="text"
+            placeholder="Search"
+            class="flex-1 outline-none bg-transparent cursor-pointer"
+          />
         </div>
 
         <!-- External links and other buttons -->
@@ -46,8 +55,11 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tutorials' }" class="page bg-tutorials"
-            :class="{ 'font-bold': $route.path.startsWith('/tutorials') }">
+          <RouterLink
+            :to="{ name: 'tutorials' }"
+            class="page bg-tutorials"
+            :class="{ 'font-bold': $route.path.startsWith('/tutorials') }"
+          >
             Tutorials
           </RouterLink>
         </li>
@@ -62,48 +74,50 @@
 </template>
 
 <script>
-  import { RouterLink } from 'vue-router'
-  import HeaderButton from './HeaderButton.vue'
-  import docs from '@/assets/docs/docs.json'
-  import { useThemeStore } from '@/stores/theme'
+import { RouterLink } from 'vue-router'
+import HeaderButton from './HeaderButton.vue'
+import docs from '@/assets/docs/docs.json'
+import { useThemeStore } from '@/stores/theme'
 
-  export default {
-    name: 'MainHeader',
-    components: {
-      RouterLink,
-      HeaderButton,
+export default {
+  name: 'MainHeader',
+  components: {
+    RouterLink,
+    HeaderButton,
+  },
+  data() {
+    return {
+      version: docs.skriptVersion,
+      theme: useThemeStore(),
+    }
+  },
+  mounted() {
+    this.theme.initTheme()
+  },
+  computed: {
+    isDark() {
+      return this.theme.isDark
     },
-    data() {
-      return {
-        version: docs.skriptVersion,
-        theme: useThemeStore(),
-      }
+    logoSrc() {
+      return this.isDark ? '/sk-logo.svg' : '/sk-logo-dark.svg'
     },
-    mounted() {
-      this.theme = useThemeStore()
-      this.theme.initTheme()
+  },
+  methods: {
+    toggleDarkMode() {
+      this.theme.toggleDark()
     },
-    computed: {
-      isDark() {
-        return this.theme.isDark
-      },
-    },
-    methods: {
-      toggleDarkMode() {
-        this.theme.toggleDark()
-      },
-    },
-  }
+  },
+}
 </script>
 
 <style scoped>
-  @reference "../../styles/app.css";
+@reference "../../styles/app.css";
 
-  .input {
-    @apply hidden md:flex items-center w-[500px] bg-d-search-fill text-white rounded-lg px-3 py-2 cursor-pointer ring-2 ring-d-search-border focus-within:ring-skript transition-all duration-200 ease-in-out;
-  }
+.input {
+  @apply hidden md:flex items-center w-[500px] bg-l-search-fill dark:bg-d-search-fill text-black dark:text-white rounded-lg px-3 py-2 cursor-pointer ring-2 ring-l-search-border dark:ring-d-search-border focus-within:ring-skript transition-all duration-200 ease-in-out;
+}
 
-  .page {
-    @apply text-white text-xl px-8 py-1.5 rounded-lg font-outfit;
-  }
+.page {
+  @apply text-white text-xl px-8 py-1.5 rounded-lg font-outfit;
+}
 </style>

@@ -12,18 +12,18 @@
 </template>
 
 <script setup>
-  import { computed, onMounted } from 'vue'
-  import { useRoute, RouterView } from 'vue-router'
-  import MainHeader from '@/components/header/MainHeader.vue'
-  import MainFooter from '@/components/footer/MainFooter.vue'
-  import TutorialsNavigation from '@/components/tutorials/TutorialsNavigation.vue'
-  import { useThemeStore } from '@/stores/theme'
+import { computed, onMounted } from 'vue'
+import { useRoute, RouterView } from 'vue-router'
+import MainHeader from '@/components/header/MainHeader.vue'
+import MainFooter from '@/components/footer/MainFooter.vue'
+import TutorialsNavigation from '@/components/tutorials/TutorialsNavigation.vue'
+import { useThemeStore } from '@/stores/theme'
 
-  const route = useRoute()
-  const showTutorialsNav = computed(() => route.path.startsWith('/tutorials'))
+const route = useRoute()
+const showTutorialsNav = computed(() => route.path.startsWith('/tutorials'))
 
-  const theme = useThemeStore()
-  onMounted(() => {
-    theme.initTheme()
-  })
+const theme = useThemeStore()
+onMounted(() => {
+  theme.initTheme()
+})
 </script>

@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border 
-              rounded-lg mb-8 p-6 flex flex-col gap-3">
+  <div
+    class="bg-white dark:bg-d-bg-secondary border-2 border-l-border dark:border-d-border rounded-lg mb-8 p-6 flex flex-col gap-3"
+  >
     <h3>
       <a
         :href="'#' + prefix + '-' + name.replace(/\s+/g, '-').toLowerCase()"
@@ -11,20 +12,37 @@
       </a>
     </h3>
 
-    <vue-markdown-it v-if="description" :source="description.join('\n')"/>
+    <vue-markdown-it v-if="description" :source="description.join('\n')" />
 
-    <highlightjs v-if="patterns" language="skript" :code="Array.isArray(patterns) ? patterns.join('\n') : patterns" />
+    <highlightjs
+      v-if="patterns"
+      language="skript"
+      :code="Array.isArray(patterns) ? patterns.join('\n') : patterns"
+    />
 
     <div>
-      <p v-if="since"><strong>Since</strong> {{ Array.isArray(since) ? since.join(', ') : since }}</p>
-      <p v-if="requirements"><strong>Requirements</strong> {{ Array.isArray(requirements) ? requirements.join(', ') : requirements }}</p>
+      <p v-if="since">
+        <strong>Since</strong> {{ Array.isArray(since) ? since.join(', ') : since }}
+      </p>
+      <p v-if="requirements">
+        <strong>Requirements</strong>
+        {{ Array.isArray(requirements) ? requirements.join(', ') : requirements }}
+      </p>
     </div>
 
     <p v-if="examples"><strong>Examples</strong></p>
-    <highlightjs v-if="examples" language="skript" :code="Array.isArray(examples) ? examples.join('\n') : examples" />
+    <highlightjs
+      v-if="examples"
+      language="skript"
+      :code="Array.isArray(examples) ? examples.join('\n') : examples"
+    />
 
     <p v-if="eventValues"><strong>Event Values</strong></p>
-    <highlightjs v-if="eventValues" language="skript" :code="eventValues.map(line => line.name).join('\n')" />
+    <highlightjs
+      v-if="eventValues"
+      language="skript"
+      :code="eventValues.map((line) => line.name).join('\n')"
+    />
   </div>
 </template>
 

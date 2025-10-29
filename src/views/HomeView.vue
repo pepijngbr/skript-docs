@@ -1,13 +1,19 @@
 <template>
   <main class="max-w-4xl m-auto flex flex-col gap-4">
     <h1>Skript</h1>
-    <p>is a scripting plugin for Paper. The syntax of Skript is close to English, 
-      and allows you to modify Minecraft server behavior without any prior programming knowledge.</p>
-    <p>This is Skript's documentation. Here, you will find all syntax that you can use, along with examples.
-      If you want to get started, we have an ever-expanding list of tutorials to get you started.
+    <p>
+      is a scripting plugin for Paper. The syntax of Skript is close to English, and allows you to
+      modify Minecraft server behavior without any prior programming knowledge.
+    </p>
+    <p>
+      This is Skript's documentation. Here, you will find all syntax that you can use, along with
+      examples. If you want to get started, we have an ever-expanding list of tutorials to get you
+      started.
     </p>
     <!-- Code Section -->
-    <highlightjs language="skript" code='command /sethome:
+    <highlightjs
+      language="skript"
+      code='command /sethome:
 	permission: skript.home # Permission required for this command
 	description: Set your home # Description of this command
 	executable by: players # Console wont be able to run this command
@@ -27,6 +33,7 @@ command /home:
 			stop trigger # stop the code here, lines below wont run
 		# Teleport the player to their home
 		teleport player to {home::%uuid of player%}
-		send "&aYou have been teleported."'/>
+		send "&aYou have been teleported."'
+    />
   </main>
 </template>
